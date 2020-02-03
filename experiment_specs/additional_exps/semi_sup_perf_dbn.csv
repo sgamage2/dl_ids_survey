@@ -1,0 +1,15 @@
+experiment_num,results_dir,model_type,model,normal_label,dbn_layer_units,ann_layer_activations,ann_layer_dropout_rates,random_seed,unsupervised_ratio,dbn_learning_rate,pretrain_epochs,fine_tune_epochs,early_stop_patience,batch_size,dataset_dir,description
+#,,,,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,,
+# DBN on NSL-KDD,,,,,,,,,,,,,,,,
+#1,results_additional_exps/semi_sup_perf_nsl_dbn_rep1,classifier,dbn,normal,"64,","relu,","0.2,",42,0.5,0.0001,50,200,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,semi_sup_perf_nsl_dbn_rep1
+#2,results_additional_exps/semi_sup_perf_nsl_dbn_rep2,classifier,dbn,normal,"64,","relu,","0.2,",42,0.5,0.0001,50,200,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,semi_sup_perf_nsl_dbn_rep2
+#3,results_additional_exps/semi_sup_perf_nsl_dbn_rep3,classifier,dbn,normal,"64,","relu,","0.2,",42,0.5,0.0001,50,200,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,semi_sup_perf_nsl_dbn_rep3
+# DBN on IDS 2017,,,,,,,,,,,,,,,,
+#1,results_additional_exps/semi_sup_perf_ids17_dbn_rep1,classifier,dbn,BENIGN,"64,","relu,","0.2,",42,0.5,0.0001,50,200,50,256,../Datasets/full_datasets/ids2017,semi_sup_perf_ids17_dbn_rep1
+#2,results_additional_exps/semi_sup_perf_ids17_dbn_rep2,classifier,dbn,BENIGN,"64,","relu,","0.2,",42,0.5,0.0001,50,200,50,256,../Datasets/full_datasets/ids2017,semi_sup_perf_ids17_dbn_rep2
+#3,results_additional_exps/semi_sup_perf_ids17_dbn_rep3,classifier,dbn,BENIGN,"64,","relu,","0.2,",42,0.5,0.0001,50,200,50,256,../Datasets/full_datasets/ids2017,semi_sup_perf_ids17_dbn_rep3
+# DBN tests IDS 2018,,,,,,,,,,,,,,,,
+1,results_additional_exps/semi_sup_perf_ids18_subset_dbn_rep1,classifier,dbn,BENIGN,"64,","relu,","0.2,",42,0.5,0.0001,50,200,50,256,../Datasets/small_datasets/ids2018,semi_sup_perf_ids18_subset_dbn_rep1
+2,results_additional_exps/semi_sup_perf_ids18_subset_dbn_rep2,classifier,dbn,BENIGN,"64,","relu,","0.2,",42,0.5,0.0001,50,200,50,256,../Datasets/small_datasets/ids2018,semi_sup_perf_ids18_subset_dbn_rep2
+3,results_additional_exps/semi_sup_perf_ids18_subset_dbn_rep3,classifier,dbn,BENIGN,"64,","relu,","0.2,",42,0.5,0.0001,50,200,50,256,../Datasets/small_datasets/ids2018,semi_sup_perf_ids18_subset_dbn_rep3

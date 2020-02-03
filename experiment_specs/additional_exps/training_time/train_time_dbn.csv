@@ -1,0 +1,36 @@
+experiment_num,results_dir,model_type,model,normal_label,scaling_type,dbn_layer_units,ann_layer_activations,ann_layer_dropout_rates,unsupervised_ratio,dbn_learning_rate,pretrain_epochs,fine_tune_epochs,early_stop_patience,batch_size,goal_metric,training_set,dataset_dir,description
+#,,,,,,,,,,,,,,,,,,
+# Shallow DBN tests on NSL-KDD,,,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_nsl_dbn_shallow_rep1,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,10,100,100,256,0.7445,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_dbn_shallow_rep1
+#2,results_additional_exps/train_time_nsl_dbn_shallow_rep2,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,10,100,100,256,0.7445,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_dbn_shallow_rep2
+#3,results_additional_exps/train_time_nsl_dbn_shallow_rep3,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,10,100,100,256,0.7445,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_dbn_shallow_rep3
+# Shallow DBN tests on IDS 2017,,,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_ids17_dbn_shallow_rep1,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,10,100,100,256,0.99388695,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_dbn_shallow_rep1
+#2,results_additional_exps/train_time_ids17_dbn_shallow_rep2,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,10,100,100,256,0.99388695,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_dbn_shallow_rep2
+#3,results_additional_exps/train_time_ids17_dbn_shallow_rep3,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,10,100,100,256,0.99388695,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_dbn_shallow_rep3
+# Shallow DBN tests on IDS 2018 subset,,,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_ids18_subset_dbn_shallow_rep1,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,10,100,100,256,0.982372891,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_dbn_shallow_rep1
+#2,results_additional_exps/train_time_ids18_subset_dbn_shallow_rep2,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,10,100,100,256,0.982372891,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_dbn_shallow_rep2
+#3,results_additional_exps/train_time_ids18_subset_dbn_shallow_rep3,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,10,100,100,256,0.982372891,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_dbn_shallow_rep3
+# Shallow DBN tests on KDD 99,,,,,,,,,,,,,,,,,,
+1,results_additional_exps/train_time_kdd99_dbn_shallow_rep1,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,10,100,100,256,0.921590082,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_dbn_shallow_rep1
+2,results_additional_exps/train_time_kdd99_dbn_shallow_rep2,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,10,100,100,256,0.921590082,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_dbn_shallow_rep2
+3,results_additional_exps/train_time_kdd99_dbn_shallow_rep3,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,10,100,100,256,0.921590082,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_dbn_shallow_rep3
+#,,,,,,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,,,,
+# Deep DBN tests on NSL-KDD,,,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_nsl_dbn_deep_rep1,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,10,100,100,256,0.740772514,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_dbn_deep_rep1
+#2,results_additional_exps/train_time_nsl_dbn_deep_rep2,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,10,100,100,256,0.740772514,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_dbn_deep_rep2
+#3,results_additional_exps/train_time_nsl_dbn_deep_rep3,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,10,100,100,256,0.740772514,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_dbn_deep_rep3
+# Deep DBN tests on IDS 2017,,,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_ids17_dbn_deep_rep1,classifier,dbn,BENIGN,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.5,0.0001,10,100,100,256,0.995285982,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_dbn_deep_rep1
+#2,results_additional_exps/train_time_ids17_dbn_deep_rep2,classifier,dbn,BENIGN,NA,"128,64,33","relu,relu,relu,","0.2,0.2,0.3",0.5,0.0001,10,100,100,256,0.995285982,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_dbn_deep_rep2
+#3,results_additional_exps/train_time_ids17_dbn_deep_rep3,classifier,dbn,BENIGN,NA,"128,64,34","relu,relu,relu,","0.2,0.2,0.4",0.5,0.0001,10,100,100,256,0.995285982,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_dbn_deep_rep3
+# Deep DBN tests on IDS 2018 subset,,,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_ids18_subset_dbn_deep_rep1,classifier,dbn,BENIGN,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.5,0.0001,10,100,100,256,0.982550715,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_dbn_deep_rep1
+#2,results_additional_exps/train_time_ids18_subset_dbn_deep_rep2,classifier,dbn,BENIGN,NA,"128,64,33","relu,relu,relu,","0.2,0.2,0.3",0.5,0.0001,10,100,100,256,0.982550715,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_dbn_deep_rep2
+#3,results_additional_exps/train_time_ids18_subset_dbn_deep_rep3,classifier,dbn,BENIGN,NA,"128,64,34","relu,relu,relu,","0.2,0.2,0.4",0.5,0.0001,10,100,100,256,0.982550715,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_dbn_deep_rep3
+# Deep DBN tests on KDD 99,,,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_kdd99_dbn_deep_rep1,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,10,100,100,256,0.920635575,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_dbn_deep_rep1
+#2,results_additional_exps/train_time_kdd99_dbn_deep_rep2,classifier,dbn,normal,NA,"128,64,33","relu,relu,relu,","0.2,0.2,0.3",0.25,0.001,10,100,100,256,0.920635575,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_dbn_deep_rep2
+#3,results_additional_exps/train_time_kdd99_dbn_deep_rep3,classifier,dbn,normal,NA,"128,64,34","relu,relu,relu,","0.2,0.2,0.4",0.25,0.001,10,100,100,256,0.920635575,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_dbn_deep_rep3

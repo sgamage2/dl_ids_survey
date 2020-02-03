@@ -1,0 +1,53 @@
+experiment_num,results_dir,model_type,model,normal_label,scaling_type,dbn_layer_units,ann_layer_activations,ann_layer_dropout_rates,unsupervised_ratio,dbn_learning_rate,pretrain_epochs,fine_tune_epochs,early_stop_patience,batch_size,dataset_dir,description
+#,,,,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,,
+# Shallow DBN tests on NSL-KDD,,,,,,,,,,,,,,,,
+#1,results_selected_models/selected_nsl_dbn_shallow_rep1,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,selected_nsl_dbn_shallow_rep1
+#2,results_selected_models/selected_nsl_dbn_shallow_rep2,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,selected_nsl_dbn_shallow_rep2
+#3,results_selected_models/selected_nsl_dbn_shallow_rep3,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,selected_nsl_dbn_shallow_rep3
+#4,results_selected_models/selected_nsl_dbn_shallow_rep4,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,selected_nsl_dbn_shallow_rep4
+#5,results_selected_models/selected_nsl_dbn_shallow_rep5,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,selected_nsl_dbn_shallow_rep5
+# Shallow DBN tests on IDS 2017,,,,,,,,,,,,,,,,
+#1,results_selected_models/selected_ids17_dbn_shallow_rep1,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/ids2017,selected_ids17_dbn_shallow_rep1
+#2,results_selected_models/selected_ids17_dbn_shallow_rep2,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/ids2017,selected_ids17_dbn_shallow_rep2
+#3,results_selected_models/selected_ids17_dbn_shallow_rep3,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/ids2017,selected_ids17_dbn_shallow_rep3
+#4,results_selected_models/selected_ids17_dbn_shallow_rep4,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/ids2017,selected_ids17_dbn_shallow_rep4
+#5,results_selected_models/selected_ids17_dbn_shallow_rep5,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/ids2017,selected_ids17_dbn_shallow_rep5
+# Shallow DBN tests on KDD 99,,,,,,,,,,,,,,,,
+#1,results_selected_models/selected_kdd99_dbn_shallow_rep1,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,selected_kdd99_dbn_shallow_rep1
+#2,results_selected_models/selected_kdd99_dbn_shallow_rep2,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,selected_kdd99_dbn_shallow_rep2
+#3,results_selected_models/selected_kdd99_dbn_shallow_rep3,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,selected_kdd99_dbn_shallow_rep3
+#4,results_selected_models/selected_kdd99_dbn_shallow_rep4,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,selected_kdd99_dbn_shallow_rep4
+#5,results_selected_models/selected_kdd99_dbn_shallow_rep5,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,selected_kdd99_dbn_shallow_rep5
+# Shallow DBN tests on IDS 2018 subset,,,,,,,,,,,,,,,,
+#1,results_selected_models/selected_ids18_subset_dbn_shallow_rep1,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/ids2018,selected_ids18_subset_dbn_shallow_rep1
+#2,results_selected_models/selected_ids18_subset_dbn_shallow_rep2,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/ids2018,selected_ids18_subset_dbn_shallow_rep2
+#3,results_selected_models/selected_ids18_subset_dbn_shallow_rep3,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/ids2018,selected_ids18_subset_dbn_shallow_rep3
+#4,results_selected_models/selected_ids18_subset_dbn_shallow_rep4,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/ids2018,selected_ids18_subset_dbn_shallow_rep4
+#5,results_selected_models/selected_ids18_subset_dbn_shallow_rep5,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/ids2018,selected_ids18_subset_dbn_shallow_rep5
+#,,,,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,,
+# Deep DBN tests on NSL-KDD,,,,,,,,,,,,,,,,
+#1,results_selected_models/selected_nsl_dbn_deep_rep1,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,selected_nsl_dbn_deep_rep1
+#2,results_selected_models/selected_nsl_dbn_deep_rep2,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,selected_nsl_dbn_deep_rep2
+#3,results_selected_models/selected_nsl_dbn_deep_rep3,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,selected_nsl_dbn_deep_rep3
+#4,results_selected_models/selected_nsl_dbn_deep_rep4,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,selected_nsl_dbn_deep_rep4
+#5,results_selected_models/selected_nsl_dbn_deep_rep5,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,selected_nsl_dbn_deep_rep5
+# Deep DBN tests on IDS 2017,,,,,,,,,,,,,,,,
+#1,results_selected_models/selected_ids17_dbn_deep_rep1,classifier,dbn,BENIGN,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/ids2017,selected_ids17_dbn_deep_rep1
+#2,results_selected_models/selected_ids17_dbn_deep_rep2,classifier,dbn,BENIGN,NA,"128,64,33","relu,relu,relu,","0.2,0.2,0.3",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/ids2017,selected_ids17_dbn_deep_rep2
+#3,results_selected_models/selected_ids17_dbn_deep_rep3,classifier,dbn,BENIGN,NA,"128,64,34","relu,relu,relu,","0.2,0.2,0.4",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/ids2017,selected_ids17_dbn_deep_rep3
+#4,results_selected_models/selected_ids17_dbn_deep_rep4,classifier,dbn,BENIGN,NA,"128,64,35","relu,relu,relu,","0.2,0.2,0.5",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/ids2017,selected_ids17_dbn_deep_rep4
+#5,results_selected_models/selected_ids17_dbn_deep_rep5,classifier,dbn,BENIGN,NA,"128,64,36","relu,relu,relu,","0.2,0.2,0.6",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/ids2017,selected_ids17_dbn_deep_rep5
+# Deep DBN tests on KDD 99,,,,,,,,,,,,,,,,
+1,results_selected_models/selected_kdd99_dbn_deep_rep1,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,selected_kdd99_dbn_deep_rep1
+2,results_selected_models/selected_kdd99_dbn_deep_rep2,classifier,dbn,normal,NA,"128,64,33","relu,relu,relu,","0.2,0.2,0.3",0.25,0.001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,selected_kdd99_dbn_deep_rep2
+3,results_selected_models/selected_kdd99_dbn_deep_rep3,classifier,dbn,normal,NA,"128,64,34","relu,relu,relu,","0.2,0.2,0.4",0.25,0.001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,selected_kdd99_dbn_deep_rep3
+4,results_selected_models/selected_kdd99_dbn_deep_rep4,classifier,dbn,normal,NA,"128,64,35","relu,relu,relu,","0.2,0.2,0.5",0.25,0.001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,selected_kdd99_dbn_deep_rep4
+5,results_selected_models/selected_kdd99_dbn_deep_rep5,classifier,dbn,normal,NA,"128,64,36","relu,relu,relu,","0.2,0.2,0.6",0.25,0.001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,selected_kdd99_dbn_deep_rep5
+# Deep DBN tests on IDS 2018 subset,,,,,,,,,,,,,,,,
+#1,results_selected_models/selected_ids18_subset_dbn_deep_rep1,classifier,dbn,BENIGN,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/ids2018,selected_ids18_subset_dbn_deep_rep1
+#2,results_selected_models/selected_ids18_subset_dbn_deep_rep2,classifier,dbn,BENIGN,NA,"128,64,33","relu,relu,relu,","0.2,0.2,0.3",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/ids2018,selected_ids18_subset_dbn_deep_rep2
+#3,results_selected_models/selected_ids18_subset_dbn_deep_rep3,classifier,dbn,BENIGN,NA,"128,64,34","relu,relu,relu,","0.2,0.2,0.4",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/ids2018,selected_ids18_subset_dbn_deep_rep3
+#4,results_selected_models/selected_ids18_subset_dbn_deep_rep4,classifier,dbn,BENIGN,NA,"128,64,35","relu,relu,relu,","0.2,0.2,0.5",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/ids2018,selected_ids18_subset_dbn_deep_rep4
+#5,results_selected_models/selected_ids18_subset_dbn_deep_rep5,classifier,dbn,BENIGN,NA,"128,64,36","relu,relu,relu,","0.2,0.2,0.6",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/ids2018,selected_ids18_subset_dbn_deep_rep5

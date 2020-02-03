@@ -1,0 +1,45 @@
+experiment_num,results_dir,model_type,model,normal_label,scaling_type,dbn_layer_units,ann_layer_activations,ann_layer_dropout_rates,unsupervised_ratio,dbn_learning_rate,pretrain_epochs,fine_tune_epochs,early_stop_patience,batch_size,dataset_dir,description
+#,,,,,,,,,,,,,,,,
+#  Deep net experiments on NSL-KDD below,,,,,,,,,,,,,,,,
+#1,results_testing/dbn_nsl_layers_2,classifier,dbn,normal,NA,"256,128","relu,relu","0.2,0.2",0.8,0.1,2,2,20,64,../Datasets/small_datasets/nsl_kdd_five_classes,"DBN [256,128] on NSL-KDD"
+#2,results_testing/dbn_nsl_layers_3,classifier,dbn,normal,NA,"512,256,128","relu,relu","0.2,0.2",0.8,0.1,500,100,50,64,../Datasets/small_datasets/nsl_kdd_five_classes,"DBN [512,256,128] on NSL-KDD"
+#3,results_testing/dbn_nsl_layers_4,classifier,dbn,normal,NA,"768,512,256,128","relu,relu","0.2,0.2",0.8,0.1,500,100,50,64,../Datasets/small_datasets/nsl_kdd_five_classes,"DBN [768,512,256,128] on NSL-KDD"
+#4,results_testing/dbn_nsl_layers_5,classifier,dbn,normal,NA,"1,024,768,512,256,120","relu,relu","0.2,0.2",0.8,0.1,500,100,50,64,../Datasets/small_datasets/nsl_kdd_five_classes,"DBN [1024,768,512,256,128] on NSL-KDD"
+#,,,,,,,,,,,,,,,,
+# Deep net experiments on IDS 2017 small subset below,,,,,,,,,,,,,,,,
+#1,results_testing/dbn_full_ids17_layers_2,classifier,dbn,BENIGN,NA,"256,128","relu,relu","0.2,0.2",0.8,0.1,2,10,30,64,../Datasets/full_datasets/ids2017,"DBN [256,128] on IDS 2017 small subset"
+#2,results_testing/dbn_full_ids17_layers_3,classifier,dbn,BENIGN,NA,"512,256,128","relu,relu","0.2,0.2",0.8,0.1,500,100,50,64,../Datasets/full_datasets/ids2017,"DBN [512,256,128] on IDS 2017 small subset"
+#3,results_testing/dbn_full_ids17_layers_4,classifier,dbn,BENIGN,NA,"768,512,256,128","relu,relu","0.2,0.2",0.8,0.1,500,100,50,64,../Datasets/full_datasets/ids2017,"DBN [768,512,256,128] on IDS 2017 small subset"
+#4,results_testing/dbn_full_ids17_layers_5,classifier,dbn,BENIGN,NA,"1,024,768,512,256,120","relu,relu","0.2,0.2",0.8,0.1,500,100,50,64,../Datasets/full_datasets/ids2017,"DBN [1024,768,512,256,128] on IDS 2017 small subset"
+#,,,,,,,,,,,,,,,,
+# Debugging,,,,,,,,,,,,,,,,
+#1,results_testing/quick_dbn,classifier,dbn,normal,NA,"10,20","relu,relu","0.2,0.2",0.8,0.1,5,12,20,64,../Datasets/small_datasets/nsl_kdd_five_classes,Quick DBN on NSL-KDD
+#,,,,,,,,,,,,,,,,
+# DBN tests on NSL-KDD,,,,,,,,,,,,,,,,
+#1,results_manual_search/manual_search_dbn_1,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,Quick DBN on NSL-KDD
+#2,results_manual_search/manual_search_dbn_2,classifier,dbn,normal,NA,"64,32","relu,relu,","0.2,0.2",0.8,0.0005,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,Quick DBN on NSL-KDD
+#3,results_manual_search/manual_search_dbn_3,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,Quick DBN on NSL-KDD
+#4,results_manual_search/manual_search_dbn_4,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.25,0.001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,Quick DBN on NSL-KDD
+#5,results_manual_search/manual_search_dbn_5,classifier,dbn,normal,NA,"64,32","relu,relu,","0.2,0.2",0.8,0.0005,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,Quick DBN on NSL-KDD
+#6,results_manual_search/manual_search_dbn_6,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/nsl_kdd_five_classes,Quick DBN on NSL-KDD
+# DBN tests on IDS 2017,,,,,,,,,,,,,,,,
+#1,results_manual_search/manual_search_ids2017_dbn_1,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/ids2017,Quick DBN on NSL-KDD
+#2,results_manual_search/manual_search_ids2017_dbn_2,classifier,dbn,BENIGN,NA,"64,32","relu,relu,","0.2,0.2",0.8,0.0005,50,300,50,256,../Datasets/full_datasets/ids2017,Quick DBN on NSL-KDD
+#3,results_manual_search/manual_search_ids2017_dbn_3,classifier,dbn,BENIGN,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,50,300,50,256,../Datasets/full_datasets/ids2017,Quick DBN on NSL-KDD
+#4,results_manual_search/manual_search_ids2017_dbn_4,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.25,0.001,50,300,50,256,../Datasets/full_datasets/ids2017,Quick DBN on NSL-KDD
+#5,results_manual_search/manual_search_ids2017_dbn_5,classifier,dbn,BENIGN,NA,"64,32","relu,relu,","0.2,0.2",0.8,0.0005,50,300,50,256,../Datasets/full_datasets/ids2017,Quick DBN on NSL-KDD
+#6,results_manual_search/manual_search_ids2017_dbn_6,classifier,dbn,BENIGN,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/ids2017,Quick DBN on NSL-KDD
+# DBN tests on KDD 99,,,,,,,,,,,,,,,,
+1,results_manual_search/manual_search_kdd99_dbn_1,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,manual_search_kdd99_dbn_1
+2,results_manual_search/manual_search_kdd99_dbn_2,classifier,dbn,normal,NA,"64,32","relu,relu,","0.2,0.2",0.8,0.0005,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,manual_search_kdd99_dbn_2
+3,results_manual_search/manual_search_kdd99_dbn_3,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,manual_search_kdd99_dbn_3
+4,results_manual_search/manual_search_kdd99_dbn_4,classifier,dbn,normal,NA,"32,","relu,","0.2,",0.25,0.001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,manual_search_kdd99_dbn_4
+5,results_manual_search/manual_search_kdd99_dbn_5,classifier,dbn,normal,NA,"64,32","relu,relu,","0.2,0.2",0.8,0.0005,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,manual_search_kdd99_dbn_5
+6,results_manual_search/manual_search_kdd99_dbn_6,classifier,dbn,normal,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.5,0.0001,50,300,50,256,../Datasets/full_datasets/kdd99_five_classes,manual_search_kdd99_dbn_6
+# DBN tests on IDS 2017,,,,,,,,,,,,,,,,
+#1,results_manual_search/manual_search_ids18_subset_dbn_1,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/ids2018,manual_search_ids18_subset_dbn_1
+#2,results_manual_search/manual_search_ids18_subset_dbn_2,classifier,dbn,BENIGN,NA,"64,32","relu,relu,","0.2,0.2",0.8,0.0005,50,300,50,256,../Datasets/small_datasets/ids2018,manual_search_ids18_subset_dbn_2
+#3,results_manual_search/manual_search_ids18_subset_dbn_3,classifier,dbn,BENIGN,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.25,0.001,50,300,50,256,../Datasets/small_datasets/ids2018,manual_search_ids18_subset_dbn_3
+#4,results_manual_search/manual_search_ids18_subset_dbn_4,classifier,dbn,BENIGN,NA,"32,","relu,","0.2,",0.25,0.001,50,300,50,256,../Datasets/small_datasets/ids2018,manual_search_ids18_subset_dbn_4
+#5,results_manual_search/manual_search_ids18_subset_dbn_5,classifier,dbn,BENIGN,NA,"64,32","relu,relu,","0.2,0.2",0.8,0.0005,50,300,50,256,../Datasets/small_datasets/ids2018,manual_search_ids18_subset_dbn_5
+#6,results_manual_search/manual_search_ids18_subset_dbn_6,classifier,dbn,BENIGN,NA,"128,64,32","relu,relu,relu,","0.2,0.2,0.2",0.5,0.0001,50,300,50,256,../Datasets/small_datasets/ids2018,manual_search_ids18_subset_dbn_6

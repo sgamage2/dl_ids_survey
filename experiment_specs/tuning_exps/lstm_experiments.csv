@@ -1,0 +1,29 @@
+batch_size,dataset_dir,early_stop_patience,epochs,lstm_time_steps,model,model_type,normal_label,num_layers,experiment_num,results_dir,description,lstm_layer_units,lstm_layer_activations,lstm_layer_dropout_rates
+#LSTM on NSL-KDD,,,,,,,,,,,,,,
+#256,../Datasets/small_datasets/nsl_kdd_five_classes,50,300,32,lstm,classifier,normal,2,1,results_manual_search/manual_search_lstm_1,manual_search_lstm_deep_1,"32,","relu,","0.2,"
+#256,../Datasets/small_datasets/nsl_kdd_five_classes,50,300,32,lstm,classifier,normal,2,2,results_manual_search/manual_search_lstm_2,manual_search_lstm_deep_2,"64,32","relu,relu,","0.2,0.2"
+#256,../Datasets/small_datasets/nsl_kdd_five_classes,50,300,32,lstm,classifier,normal,2,3,results_manual_search/manual_search_lstm_3,manual_search_lstm_deep_3,"32,16","relu,relu,","0.2,0.2"
+#256,../Datasets/small_datasets/nsl_kdd_five_classes,50,300,16,lstm,classifier,normal,2,4,results_manual_search/manual_search_lstm_4,manual_search_lstm_deep_4,"64,32","relu,relu,","0.2,0.2"
+#256,../Datasets/small_datasets/nsl_kdd_five_classes,50,300,16,lstm,classifier,normal,2,5,results_manual_search/manual_search_lstm_5,manual_search_lstm_deep_5,"64,32,64","relu,relu,relu","0.2,0.2,0.2"
+#256,../Datasets/small_datasets/nsl_kdd_five_classes,50,300,16,lstm,classifier,normal,2,6,results_manual_search/manual_search_lstm_6,manual_search_lstm_deep_6,"128,64,32","relu,relu,relu","0.2,0.2,0.2"
+#LSTM on IDS 2017 (same configs as above),,,,,,,,,,,,,,
+#256,../Datasets/full_datasets/ids2017,50,300,32,lstm,classifier,BENIGN,2,1,results_manual_search/manual_search_ids2017_lstm_1,manual_search_ids2017_lstm_1,"32,","relu,","0.2,"
+#256,../Datasets/full_datasets/ids2017,50,300,32,lstm,classifier,BENIGN,2,2,results_manual_search/manual_search_ids2017_lstm_2,manual_search_ids2017_lstm_2,"64,32","relu,relu,","0.2,0.2"
+#256,../Datasets/full_datasets/ids2017,50,300,32,lstm,classifier,BENIGN,2,3,results_manual_search/manual_search_ids2017_lstm_3,manual_search_ids2017_lstm_3,"32,16","relu,relu,","0.2,0.2"
+#256,../Datasets/full_datasets/ids2017,50,300,16,lstm,classifier,BENIGN,2,4,results_manual_search/manual_search_ids2017_lstm_4,manual_search_ids2017_lstm_4,"64,32","relu,relu,","0.2,0.2"
+#256,../Datasets/full_datasets/ids2017,50,300,16,lstm,classifier,BENIGN,2,5,results_manual_search/manual_search_ids2017_lstm_5,manual_search_ids2017_lstm_5,"64,32,64","relu,relu,relu","0.2,0.2,0.2"
+#256,../Datasets/full_datasets/ids2017,50,300,16,lstm,classifier,BENIGN,2,6,results_manual_search/manual_search_ids2017_lstm_6,manual_search_ids2017_lstm_6,"128,64,32","relu,relu,relu","0.2,0.2,0.2"
+#LSTM on KDD99 (same configs as above),,,,,,,,,,,,,,
+256,../Datasets/full_datasets/kdd99_five_classes,50,300,32,lstm,classifier,normal,2,1,results_manual_search/manual_search_kdd99_lstm_1,manual_search_kdd99_lstm_1,"32,","relu,","0.2,"
+256,../Datasets/full_datasets/kdd99_five_classes,50,300,32,lstm,classifier,normal,2,2,results_manual_search/manual_search_kdd99_lstm_2,manual_search_kdd99_lstm_2,"64,32","relu,relu,","0.2,0.2"
+256,../Datasets/full_datasets/kdd99_five_classes,50,300,32,lstm,classifier,normal,2,3,results_manual_search/manual_search_kdd99_lstm_3,manual_search_kdd99_lstm_3,"32,16","relu,relu,","0.2,0.2"
+256,../Datasets/full_datasets/kdd99_five_classes,50,300,16,lstm,classifier,normal,2,4,results_manual_search/manual_search_kdd99_lstm_4,manual_search_kdd99_lstm_4,"64,32","relu,relu,","0.2,0.2"
+256,../Datasets/full_datasets/kdd99_five_classes,50,300,16,lstm,classifier,normal,2,5,results_manual_search/manual_search_kdd99_lstm_5,manual_search_kdd99_lstm_5,"64,32,64","relu,relu,relu","0.2,0.2,0.2"
+256,../Datasets/full_datasets/kdd99_five_classes,50,300,16,lstm,classifier,normal,2,6,results_manual_search/manual_search_kdd99_lstm_6,manual_search_kdd99_lstm_6,"128,64,32","relu,relu,relu","0.2,0.2,0.2"
+#LSTM on IDS 2018 subset (same configs as above),,,,,,,,,,,,,,
+#256,../Datasets/small_datasets/ids2018,50,300,32,lstm,classifier,BENIGN,2,1,results_manual_search/ids2018_subset_lstm_1,ids2018_subset_lstm_1,"32,","relu,","0.2,"
+#256,../Datasets/small_datasets/ids2018,50,300,32,lstm,classifier,BENIGN,2,2,results_manual_search/ids2018_subset_lstm_2,ids2018_subset_lstm_2,"64,32","relu,relu,","0.2,0.2"
+#256,../Datasets/small_datasets/ids2018,50,300,32,lstm,classifier,BENIGN,2,3,results_manual_search/ids2018_subset_lstm_3,ids2018_subset_lstm_3,"32,16","relu,relu,","0.2,0.2"
+#256,../Datasets/small_datasets/ids2018,50,300,16,lstm,classifier,BENIGN,2,4,results_manual_search/ids2018_subset_lstm_4,ids2018_subset_lstm_4,"64,32","relu,relu,","0.2,0.2"
+#256,../Datasets/small_datasets/ids2018,50,300,16,lstm,classifier,BENIGN,2,5,results_manual_search/ids2018_subset_lstm_5,ids2018_subset_lstm_5,"64,32,64","relu,relu,relu","0.2,0.2,0.2"
+#256,../Datasets/small_datasets/ids2018,50,300,16,lstm,classifier,BENIGN,2,6,results_manual_search/ids2018_subset_lstm_6,ids2018_subset_lstm_6,"128,64,32","relu,relu,relu","0.2,0.2,0.2"

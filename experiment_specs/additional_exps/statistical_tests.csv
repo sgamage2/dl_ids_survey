@@ -1,0 +1,17 @@
+experiment_num,results_dir,model,model_origin,model_type,action,model_location,model2_location,normal_label,dataset_dir,description
+#,,,,,,,,,,
+# Checks to see if same model (different initialization points) does not reject null H0 (big p-vals),,,,,,,,,,
+#2,results_testing/statistical_tests,ann,loaded,classifier,stat_test_2_models,path\to\model_1\directory\best_model.pickle,path\to\model_2\directory\best_model.pickle,normal,../Datasets/small_datasets/nsl_kdd_five_classes,ANN rep3 vs rep4
+#3,results_testing/statistical_tests,ann,loaded,classifier,stat_test_2_models,path\to\model_1\directory\best_model.pickle,path\to\model_2\directory\best_model.pickle,normal,../Datasets/full_datasets/ids2017,ANN rep1 vs rep5
+#,,,,,,,,,,
+# Depth and data efficiency tests,,,,,,,,,,
+#4,results_testing/statistical_tests,ann,loaded,classifier,stat_test_2_models,path\to\model_1\directory\best_model.pickle,path\to\model_2\directory\best_model.pickle,normal,../Datasets/full_datasets/ids2017,Depth (shrinking layers) 1 vs 10
+#5,results_testing/statistical_tests,ann,loaded,classifier,stat_test_2_models,path\to\model_1\directory\best_model.pickle,path\to\model_2\directory\best_model.pickle,normal,../Datasets/full_datasets/ids2017,Data efficiency 10%vs 100%
+#,,,,,,,,,,
+# Pair-wise t-tests for semi-sup,,,,,,,,,,
+#1,results_testing/statistical_tests,ann,loaded,classifier,stat_test_2_models,path\to\model_1\directory\best_model.pickle,path\to\model_2\directory\best_model.pickle,normal,../Datasets/small_datasets/nsl_kdd_five_classes,ANN vs AE
+#2,results_testing/statistical_tests,ann,loaded,classifier,stat_test_2_models,path\to\model_1\directory\best_model.pickle,path\to\model_2\directory\best_model.pickle,normal,../Datasets/small_datasets/nsl_kdd_five_classes,ANN vs DBN
+#3,results_testing/statistical_tests,ann,loaded,classifier,stat_test_2_models,path\to\model_1\directory\best_model.pickle,path\to\model_2\directory\best_model.pickle,normal,../Datasets/full_datasets/ids2017,ANN vs AE
+#4,results_testing/statistical_tests,ann,loaded,classifier,stat_test_2_models,path\to\model_1\directory\best_model.pickle,path\to\model_2\directory\best_model.pickle,normal,../Datasets/full_datasets/ids2017,ANN vs DBN
+#5,results_testing/statistical_tests,ann,loaded,classifier,stat_test_2_models,path\to\model_1\directory\best_model.pickle,path\to\model_2\directory\best_model.pickle,normal,../Datasets/small_datasets/ids2018,ANN vs AE
+6,results_testing/statistical_tests,ann,loaded,classifier,stat_test_2_models,path\to\model_1\directory\best_model.pickle,path\to\model_2\directory\best_model.pickle,normal,../Datasets/small_datasets/ids2018,ANN vs DBN

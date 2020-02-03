@@ -1,0 +1,16 @@
+experiment_num,results_dir,model_type,model,normal_label,training_data_feed,split_random_seed,dataset_split_ratio,ann_layer_units,ann_layer_activations,ann_layer_dropout_rates,epochs,early_stop_patience,batch_size,training_set,dataset_dir,description
+#,,,,,,,,,,,,,,,,
+#  ANN on NSL-KDD,,,,,,,,,,,,,,,,
+#1,results_additional_exps/semi_sup_perf_nsl_ann_rep1,classifier,ann,normal,preload,42,0.5,"64,","relu,","0.2,",300,50,256,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,semi_sup_perf_nsl_ann_rep1
+#2,results_additional_exps/semi_sup_perf_nsl_ann_rep2,classifier,ann,normal,preload,42,0.5,"64,","relu,","0.2,",300,50,256,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,semi_sup_perf_nsl_ann_rep2
+#3,results_additional_exps/semi_sup_perf_nsl_ann_rep3,classifier,ann,normal,preload,42,0.5,"64,","relu,","0.2,",300,50,256,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,semi_sup_perf_nsl_ann_rep3
+#,,,,,,,,,,,,,,,,
+#  ANN on IDS 2017,,,,,,,,,,,,,,,,
+#1,results_additional_exps/semi_sup_perf_ids17_ann_rep1,classifier,ann,BENIGN,preload,42,0.5,"64,","relu,","0.2,",300,50,256,train_set_only,../Datasets/full_datasets/ids2017,semi_sup_perf_ids17_ann_rep1
+#2,results_additional_exps/semi_sup_perf_ids17_ann_rep2,classifier,ann,BENIGN,preload,42,0.5,"64,","relu,","0.2,",300,50,256,train_set_only,../Datasets/full_datasets/ids2017,semi_sup_perf_ids17_ann_rep2
+#3,results_additional_exps/semi_sup_perf_ids17_ann_rep3,classifier,ann,BENIGN,preload,42,0.5,"64,","relu,","0.2,",300,50,256,train_set_only,../Datasets/full_datasets/ids2017,semi_sup_perf_ids17_ann_rep3
+#,,,,,,,,,,,,,,,,
+#  ANN on IDS 2018,,,,,,,,,,,,,,,,
+1,results_additional_exps/semi_sup_perf_ids18_subset_ann_rep1,classifier,ann,BENIGN,preload,42,0.5,"64,","relu,","0.2,",200,50,256,train_set_only,../Datasets/small_datasets/ids2018,semi_sup_perf_ids18_subset_ann_rep1
+2,results_additional_exps/semi_sup_perf_ids18_subset_ann_rep2,classifier,ann,BENIGN,preload,42,0.5,"64,","relu,","0.2,",200,50,256,train_set_only,../Datasets/small_datasets/ids2018,semi_sup_perf_ids18_subset_ann_rep2
+3,results_additional_exps/semi_sup_perf_ids18_subset_ann_rep3,classifier,ann,BENIGN,preload,42,0.5,"64,","relu,","0.2,",200,50,256,train_set_only,../Datasets/small_datasets/ids2018,semi_sup_perf_ids18_subset_ann_rep3

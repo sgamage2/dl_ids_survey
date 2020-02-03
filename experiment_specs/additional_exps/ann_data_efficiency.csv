@@ -1,0 +1,36 @@
+experiment_num,results_dir,model_type,model,normal_label,training_data_feed,split_random_seed,dataset_split_ratio,ann_layer_units,ann_layer_activations,ann_layer_dropout_rates,epochs,early_stop_patience,batch_size,training_set,dataset_dir,description
+#,,,,,,,,,,,,,,,,
+#  Selected shallow ANN on NSL-KDD,,,,,,,,,,,,,,,,
+#1,results_additional_exps/ann_data_efficiency_nsl_p10,classifier,ann,normal,preload,42,0.9,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,ann_data_efficiency_nsl_p10
+#2,results_additional_exps/ann_data_efficiency_nsl_p20,classifier,ann,normal,preload,42,0.8,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,ann_data_efficiency_nsl_p20
+#3,results_additional_exps/ann_data_efficiency_nsl_p30,classifier,ann,normal,preload,42,0.7,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,ann_data_efficiency_nsl_p30
+#4,results_additional_exps/ann_data_efficiency_nsl_p40,classifier,ann,normal,preload,42,0.6,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,ann_data_efficiency_nsl_p40
+#5,results_additional_exps/ann_data_efficiency_nsl_p50,classifier,ann,normal,preload,42,0.5,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,ann_data_efficiency_nsl_p50
+#6,results_additional_exps/ann_data_efficiency_nsl_p60,classifier,ann,normal,preload,42,0.4,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,ann_data_efficiency_nsl_p60
+#7,results_additional_exps/ann_data_efficiency_nsl_p70,classifier,ann,normal,preload,42,0.3,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,ann_data_efficiency_nsl_p70
+#8,results_additional_exps/ann_data_efficiency_nsl_p80,classifier,ann,normal,preload,42,0.2,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,ann_data_efficiency_nsl_p80
+#9,results_additional_exps/ann_data_efficiency_nsl_p90,classifier,ann,normal,preload,42,0.1,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,ann_data_efficiency_nsl_p90
+#10,results_additional_exps/ann_data_efficiency_nsl_p100,classifier,ann,normal,preload,42,-1,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,ann_data_efficiency_nsl_p100
+#,,,,,,,,,,,,,,,,
+#  Selected shallow ANN on IDS 2017,,,,,,,,,,,,,,,,
+1,results_additional_exps/ann_data_efficiency_ids17_p10,classifier,ann,BENIGN,preload,42,0.9,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/full_datasets/ids2017,ann_data_efficiency_ids17_p10
+#2,results_additional_exps/ann_data_efficiency_ids17_p20,classifier,ann,BENIGN,preload,42,0.8,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/full_datasets/ids2017,ann_data_efficiency_ids17_p20
+#3,results_additional_exps/ann_data_efficiency_ids17_p30,classifier,ann,BENIGN,preload,42,0.7,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/full_datasets/ids2017,ann_data_efficiency_ids17_p30
+#4,results_additional_exps/ann_data_efficiency_ids17_p40,classifier,ann,BENIGN,preload,42,0.6,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/full_datasets/ids2017,ann_data_efficiency_ids17_p40
+#5,results_additional_exps/ann_data_efficiency_ids17_p50,classifier,ann,BENIGN,preload,42,0.5,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/full_datasets/ids2017,ann_data_efficiency_ids17_p50
+#6,results_additional_exps/ann_data_efficiency_ids17_p60,classifier,ann,BENIGN,preload,42,0.4,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/full_datasets/ids2017,ann_data_efficiency_ids17_p60
+#7,results_additional_exps/ann_data_efficiency_ids17_p70,classifier,ann,BENIGN,preload,42,0.3,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/full_datasets/ids2017,ann_data_efficiency_ids17_p70
+#8,results_additional_exps/ann_data_efficiency_ids17_p80,classifier,ann,BENIGN,preload,42,0.2,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/full_datasets/ids2017,ann_data_efficiency_ids17_p80
+#9,results_additional_exps/ann_data_efficiency_ids17_p90,classifier,ann,BENIGN,preload,42,0.1,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/full_datasets/ids2017,ann_data_efficiency_ids17_p90
+10,results_additional_exps/ann_data_efficiency_ids17_p100,classifier,ann,BENIGN,preload,42,-1,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/full_datasets/ids2017,ann_data_efficiency_ids17_p100
+#  Selected shallow ANN on IDS 2018,,,,,,,,,,,,,,,,
+#1,results_additional_exps/ann_data_efficiency_ids18_p10,classifier,ann,BENIGN,preload,42,0.9,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/ids2018,ann_data_efficiency_ids18_p10
+#2,results_additional_exps/ann_data_efficiency_ids18_p20,classifier,ann,BENIGN,preload,42,0.8,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/ids2018,ann_data_efficiency_ids18_p20
+#3,results_additional_exps/ann_data_efficiency_ids18_p30,classifier,ann,BENIGN,preload,42,0.7,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/ids2018,ann_data_efficiency_ids18_p30
+#4,results_additional_exps/ann_data_efficiency_ids18_p40,classifier,ann,BENIGN,preload,42,0.6,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/ids2018,ann_data_efficiency_ids18_p40
+#5,results_additional_exps/ann_data_efficiency_ids18_p50,classifier,ann,BENIGN,preload,42,0.5,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/ids2018,ann_data_efficiency_ids18_p50
+#6,results_additional_exps/ann_data_efficiency_ids18_p60,classifier,ann,BENIGN,preload,42,0.4,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/ids2018,ann_data_efficiency_ids18_p60
+#7,results_additional_exps/ann_data_efficiency_ids18_p70,classifier,ann,BENIGN,preload,42,0.3,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/ids2018,ann_data_efficiency_ids18_p70
+#8,results_additional_exps/ann_data_efficiency_ids18_p80,classifier,ann,BENIGN,preload,42,0.2,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/ids2018,ann_data_efficiency_ids18_p80
+#9,results_additional_exps/ann_data_efficiency_ids18_p90,classifier,ann,BENIGN,preload,42,0.1,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/ids2018,ann_data_efficiency_ids18_p90
+#10,results_additional_exps/ann_data_efficiency_ids18_p100,classifier,ann,BENIGN,preload,42,-1,"64,","relu,","0.2,",100,20,256,train_set_only,../Datasets/small_datasets/ids2018,ann_data_efficiency_ids18_p100

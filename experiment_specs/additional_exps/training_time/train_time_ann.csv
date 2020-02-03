@@ -1,0 +1,42 @@
+experiment_num,results_dir,model_type,model,normal_label,training_data_feed,scaling_type,ann_layer_units,ann_layer_activations,ann_layer_dropout_rates,epochs,early_stop_patience,batch_size,goal_metric,training_set,dataset_dir,description
+#  Selected shallow ANN on NSL-KDD,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_nsl_ann_shallow_rep1,classifier,ann,normal,preload,NA,"256,","relu,","0.2,",100,100,256,0.7571,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_ann_shallow_rep1
+#2,results_additional_exps/train_time_nsl_ann_shallow_rep2,classifier,ann,normal,preload,NA,"256,","relu,","0.2,",100,100,256,0.7571,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_ann_shallow_rep2
+#3,results_additional_exps/train_time_nsl_ann_shallow_rep3,classifier,ann,normal,preload,NA,"256,","relu,","0.2,",100,100,256,0.7571,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_ann_shallow_rep3
+#,,,,,,,,,,,,,,,,
+#  Selected shallow ANN on IDS 2017,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_ids17_ann_shallow_rep1,classifier,ann,BENIGN,preload,NA,"64,","relu,","0.2,",100,100,256,0.994912917,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_ann_shallow_rep1
+#2,results_additional_exps/train_time_ids17_ann_shallow_rep2,classifier,ann,BENIGN,preload,NA,"64,","relu,","0.2,",100,100,256,0.994912917,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_ann_shallow_rep2
+#3,results_additional_exps/train_time_ids17_ann_shallow_rep3,classifier,ann,BENIGN,preload,NA,"64,","relu,","0.2,",100,100,256,0.994912917,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_ann_shallow_rep3
+#,,,,,,,,,,,,,,,,
+#  Selected shallow ANN on KDD 99,,,,,,,,,,,,,,,,
+1,results_additional_exps/train_time_kdd99_ann_shallow_rep1,classifier,ann,normal,preload,NA,"256,","relu,","0.2,",100,100,256,0.921328918,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_ann_shallow_rep1
+2,results_additional_exps/train_time_kdd99_ann_shallow_rep2,classifier,ann,normal,preload,NA,"256,","relu,","0.2,",100,100,256,0.921328918,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_ann_shallow_rep2
+3,results_additional_exps/train_time_kdd99_ann_shallow_rep3,classifier,ann,normal,preload,NA,"256,","relu,","0.2,",100,100,256,0.921328918,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_ann_shallow_rep3
+#,,,,,,,,,,,,,,,,
+#  Selected shallow ANN on IDS 2018 subset,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_ids18_subset_ann_shallow_rep1,classifier,ann,BENIGN,preload,NA,"512,","relu,","0.2,",100,100,256,0.983416334,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_ann_shallow_rep1
+#2,results_additional_exps/train_time_ids18_subset_ann_shallow_rep2,classifier,ann,BENIGN,preload,NA,"512,","relu,","0.2,",100,100,256,0.983416334,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_ann_shallow_rep2
+#3,results_additional_exps/train_time_ids18_subset_ann_shallow_rep3,classifier,ann,BENIGN,preload,NA,"512,","relu,","0.2,",100,100,256,0.983416334,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_ann_shallow_rep3
+#,,,,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,,
+#  Selected deep ANN on NSL-KDD,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_nsl_ann_deep_rep1,classifier,ann,normal,preload,NA,"64,32,64","relu,relu,relu","0.2,0.2,0.2",100,100,256,0.739369053,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_ann_deep_rep1
+#2,results_additional_exps/train_time_nsl_ann_deep_rep2,classifier,ann,normal,preload,NA,"64,32,65","relu,relu,relu","0.2,0.2,0.2",100,100,256,0.739369053,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_ann_deep_rep2
+#3,results_additional_exps/train_time_nsl_ann_deep_rep3,classifier,ann,normal,preload,NA,"64,32,66","relu,relu,relu","0.2,0.2,0.2",100,100,256,0.739369053,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_ann_deep_rep3
+#,,,,,,,,,,,,,,,,
+#  Selected deep ANN on IDS 2017,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_ids2017_ann_deep_rep1,classifier,ann,BENIGN,preload,NA,"256,128,64,32","relu,relu,relu,relu","0.2,0.2,0.2,0.2",100,100,256,0.994231669,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids2017_ann_deep_rep1
+#2,results_additional_exps/train_time_ids2017_ann_deep_rep2,classifier,ann,BENIGN,preload,NA,"256,128,64,32","relu,relu,relu,relu","0.2,0.2,0.2,0.2",100,100,256,0.994231669,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids2017_ann_deep_rep2
+#3,results_additional_exps/train_time_ids2017_ann_deep_rep3,classifier,ann,BENIGN,preload,NA,"256,128,64,32","relu,relu,relu,relu","0.2,0.2,0.2,0.2",100,100,256,0.994231669,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids2017_ann_deep_rep3
+#,,,,,,,,,,,,,,,,
+#  Selected deep ANN on KDD 99,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_kdd99_ann_deep_rep1,classifier,ann,normal,preload,NA,"64,32,64","relu,relu,relu","0.2,0.2,0.2",100,100,256,0.922468135,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_ann_deep_rep1
+#2,results_additional_exps/train_time_kdd99_ann_deep_rep2,classifier,ann,normal,preload,NA,"64,32,65","relu,relu,relu","0.2,0.2,0.2",100,100,256,0.922468135,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_ann_deep_rep2
+#3,results_additional_exps/train_time_kdd99_ann_deep_rep3,classifier,ann,normal,preload,NA,"64,32,66","relu,relu,relu","0.2,0.2,0.2",100,100,256,0.922468135,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_ann_deep_rep3
+#,,,,,,,,,,,,,,,,
+#  Selected deep ANN on IDS 2018 subset,,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_ids18_subset_ann_deep_rep1,classifier,ann,BENIGN,preload,NA,"128,64,32,16","relu,relu,relu,relu","0.2,0.2,0.2,0.2",100,100,256,0.983585982,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_ann_deep_rep1
+#2,results_additional_exps/train_time_ids18_subset_ann_deep_rep2,classifier,ann,BENIGN,preload,NA,"128,64,32,16","relu,relu,relu,relu","0.2,0.2,0.2,0.2",100,100,256,0.983585982,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_ann_deep_rep2
+#3,results_additional_exps/train_time_ids18_subset_ann_deep_rep3,classifier,ann,BENIGN,preload,NA,"128,64,32,16","relu,relu,relu,relu","0.2,0.2,0.2,0.2",100,100,256,0.983585982,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_ann_deep_rep3

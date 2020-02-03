@@ -1,0 +1,35 @@
+experiment_num,results_dir,model,model_type,normal_label,lstm_time_steps,lstm_layer_units,lstm_layer_activations,lstm_layer_dropout_rates,batch_size,epochs,early_stop_patience,goal_metric,training_set,dataset_dir,description
+# Shallow LSTM on NSL-KDD,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_nsl_lstm_shallow_rep1,lstm,classifier,normal,32,"32,","relu,","0.2,",256,100,100,0.7640,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_lstm_shallow_rep1
+#2,results_additional_exps/train_time_nsl_lstm_shallow_rep2,lstm,classifier,normal,32,"32,","relu,","0.2,",256,100,100,0.7640,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_lstm_shallow_rep2
+#3,results_additional_exps/train_time_nsl_lstm_shallow_rep3,lstm,classifier,normal,32,"32,","relu,","0.2,",256,100,100,0.7640,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_lstm_shallow_rep3
+# Shallow LSTM on IDS 2017,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_ids17_lstm_shallow_rep1,lstm,classifier,BENIGN,32,"32,","relu,","0.2,",256,100,100,0.994603352,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_lstm_shallow_rep1
+#2,results_additional_exps/train_time_ids17_lstm_shallow_rep2,lstm,classifier,BENIGN,32,"32,","relu,","0.2,",256,100,100,0.994603352,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_lstm_shallow_rep2
+#3,results_additional_exps/train_time_ids17_lstm_shallow_rep3,lstm,classifier,BENIGN,32,"32,","relu,","0.2,",256,100,100,0.994603352,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_lstm_shallow_rep3
+# Shallow LSTM on KDD 99,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_kdd99_lstm_shallow_rep1,lstm,classifier,normal,32,"32,","relu,","0.2,",256,100,100,0.922115192,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_lstm_shallow_rep1
+#2,results_additional_exps/train_time_kdd99_lstm_shallow_rep2,lstm,classifier,normal,32,"32,","relu,","0.2,",256,100,100,0.922115192,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_lstm_shallow_rep2
+#3,results_additional_exps/train_time_kdd99_lstm_shallow_rep3,lstm,classifier,normal,32,"32,","relu,","0.2,",256,100,100,0.922115192,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_lstm_shallow_rep3
+# Shallow LSTM on IDS 2018 subset,,,,,,,,,,,,,,,
+#1,results_additional_exps/train_time_ids18_subset_lstm_shallow_rep1,lstm,classifier,BENIGN,32,"32,","relu,","0.2,",256,100,100,0.982977526,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_lstm_shallow_rep1
+#2,results_additional_exps/train_time_ids18_subset_lstm_shallow_rep2,lstm,classifier,BENIGN,32,"32,","relu,","0.2,",256,100,100,0.982977526,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_lstm_shallow_rep2
+#3,results_additional_exps/train_time_ids18_subset_lstm_shallow_rep3,lstm,classifier,BENIGN,32,"32,","relu,","0.2,",256,100,100,0.982977526,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_lstm_shallow_rep3
+#,,,,,,,,,,,,,,,
+#,,,,,,,,,,,,,,,
+# Deep LSTM on NSL-KDD,,,,,,,,,,,,,,,
+1,results_additional_exps/train_time_nsl_lstm_deep_rep1,lstm,classifier,normal,16,"64,32","relu,relu","0.2,0.2",256,100,100,0.755064154,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_lstm_deep_rep1
+2,results_additional_exps/train_time_nsl_lstm_deep_rep2,lstm,classifier,normal,17,"64,33","relu,relu","0.2,0.3",256,100,100,0.755064154,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_lstm_deep_rep2
+3,results_additional_exps/train_time_nsl_lstm_deep_rep3,lstm,classifier,normal,18,"64,34","relu,relu","0.2,0.4",256,100,100,0.755064154,train_set_only,../Datasets/small_datasets/nsl_kdd_five_classes,train_time_nsl_lstm_deep_rep3
+# Deep LSTM on IDS 2017,,,,,,,,,,,,,,,
+1,results_additional_exps/train_time_ids17_lstm_deep_rep1,lstm,classifier,BENIGN,32,"64,32","relu,relu","0.2,0.2",256,100,100,0.994779286,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_lstm_deep_rep1
+2,results_additional_exps/train_time_ids17_lstm_deep_rep2,lstm,classifier,BENIGN,32,"64,32","relu,relu","0.2,0.2",256,100,100,0.994779286,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_lstm_deep_rep2
+3,results_additional_exps/train_time_ids17_lstm_deep_rep3,lstm,classifier,BENIGN,32,"64,32","relu,relu","0.2,0.2",256,100,100,0.994779286,train_set_only,../Datasets/full_datasets/ids2017,train_time_ids17_lstm_deep_rep3
+# Deep LSTM on KDD 99,,,,,,,,,,,,,,,
+1,results_additional_exps/train_time_kdd99_lstm_deep_rep1,lstm,classifier,normal,32,"32,16","relu,relu","0.2,0.2",256,100,100,0.919948449,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_lstm_deep_rep1
+2,results_additional_exps/train_time_kdd99_lstm_deep_rep2,lstm,classifier,normal,32,"32,16","relu,relu","0.2,0.2",256,100,100,0.919948449,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_lstm_deep_rep2
+3,results_additional_exps/train_time_kdd99_lstm_deep_rep3,lstm,classifier,normal,32,"32,16","relu,relu","0.2,0.2",256,100,100,0.919948449,train_set_only,../Datasets/full_datasets/kdd99_five_classes,train_time_kdd99_lstm_deep_rep3
+# Deep LSTM on IDS 2018 subset,,,,,,,,,,,,,,,
+1,results_additional_exps/train_time_ids18_subset_lstm_deep_rep1,lstm,classifier,BENIGN,32,"64,32","relu,relu","0.2,0.2",256,100,100,0.983310557,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_lstm_deep_rep1
+2,results_additional_exps/train_time_ids18_subset_lstm_deep_rep2,lstm,classifier,BENIGN,32,"64,32","relu,relu","0.2,0.2",256,100,100,0.983310557,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_lstm_deep_rep2
+3,results_additional_exps/train_time_ids18_subset_lstm_deep_rep3,lstm,classifier,BENIGN,32,"64,32","relu,relu","0.2,0.2",256,100,100,0.983310557,train_set_only,../Datasets/small_datasets/ids2018,train_time_ids18_subset_lstm_deep_rep3
