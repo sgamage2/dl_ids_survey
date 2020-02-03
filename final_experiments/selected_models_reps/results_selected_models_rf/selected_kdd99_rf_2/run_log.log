@@ -1,0 +1,91 @@
+2019-12-30 14:07:04,461 [INFO] Initialized logging. log_filename = results_selected_models/selected_kdd99_rf_2/run_log.log
+2019-12-30 14:07:04,462 [INFO] ================= Running experiment no. 2  ================= 
+
+2019-12-30 14:07:04,462 [INFO] Experiment parameters given below
+2019-12-30 14:07:04,462 [INFO] 
+{'experiment_num': 2, 'results_dir': 'results_selected_models/selected_kdd99_rf_2', 'model_type': 'classifier', 'model': 'rf', 'normal_label': 'normal', 'training_data_feed': 'preload', 'scaling_type': 'NA', 'num_trees': 100, 'min_samples_for_split': 2, 'randomize_state': 1, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/full_datasets/kdd99_five_classes', 'description': 'selected_kdd99_rf_2'}
+2019-12-30 14:07:04,462 [INFO] Created tensorboard log directory: results_selected_models/selected_kdd99_rf_2/tf_logs_run_2019_12_30-14_07_04
+2019-12-30 14:07:04,462 [INFO] Loading datsets from: ../Datasets/full_datasets/kdd99_five_classes
+2019-12-30 14:07:04,466 [INFO] Reading X, y files
+2019-12-30 14:07:04,466 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_train.h5
+2019-12-30 14:07:14,602 [INFO] Reading complete. time_to_read=10.14 seconds
+2019-12-30 14:07:14,603 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_val.h5
+2019-12-30 14:07:17,213 [INFO] Reading complete. time_to_read=2.61 seconds
+2019-12-30 14:07:17,213 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_test.h5
+2019-12-30 14:07:17,966 [INFO] Reading complete. time_to_read=0.75 seconds
+2019-12-30 14:07:17,967 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_train.h5
+2019-12-30 14:07:18,318 [INFO] Reading complete. time_to_read=0.35 seconds
+2019-12-30 14:07:18,318 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_val.h5
+2019-12-30 14:07:18,403 [INFO] Reading complete. time_to_read=0.08 seconds
+2019-12-30 14:07:18,403 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_test.h5
+2019-12-30 14:07:18,437 [INFO] Reading complete. time_to_read=0.03 seconds
+2019-12-30 14:07:29,412 [INFO] Initializing model
+2019-12-30 14:07:29,412 [INFO] Training model
+2019-12-30 14:14:53,077 [INFO] Training complete. time_to_train = 443.67 sec, 7.39 min
+2019-12-30 14:14:53,101 [INFO] Model saved to results_selected_models/selected_kdd99_rf_2/best_model.pickle
+2019-12-30 14:14:53,101 [INFO] Making predictions on training, validation, testing data
+2019-12-30 14:16:47,699 [INFO] Evaluating predictions (results)
+2019-12-30 14:17:01,918 [INFO] Dataset: Testing. Classification report below
+2019-12-30 14:17:01,919 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      0.97      0.99    229853
+     normal.       0.72      1.00      0.84     60593
+       probe       0.92      0.75      0.82      4166
+         r2l       1.00      0.01      0.01     13781
+         u2r       0.67      0.00      0.00      2636
+
+    accuracy                           0.92    311029
+   macro avg       0.86      0.54      0.53    311029
+weighted avg       0.94      0.92      0.90    311029
+
+2019-12-30 14:17:01,919 [INFO] Overall accuracy (micro avg): 0.9226920962353993
+2019-12-30 14:17:17,323 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9227         0.9227                       0.9227                0.0193                   0.0773  0.9227
+1     Macro avg        0.9691         0.8611                       0.5440                0.0199                   0.4560  0.5315
+2  Weighted avg        0.9670         0.9403                       0.9227                0.0220                   0.0773  0.9024
+2019-12-30 14:18:07,383 [INFO] Dataset: Validation. Classification report below
+2019-12-30 14:18:07,383 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00    776675
+     normal.       1.00      1.00      1.00    194556
+       probe       1.00      1.00      1.00      8221
+         r2l       1.00      0.94      0.97       225
+         u2r       1.00      0.40      0.57        10
+
+    accuracy                           1.00    979687
+   macro avg       1.00      0.87      0.91    979687
+weighted avg       1.00      1.00      1.00    979687
+
+2019-12-30 14:18:07,383 [INFO] Overall accuracy (micro avg): 0.9999663157722823
+2019-12-30 14:19:01,462 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        1.0000         1.0000                       1.0000                0.0000                   0.0000  1.0000
+1     Macro avg        1.0000         1.0000                       0.8673                0.0000                   0.1327  0.9077
+2  Weighted avg        1.0000         1.0000                       1.0000                0.0001                   0.0000  1.0000
+2019-12-30 14:22:43,367 [INFO] Dataset: Training. Classification report below
+2019-12-30 14:22:43,368 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00   3106695
+     normal.       1.00      1.00      1.00    778225
+       probe       1.00      1.00      1.00     32881
+         r2l       1.00      1.00      1.00       901
+         u2r       1.00      0.98      0.99        42
+
+    accuracy                           1.00   3918744
+   macro avg       1.00      1.00      1.00   3918744
+weighted avg       1.00      1.00      1.00   3918744
+
+2019-12-30 14:22:43,368 [INFO] Overall accuracy (micro avg): 0.9999979585295696
+2019-12-30 14:26:30,121 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        1.0000         1.0000                       1.0000                0.0000                   0.0000  1.0000
+1     Macro avg        1.0000         1.0000                       0.9952                0.0000                   0.0048  0.9976
+2  Weighted avg        1.0000         1.0000                       1.0000                0.0000                   0.0000  1.0000
+2019-12-30 14:26:30,168 [INFO] Results saved to: results_selected_models/selected_kdd99_rf_2/selected_kdd99_rf_2_results.xlsx
+2019-12-30 14:26:30,179 [INFO] ================= Finished running experiment no. 2 ================= 
+
+2019-12-30 14:26:30,219 [INFO] Created directory: results_selected_models/selected_kdd99_rf_3

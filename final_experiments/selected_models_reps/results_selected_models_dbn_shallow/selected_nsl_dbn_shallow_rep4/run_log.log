@@ -1,0 +1,123 @@
+2019-12-23 12:24:04,520 [INFO] Initialized logging. log_filename = results_selected_models/selected_nsl_dbn_shallow_rep4/run_log.log
+2019-12-23 12:24:04,520 [INFO] ================= Running experiment no. 4  ================= 
+
+2019-12-23 12:24:04,520 [INFO] Experiment parameters given below
+2019-12-23 12:24:04,520 [INFO] 
+{'experiment_num': 4, 'results_dir': 'results_selected_models/selected_nsl_dbn_shallow_rep4', 'model_type': 'classifier', 'model': 'dbn', 'normal_label': 'normal', 'scaling_type': 'NA', 'dbn_layer_units': [32], 'ann_layer_activations': ['relu'], 'ann_layer_dropout_rates': [0.2], 'unsupervised_ratio': 0.5, 'dbn_learning_rate': 0.0001, 'pretrain_epochs': 50, 'fine_tune_epochs': 300, 'early_stop_patience': 50, 'batch_size': 256, 'dataset_dir': '../Datasets/small_datasets/nsl_kdd_five_classes', 'description': 'selected_nsl_dbn_shallow_rep4'}
+2019-12-23 12:24:04,520 [INFO] Created tensorboard log directory: results_selected_models/selected_nsl_dbn_shallow_rep4/tf_logs_run_2019_12_23-12_24_04
+2019-12-23 12:24:04,520 [INFO] Loading datsets from: ../Datasets/small_datasets/nsl_kdd_five_classes
+2019-12-23 12:24:04,521 [INFO] Reading X, y files
+2019-12-23 12:24:04,521 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_train.h5
+2019-12-23 12:24:04,800 [INFO] Reading complete. time_to_read=0.28 seconds
+2019-12-23 12:24:04,800 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_val.h5
+2019-12-23 12:24:04,864 [INFO] Reading complete. time_to_read=0.06 seconds
+2019-12-23 12:24:04,864 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_test.h5
+2019-12-23 12:24:04,921 [INFO] Reading complete. time_to_read=0.06 seconds
+2019-12-23 12:24:04,921 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_train.h5
+2019-12-23 12:24:04,929 [INFO] Reading complete. time_to_read=0.01 seconds
+2019-12-23 12:24:04,929 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_val.h5
+2019-12-23 12:24:04,933 [INFO] Reading complete. time_to_read=0.00 seconds
+2019-12-23 12:24:04,933 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_test.h5
+2019-12-23 12:24:04,937 [INFO] Reading complete. time_to_read=0.00 seconds
+2019-12-23 12:24:05,139 [INFO] Initializing model
+2019-12-23 12:24:05,139 [INFO] Training model
+2019-12-23 12:24:05,140 [INFO] Splitting train set into 2 sets (unsupervised, supervised), random_seed = None
+2019-12-23 12:24:05,875 [INFO] Split sizes (instances). total = 100778, unsupervised = 50389, supervised = 50389, unsupervised dataset hash = 106dbd32e80b51ad885305908614f4ee0d18735e
+2019-12-23 12:24:05,875 [INFO] Pretraining Deep Belief Network
+2019-12-23 12:24:32,500 [INFO] Pretraining Complete
+2019-12-23 12:24:32,501 [INFO] Getting pretrained weights
+2019-12-23 12:24:32,501 [INFO] Creating and initializing feed forward neural network
+2019-12-23 12:24:32,699 [INFO] _________________________________________________________________
+2019-12-23 12:24:32,699 [INFO] Layer (type)                 Output Shape              Param #   
+2019-12-23 12:24:32,699 [INFO] =================================================================
+2019-12-23 12:24:32,699 [INFO] dense_7 (Dense)              (None, 32)                3936      
+2019-12-23 12:24:32,699 [INFO] _________________________________________________________________
+2019-12-23 12:24:32,700 [INFO] batch_normalization_4 (Batch (None, 32)                128       
+2019-12-23 12:24:32,700 [INFO] _________________________________________________________________
+2019-12-23 12:24:32,700 [INFO] dropout_4 (Dropout)          (None, 32)                0         
+2019-12-23 12:24:32,700 [INFO] _________________________________________________________________
+2019-12-23 12:24:32,700 [INFO] dense_8 (Dense)              (None, 5)                 165       
+2019-12-23 12:24:32,700 [INFO] =================================================================
+2019-12-23 12:24:32,700 [INFO] Total params: 4,229
+2019-12-23 12:24:32,700 [INFO] Trainable params: 4,165
+2019-12-23 12:24:32,700 [INFO] Non-trainable params: 64
+2019-12-23 12:24:32,700 [INFO] _________________________________________________________________
+2019-12-23 12:24:32,975 [INFO] Fine-tuning final neural network
+2019-12-23 12:24:59,682 [INFO] epoch = 30. Intermediate model saved to results_selected_models/selected_nsl_dbn_shallow_rep4/ann_model_epoch_30.pickle
+2019-12-23 12:25:24,650 [INFO] epoch = 60. Intermediate model saved to results_selected_models/selected_nsl_dbn_shallow_rep4/ann_model_epoch_60.pickle
+2019-12-23 12:25:49,694 [INFO] epoch = 90. Intermediate model saved to results_selected_models/selected_nsl_dbn_shallow_rep4/ann_model_epoch_90.pickle
+2019-12-23 12:26:14,696 [INFO] epoch = 120. Intermediate model saved to results_selected_models/selected_nsl_dbn_shallow_rep4/ann_model_epoch_120.pickle
+2019-12-23 12:26:39,623 [INFO] epoch = 150. Intermediate model saved to results_selected_models/selected_nsl_dbn_shallow_rep4/ann_model_epoch_150.pickle
+2019-12-23 12:27:04,968 [INFO] epoch = 180. Intermediate model saved to results_selected_models/selected_nsl_dbn_shallow_rep4/ann_model_epoch_180.pickle
+2019-12-23 12:27:13,670 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2019-12-23 12:27:14,974 [INFO] Last epoch loss evaluation: train_loss = 0.003422, val_loss = 0.006344
+2019-12-23 12:27:14,980 [INFO] Training complete. time_to_train = 189.84 sec, 3.16 min
+2019-12-23 12:27:14,983 [INFO] Model saved to results_selected_models/selected_nsl_dbn_shallow_rep4/best_model.pickle
+2019-12-23 12:27:15,127 [INFO] Plot saved to: results_selected_models/selected_nsl_dbn_shallow_rep4/training_error_history.png
+2019-12-23 12:27:15,261 [INFO] Plot saved to: results_selected_models/selected_nsl_dbn_shallow_rep4/training_f1_history.png
+2019-12-23 12:27:15,261 [INFO] Making predictions on training, validation, testing data
+2019-12-23 12:27:17,362 [INFO] Evaluating predictions (results)
+2019-12-23 12:27:17,646 [INFO] Dataset: Testing. Classification report below
+2019-12-23 12:27:17,646 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       0.97      0.83      0.90      7458
+      normal       0.66      0.93      0.77      9711
+       probe       0.71      0.69      0.70      2421
+         r2l       0.91      0.03      0.06      2421
+         u2r       0.67      0.03      0.06       533
+
+   micro avg       0.75      0.75      0.75     22544
+   macro avg       0.78      0.50      0.50     22544
+weighted avg       0.79      0.75      0.71     22544
+
+2019-12-23 12:27:17,646 [INFO] Overall accuracy (micro avg): 0.754125266146203
+2019-12-23 12:27:17,970 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.7541         0.7541                       0.7541                0.0615                   0.2459  0.7541
+1     Macro avg        0.9017         0.7832                       0.5031                0.0820                   0.4969  0.4977
+2  Weighted avg        0.8583         0.7948                       0.7541                0.1642                   0.2459  0.7117
+2019-12-23 12:27:18,312 [INFO] Dataset: Validation. Classification report below
+2019-12-23 12:27:18,312 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00      9186
+      normal       1.00      1.00      1.00     13469
+       probe       0.99      0.99      0.99      2331
+         r2l       0.94      0.89      0.92       199
+         u2r       1.00      0.40      0.57        10
+
+   micro avg       1.00      1.00      1.00     25195
+   macro avg       0.98      0.86      0.89     25195
+weighted avg       1.00      1.00      1.00     25195
+
+2019-12-23 12:27:18,312 [INFO] Overall accuracy (micro avg): 0.9956340543758683
+2019-12-23 12:27:18,690 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9956         0.9956                       0.9956                0.0011                   0.0044  0.9956
+1     Macro avg        0.9983         0.9848                       0.8556                0.0015                   0.1444  0.8943
+2  Weighted avg        0.9973         0.9956                       0.9956                0.0030                   0.0044  0.9956
+2019-12-23 12:27:20,202 [INFO] Dataset: Training. Classification report below
+2019-12-23 12:27:20,202 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00     36741
+      normal       1.00      1.00      1.00     53874
+       probe       0.99      0.99      0.99      9325
+         r2l       0.95      0.92      0.93       796
+         u2r       0.68      0.50      0.58        42
+
+   micro avg       1.00      1.00      1.00    100778
+   macro avg       0.92      0.88      0.90    100778
+weighted avg       1.00      1.00      1.00    100778
+
+2019-12-23 12:27:20,202 [INFO] Overall accuracy (micro avg): 0.9966361705927881
+2019-12-23 12:27:21,925 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9966         0.9966                       0.9966                0.0008                   0.0034  0.9966
+1     Macro avg        0.9987         0.9223                       0.8814                0.0011                   0.1186  0.8991
+2  Weighted avg        0.9979         0.9966                       0.9966                0.0022                   0.0034  0.9966
+2019-12-23 12:27:21,946 [INFO] Results saved to: results_selected_models/selected_nsl_dbn_shallow_rep4/selected_nsl_dbn_shallow_rep4_results.xlsx
+2019-12-23 12:27:21,947 [INFO] ================= Finished running experiment no. 4 ================= 
+
+2019-12-23 12:27:21,951 [INFO] Created directory: results_selected_models/selected_nsl_dbn_shallow_rep5

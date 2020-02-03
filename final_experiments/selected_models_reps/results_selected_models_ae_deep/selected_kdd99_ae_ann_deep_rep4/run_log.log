@@ -1,0 +1,176 @@
+2019-12-25 18:55:24,758 [INFO] Initialized logging. log_filename = results_selected_models/selected_kdd99_ae_ann_deep_rep4/run_log.log
+2019-12-25 18:55:24,758 [INFO] ================= Running experiment no. 4  ================= 
+
+2019-12-25 18:55:24,758 [INFO] Experiment parameters given below
+2019-12-25 18:55:24,758 [INFO] 
+{'experiment_num': 4, 'results_dir': 'results_selected_models/selected_kdd99_ae_ann_deep_rep4', 'model_type': 'classifier', 'model': 'ae_ann', 'normal_label': 'normal', 'scaling_type': 'NA', 'unsupervised_ratio': 0.25, 'ae_encoder_units': [128, 64, 32], 'ae_encoder_activations': ['relu', 'relu', 'relu'], 'ae_encoder_dropout_rates': [0.2, 0.2, 0.2], 'ae_encoder_l1_param': -1, 'ae_decoder_units': [64, 128], 'ae_decoder_activations': ['relu', 'relu'], 'ae_decoder_dropout_rates': [0.2, 0.2], 'output_activation': 'sigmoid', 'loss_function': 'binary_crossentropy', 'ae_epochs': 200, 'ann_layer_units': [64], 'ann_layer_activations': ['relu'], 'ann_layer_dropout_rates': [0.2], 'ann_epochs': 200, 'early_stop_patience': 50, 'batch_size': 256, 'dataset_dir': '../Datasets/full_datasets/kdd99_five_classes', 'description': 'selected_kdd99_ae_ann_deep_rep4'}
+2019-12-25 18:55:24,758 [INFO] Created tensorboard log directory: results_selected_models/selected_kdd99_ae_ann_deep_rep4/tf_logs_run_2019_12_25-18_55_24
+2019-12-25 18:55:24,759 [INFO] Loading datsets from: ../Datasets/full_datasets/kdd99_five_classes
+2019-12-25 18:55:24,759 [INFO] Reading X, y files
+2019-12-25 18:55:24,759 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_train.h5
+2019-12-25 18:55:31,461 [INFO] Reading complete. time_to_read=6.70 seconds
+2019-12-25 18:55:31,462 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_val.h5
+2019-12-25 18:55:33,138 [INFO] Reading complete. time_to_read=1.68 seconds
+2019-12-25 18:55:33,138 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_test.h5
+2019-12-25 18:55:33,611 [INFO] Reading complete. time_to_read=0.47 seconds
+2019-12-25 18:55:33,611 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_train.h5
+2019-12-25 18:55:33,827 [INFO] Reading complete. time_to_read=0.22 seconds
+2019-12-25 18:55:33,827 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_val.h5
+2019-12-25 18:55:33,881 [INFO] Reading complete. time_to_read=0.05 seconds
+2019-12-25 18:55:33,881 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_test.h5
+2019-12-25 18:55:33,902 [INFO] Reading complete. time_to_read=0.02 seconds
+2019-12-25 18:55:41,089 [INFO] Initializing model
+2019-12-25 18:55:41,716 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,717 [INFO] Layer (type)                 Output Shape              Param #   
+2019-12-25 18:55:41,717 [INFO] =================================================================
+2019-12-25 18:55:41,717 [INFO] dense_125 (Dense)            (None, 128)               15872     
+2019-12-25 18:55:41,717 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,717 [INFO] batch_normalization_89 (Batc (None, 128)               512       
+2019-12-25 18:55:41,717 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,717 [INFO] dropout_89 (Dropout)         (None, 128)               0         
+2019-12-25 18:55:41,717 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,717 [INFO] dense_126 (Dense)            (None, 64)                8256      
+2019-12-25 18:55:41,717 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,717 [INFO] batch_normalization_90 (Batc (None, 64)                256       
+2019-12-25 18:55:41,718 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,718 [INFO] dropout_90 (Dropout)         (None, 64)                0         
+2019-12-25 18:55:41,718 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,718 [INFO] dense_127 (Dense)            (None, 32)                2080      
+2019-12-25 18:55:41,718 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,718 [INFO] batch_normalization_91 (Batc (None, 32)                128       
+2019-12-25 18:55:41,718 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,718 [INFO] dropout_91 (Dropout)         (None, 32)                0         
+2019-12-25 18:55:41,718 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,718 [INFO] dense_128 (Dense)            (None, 64)                2112      
+2019-12-25 18:55:41,718 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,718 [INFO] batch_normalization_92 (Batc (None, 64)                256       
+2019-12-25 18:55:41,719 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,719 [INFO] dropout_92 (Dropout)         (None, 64)                0         
+2019-12-25 18:55:41,719 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,719 [INFO] dense_129 (Dense)            (None, 128)               8320      
+2019-12-25 18:55:41,719 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,719 [INFO] batch_normalization_93 (Batc (None, 128)               512       
+2019-12-25 18:55:41,719 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,719 [INFO] dropout_93 (Dropout)         (None, 128)               0         
+2019-12-25 18:55:41,719 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,719 [INFO] dense_130 (Dense)            (None, 123)               15867     
+2019-12-25 18:55:41,719 [INFO] =================================================================
+2019-12-25 18:55:41,720 [INFO] Total params: 54,171
+2019-12-25 18:55:41,720 [INFO] Trainable params: 53,339
+2019-12-25 18:55:41,720 [INFO] Non-trainable params: 832
+2019-12-25 18:55:41,720 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,887 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,887 [INFO] Layer (type)                 Output Shape              Param #   
+2019-12-25 18:55:41,887 [INFO] =================================================================
+2019-12-25 18:55:41,887 [INFO] dense_131 (Dense)            (None, 64)                2112      
+2019-12-25 18:55:41,887 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,887 [INFO] batch_normalization_94 (Batc (None, 64)                256       
+2019-12-25 18:55:41,888 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,888 [INFO] dropout_94 (Dropout)         (None, 64)                0         
+2019-12-25 18:55:41,888 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,888 [INFO] dense_132 (Dense)            (None, 5)                 325       
+2019-12-25 18:55:41,888 [INFO] =================================================================
+2019-12-25 18:55:41,888 [INFO] Total params: 2,693
+2019-12-25 18:55:41,888 [INFO] Trainable params: 2,565
+2019-12-25 18:55:41,888 [INFO] Non-trainable params: 128
+2019-12-25 18:55:41,888 [INFO] _________________________________________________________________
+2019-12-25 18:55:41,888 [INFO] Training model
+2019-12-25 18:55:41,888 [INFO] Splitting train set into 2 sets (unsupervised, supervised), random_seed = None
+2019-12-25 18:56:25,818 [INFO] Split sizes (instances). total = 3918744, unsupervised = 979686, supervised = 2939058, unsupervised dataset hash = cbec8ef65591cb5e59d08366bb1e5d38b54d7466
+2019-12-25 18:56:25,818 [INFO] Training autoencoder
+2019-12-25 19:19:32,580 [INFO] epoch = 20. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ae_model_epoch_20.pickle
+2019-12-25 19:41:10,351 [INFO] epoch = 40. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ae_model_epoch_40.pickle
+2019-12-25 20:02:47,734 [INFO] epoch = 60. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ae_model_epoch_60.pickle
+2019-12-25 20:24:25,618 [INFO] epoch = 80. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ae_model_epoch_80.pickle
+2019-12-25 20:46:04,222 [INFO] epoch = 100. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ae_model_epoch_100.pickle
+2019-12-25 21:07:42,625 [INFO] epoch = 120. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ae_model_epoch_120.pickle
+2019-12-25 21:29:21,132 [INFO] epoch = 140. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ae_model_epoch_140.pickle
+2019-12-25 21:50:59,796 [INFO] epoch = 160. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ae_model_epoch_160.pickle
+2019-12-25 22:12:38,524 [INFO] epoch = 180. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ae_model_epoch_180.pickle
+2019-12-25 22:33:12,770 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2019-12-25 22:35:51,627 [INFO] Last epoch loss evaluation: train_loss = -2.119530, val_loss = -2.117216
+2019-12-25 22:35:51,627 [INFO] Training autoencoder complete
+2019-12-25 22:35:51,628 [INFO] Encoding data for supervised training
+2019-12-25 22:39:20,708 [INFO] Encoding complete
+2019-12-25 22:39:20,708 [INFO] Training neural network layers (after autoencoder)
+2019-12-25 23:12:46,259 [INFO] epoch = 20. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ann_model_epoch_20.pickle
+2019-12-25 23:44:56,478 [INFO] epoch = 40. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ann_model_epoch_40.pickle
+2019-12-26 00:17:06,239 [INFO] epoch = 60. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ann_model_epoch_60.pickle
+2019-12-26 00:49:15,914 [INFO] epoch = 80. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ann_model_epoch_80.pickle
+2019-12-26 01:21:24,323 [INFO] epoch = 100. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ann_model_epoch_100.pickle
+2019-12-26 01:53:33,141 [INFO] epoch = 120. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ann_model_epoch_120.pickle
+2019-12-26 02:25:44,485 [INFO] epoch = 140. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ann_model_epoch_140.pickle
+2019-12-26 02:57:54,740 [INFO] epoch = 160. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ann_model_epoch_160.pickle
+2019-12-26 03:30:04,616 [INFO] epoch = 180. Intermediate model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/ann_model_epoch_180.pickle
+2019-12-26 03:51:42,404 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2019-12-26 03:54:46,236 [INFO] Last epoch loss evaluation: train_loss = 0.000426, val_loss = 0.000482
+2019-12-26 03:54:46,258 [INFO] Training complete. time_to_train = 32344.37 sec, 539.07 min
+2019-12-26 03:54:46,290 [INFO] Model saved to results_selected_models/selected_kdd99_ae_ann_deep_rep4/best_model.pickle
+2019-12-26 03:54:46,479 [INFO] Plot saved to: results_selected_models/selected_kdd99_ae_ann_deep_rep4/training_error_history.png
+2019-12-26 03:54:46,666 [INFO] Plot saved to: results_selected_models/selected_kdd99_ae_ann_deep_rep4/training_f1_history.png
+2019-12-26 03:54:46,666 [INFO] Making predictions on training, validation, testing data
+2019-12-26 04:03:02,039 [INFO] Evaluating predictions (results)
+2019-12-26 04:03:10,710 [INFO] Dataset: Testing. Classification report below
+2019-12-26 04:03:10,710 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      0.97      0.99    229853
+     normal.       0.72      0.98      0.83     60593
+       probe       0.74      0.80      0.77      4166
+         r2l       0.53      0.00      0.01     13781
+         u2r       0.41      0.00      0.01      2636
+
+    accuracy                           0.92    311029
+   macro avg       0.68      0.55      0.52    311029
+weighted avg       0.92      0.92      0.90    311029
+
+2019-12-26 04:03:10,710 [INFO] Overall accuracy (micro avg): 0.9215539387002498
+2019-12-26 04:03:20,014 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9216         0.9216                       0.9216                0.0196                   0.0784  0.9216
+1     Macro avg        0.9686         0.6790                       0.5537                0.0199                   0.4463  0.5212
+2  Weighted avg        0.9674         0.9154                       0.9216                0.0209                   0.0784  0.9014
+2019-12-26 04:03:50,331 [INFO] Dataset: Validation. Classification report below
+2019-12-26 04:03:50,331 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00    776675
+     normal.       1.00      1.00      1.00    194556
+       probe       0.99      0.99      0.99      8221
+         r2l       0.93      0.76      0.83       225
+         u2r       0.33      0.20      0.25        10
+
+    accuracy                           1.00    979687
+   macro avg       0.85      0.79      0.81    979687
+weighted avg       1.00      1.00      1.00    979687
+
+2019-12-26 04:03:50,331 [INFO] Overall accuracy (micro avg): 0.9997264432415659
+2019-12-26 04:04:23,035 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9997         0.9997                       0.9997                0.0001                   0.0003  0.9997
+1     Macro avg        0.9999         0.8510                       0.7889                0.0001                   0.2111  0.8148
+2  Weighted avg        0.9999         0.9997                       0.9997                0.0002                   0.0003  0.9997
+2019-12-26 04:06:36,718 [INFO] Dataset: Training. Classification report below
+2019-12-26 04:06:36,718 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00   3106695
+     normal.       1.00      1.00      1.00    778225
+       probe       0.99      0.99      0.99     32881
+         r2l       0.91      0.77      0.84       901
+         u2r       0.45      0.40      0.43        42
+
+    accuracy                           1.00   3918744
+   macro avg       0.87      0.83      0.85   3918744
+weighted avg       1.00      1.00      1.00   3918744
+
+2019-12-26 04:06:36,719 [INFO] Overall accuracy (micro avg): 0.9997440506447984
+2019-12-26 04:09:01,030 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9997         0.9997                       0.9997                0.0001                   0.0003  0.9997
+1     Macro avg        0.9999         0.8705                       0.8334                0.0001                   0.1666  0.8506
+2  Weighted avg        0.9999         0.9997                       0.9997                0.0002                   0.0003  0.9997
+2019-12-26 04:09:01,076 [INFO] Results saved to: results_selected_models/selected_kdd99_ae_ann_deep_rep4/selected_kdd99_ae_ann_deep_rep4_results.xlsx
+2019-12-26 04:09:01,083 [INFO] ================= Finished running experiment no. 4 ================= 
+
+2019-12-26 04:09:01,107 [INFO] Created directory: results_selected_models/selected_kdd99_ae_ann_deep_rep5

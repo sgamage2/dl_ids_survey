@@ -1,0 +1,149 @@
+2019-12-26 15:30:09,645 [INFO] Initialized logging. log_filename = results_selected_models/selected_ids18_subset_lstm_shallow_rep1/run_log.log
+2019-12-26 15:30:09,645 [INFO] ================= Running experiment no. 1  ================= 
+
+2019-12-26 15:30:09,645 [INFO] Experiment parameters given below
+2019-12-26 15:30:09,645 [INFO] 
+{'experiment_num': 1, 'results_dir': 'results_selected_models/selected_ids18_subset_lstm_shallow_rep1', 'model': 'lstm', 'model_type': 'classifier', 'normal_label': 'BENIGN', 'lstm_time_steps': 32, 'lstm_layer_units': [32], 'lstm_layer_activations': ['relu'], 'lstm_layer_dropout_rates': [0.2], 'batch_size': 256, 'epochs': 300, 'early_stop_patience': 50, 'dataset_dir': '../Datasets/small_datasets/ids2018', 'description': 'selected_ids18_subset_lstm_shallow_rep1'}
+2019-12-26 15:30:09,645 [INFO] Created tensorboard log directory: results_selected_models/selected_ids18_subset_lstm_shallow_rep1/tf_logs_run_2019_12_26-15_30_09
+2019-12-26 15:30:09,645 [INFO] Loading datsets from: ../Datasets/small_datasets/ids2018
+2019-12-26 15:30:09,653 [INFO] Reading X, y files
+2019-12-26 15:30:09,653 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_train.h5
+2019-12-26 15:30:15,576 [INFO] Reading complete. time_to_read=5.92 seconds
+2019-12-26 15:30:15,576 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_val.h5
+2019-12-26 15:30:17,250 [INFO] Reading complete. time_to_read=1.67 seconds
+2019-12-26 15:30:17,251 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_test.h5
+2019-12-26 15:30:18,909 [INFO] Reading complete. time_to_read=1.66 seconds
+2019-12-26 15:30:18,909 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_train.h5
+2019-12-26 15:30:19,394 [INFO] Reading complete. time_to_read=0.48 seconds
+2019-12-26 15:30:19,394 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_val.h5
+2019-12-26 15:30:19,587 [INFO] Reading complete. time_to_read=0.19 seconds
+2019-12-26 15:30:19,587 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_test.h5
+2019-12-26 15:30:19,763 [INFO] Reading complete. time_to_read=0.18 seconds
+2019-12-26 15:30:22,545 [INFO] Preparing flow sequences
+2019-12-26 15:30:47,552 [INFO] Extracting flows complete. time_taken = 25.01 sec
+2019-12-26 15:30:48,872 [INFO] Initializing model
+2019-12-26 15:30:49,112 [INFO] _________________________________________________________________
+2019-12-26 15:30:49,112 [INFO] Layer (type)                 Output Shape              Param #   
+2019-12-26 15:30:49,112 [INFO] =================================================================
+2019-12-26 15:30:49,112 [INFO] lstm_11 (LSTM)               (None, 32, 32)            14080     
+2019-12-26 15:30:49,112 [INFO] _________________________________________________________________
+2019-12-26 15:30:49,112 [INFO] batch_normalization_11 (Batc (None, 32, 32)            128       
+2019-12-26 15:30:49,112 [INFO] _________________________________________________________________
+2019-12-26 15:30:49,112 [INFO] dropout_11 (Dropout)         (None, 32, 32)            0         
+2019-12-26 15:30:49,112 [INFO] _________________________________________________________________
+2019-12-26 15:30:49,112 [INFO] time_distributed_11 (TimeDis (None, 32, 15)            495       
+2019-12-26 15:30:49,112 [INFO] =================================================================
+2019-12-26 15:30:49,112 [INFO] Total params: 14,703
+2019-12-26 15:30:49,113 [INFO] Trainable params: 14,639
+2019-12-26 15:30:49,113 [INFO] Non-trainable params: 64
+2019-12-26 15:30:49,113 [INFO] _________________________________________________________________
+2019-12-26 15:30:49,113 [INFO] Training model
+2019-12-26 15:35:24,699 [INFO] epoch = 30. Intermediate model saved to results_selected_models/selected_ids18_subset_lstm_shallow_rep1/_model_epoch_30.pickle
+2019-12-26 15:39:46,930 [INFO] epoch = 60. Intermediate model saved to results_selected_models/selected_ids18_subset_lstm_shallow_rep1/_model_epoch_60.pickle
+2019-12-26 15:44:09,174 [INFO] epoch = 90. Intermediate model saved to results_selected_models/selected_ids18_subset_lstm_shallow_rep1/_model_epoch_90.pickle
+2019-12-26 15:48:31,412 [INFO] epoch = 120. Intermediate model saved to results_selected_models/selected_ids18_subset_lstm_shallow_rep1/_model_epoch_120.pickle
+2019-12-26 15:52:53,636 [INFO] epoch = 150. Intermediate model saved to results_selected_models/selected_ids18_subset_lstm_shallow_rep1/_model_epoch_150.pickle
+2019-12-26 15:57:15,744 [INFO] epoch = 180. Intermediate model saved to results_selected_models/selected_ids18_subset_lstm_shallow_rep1/_model_epoch_180.pickle
+2019-12-26 15:58:01,756 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2019-12-26 15:58:09,368 [INFO] Last epoch loss evaluation: train_loss = 0.007576, val_loss = 0.007736
+2019-12-26 15:58:09,368 [INFO] Training complete. time_to_train = 1640.25 sec, 27.34 min
+2019-12-26 15:58:09,372 [INFO] Model saved to results_selected_models/selected_ids18_subset_lstm_shallow_rep1/best_model.pickle
+2019-12-26 15:58:09,374 [INFO] Training history saved to: results_selected_models/selected_ids18_subset_lstm_shallow_rep1/training_error_history.csv
+2019-12-26 15:58:09,530 [INFO] Plot saved to: results_selected_models/selected_ids18_subset_lstm_shallow_rep1/training_error_history.png
+2019-12-26 15:58:09,654 [INFO] Plot saved to: results_selected_models/selected_ids18_subset_lstm_shallow_rep1/training_f1_history.png
+2019-12-26 15:58:09,654 [INFO] Making predictions on training, validation, testing data
+2019-12-26 15:58:18,102 [INFO] Evaluating predictions (results)
+2019-12-26 15:58:30,160 [INFO] Dataset: Testing. Classification report below
+2019-12-26 15:58:30,161 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99    535639
+                     Bot       1.00      1.00      1.00     11465
+        Brute Force -Web       1.00      0.25      0.40        24
+        Brute Force -XSS       0.75      0.33      0.46         9
+        DDOS attack-HOIC       1.00      1.00      1.00     27446
+    DDOS attack-LOIC-UDP       0.67      0.91      0.77        67
+  DDoS attacks-LOIC-HTTP       0.99      0.99      0.99     23008
+   DoS attacks-GoldenEye       0.99      1.00      1.00      1651
+        DoS attacks-Hulk       1.00      1.00      1.00     18477
+DoS attacks-SlowHTTPTest       0.73      0.50      0.59      5596
+   DoS attacks-Slowloris       0.96      0.85      0.90       440
+          FTP-BruteForce       0.70      0.86      0.78      7718
+           Infilteration       0.51      0.01      0.02      6403
+           SQL Injection       0.00      0.00      0.00         4
+          SSH-Bruteforce       1.00      1.00      1.00      7525
+
+               micro avg       0.98      0.98      0.98    645472
+               macro avg       0.82      0.71      0.73    645472
+            weighted avg       0.98      0.98      0.98    645472
+
+2019-12-26 15:58:30,161 [INFO] Overall accuracy (micro avg): 0.9833749566208914
+2019-12-26 15:58:43,835 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9834         0.9834                       0.9834                0.0012                   0.0166  0.9834
+1     Macro avg        0.9978         0.8191                       0.7137                0.0044                   0.2863  0.7268
+2  Weighted avg        0.9910         0.9788                       0.9834                0.0497                   0.0166  0.9784
+2019-12-26 15:58:56,119 [INFO] Dataset: Validation. Classification report below
+2019-12-26 15:58:56,119 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99    535636
+                     Bot       1.00      1.00      1.00     11464
+        Brute Force -Web       0.91      0.40      0.56        25
+        Brute Force -XSS       1.00      0.67      0.80         9
+        DDOS attack-HOIC       1.00      1.00      1.00     27447
+    DDOS attack-LOIC-UDP       0.71      0.93      0.80        68
+  DDoS attacks-LOIC-HTTP       0.99      0.99      0.99     23009
+   DoS attacks-GoldenEye       0.99      1.00      1.00      1651
+        DoS attacks-Hulk       1.00      1.00      1.00     18478
+DoS attacks-SlowHTTPTest       0.73      0.49      0.59      5596
+   DoS attacks-Slowloris       0.96      0.87      0.91       439
+          FTP-BruteForce       0.70      0.87      0.78      7718
+           Infilteration       0.38      0.01      0.02      6403
+           SQL Injection       0.00      0.00      0.00         4
+          SSH-Bruteforce       1.00      1.00      1.00      7525
+
+               micro avg       0.98      0.98      0.98    645472
+               macro avg       0.82      0.75      0.76    645472
+            weighted avg       0.98      0.98      0.98    645472
+
+2019-12-26 15:58:56,119 [INFO] Overall accuracy (micro avg): 0.9833656610976154
+2019-12-26 15:59:10,091 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9834         0.9834                       0.9834                0.0012                   0.0166  0.9834
+1     Macro avg        0.9978         0.8241                       0.7483                0.0044                   0.2517  0.7624
+2  Weighted avg        0.9909         0.9775                       0.9834                0.0496                   0.0166  0.9783
+2019-12-26 15:59:49,843 [INFO] Dataset: Training. Classification report below
+2019-12-26 15:59:49,843 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99   1606935
+                     Bot       1.00      1.00      1.00     34396
+        Brute Force -Web       1.00      0.30      0.46        73
+        Brute Force -XSS       1.00      0.50      0.67        26
+        DDOS attack-HOIC       1.00      1.00      1.00     82341
+    DDOS attack-LOIC-UDP       0.74      0.92      0.82       203
+  DDoS attacks-LOIC-HTTP       0.99      0.99      0.99     69029
+   DoS attacks-GoldenEye       0.99      1.00      1.00      4954
+        DoS attacks-Hulk       1.00      1.00      1.00     55435
+DoS attacks-SlowHTTPTest       0.73      0.50      0.59     16787
+   DoS attacks-Slowloris       0.98      0.91      0.95      1318
+          FTP-BruteForce       0.70      0.87      0.78     23153
+           Infilteration       0.58      0.01      0.02     19210
+           SQL Injection       1.00      0.33      0.50        12
+          SSH-Bruteforce       1.00      1.00      1.00     22576
+
+               micro avg       0.98      0.98      0.98   1936448
+               macro avg       0.91      0.76      0.78   1936448
+            weighted avg       0.98      0.98      0.98   1936448
+
+2019-12-26 15:59:49,843 [INFO] Overall accuracy (micro avg): 0.9835848935783456
+2019-12-26 16:00:34,982 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9836         0.9836                       0.9836                0.0012                   0.0164  0.9836
+1     Macro avg        0.9978         0.9144                       0.7559                0.0044                   0.2441  0.7849
+2  Weighted avg        0.9911         0.9797                       0.9836                0.0493                   0.0164  0.9786
+2019-12-26 16:00:35,008 [INFO] Results saved to: results_selected_models/selected_ids18_subset_lstm_shallow_rep1/selected_ids18_subset_lstm_shallow_rep1_results.xlsx
+2019-12-26 16:00:35,013 [INFO] ================= Finished running experiment no. 1 ================= 
+
+2019-12-26 16:00:35,098 [INFO] Created directory: results_selected_models/selected_ids18_subset_lstm_shallow_rep2

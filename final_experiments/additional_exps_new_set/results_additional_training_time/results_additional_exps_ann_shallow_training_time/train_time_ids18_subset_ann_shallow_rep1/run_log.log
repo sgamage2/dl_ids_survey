@@ -1,0 +1,154 @@
+2020-01-13 22:34:01,098 [INFO] Initialized logging. log_filename = results_additional_exps/train_time_ids18_subset_ann_shallow_rep1/run_log.log
+2020-01-13 22:34:01,098 [INFO] ================= Running experiment no. 1  ================= 
+
+2020-01-13 22:34:01,098 [INFO] Experiment parameters given below
+2020-01-13 22:34:01,098 [INFO] 
+{'experiment_num': 1, 'results_dir': 'results_additional_exps/train_time_ids18_subset_ann_shallow_rep1', 'model_type': 'classifier', 'model': 'ann', 'normal_label': 'BENIGN', 'training_data_feed': 'preload', 'scaling_type': 'NA', 'ann_layer_units': [512], 'ann_layer_activations': ['relu'], 'ann_layer_dropout_rates': [0.2], 'epochs': 100, 'early_stop_patience': 100, 'batch_size': 256, 'goal_metric': 0.983416334, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/small_datasets/ids2018', 'description': 'train_time_ids18_subset_ann_shallow_rep1'}
+2020-01-13 22:34:01,098 [INFO] Created tensorboard log directory: results_additional_exps/train_time_ids18_subset_ann_shallow_rep1/tf_logs_run_2020_01_13-22_34_01
+2020-01-13 22:34:01,098 [INFO] Loading datsets from: ../Datasets/small_datasets/ids2018
+2020-01-13 22:34:01,099 [INFO] Reading X, y files
+2020-01-13 22:34:01,099 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_train.h5
+2020-01-13 22:34:06,302 [INFO] Reading complete. time_to_read=5.20 seconds
+2020-01-13 22:34:06,302 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_val.h5
+2020-01-13 22:34:07,832 [INFO] Reading complete. time_to_read=1.53 seconds
+2020-01-13 22:34:07,833 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_test.h5
+2020-01-13 22:34:09,360 [INFO] Reading complete. time_to_read=1.53 seconds
+2020-01-13 22:34:09,360 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_train.h5
+2020-01-13 22:34:09,632 [INFO] Reading complete. time_to_read=0.27 seconds
+2020-01-13 22:34:09,632 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_val.h5
+2020-01-13 22:34:09,710 [INFO] Reading complete. time_to_read=0.08 seconds
+2020-01-13 22:34:09,710 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_test.h5
+2020-01-13 22:34:09,789 [INFO] Reading complete. time_to_read=0.08 seconds
+2020-01-13 22:34:13,436 [INFO] Initializing model
+2020-01-13 22:34:13,449 [WARNING] From /home/sunanda/test/ml_env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2020-01-13 22:34:13,511 [WARNING] From /home/sunanda/test/ml_env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-01-13 22:34:13,548 [INFO] _________________________________________________________________
+2020-01-13 22:34:13,548 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-13 22:34:13,548 [INFO] =================================================================
+2020-01-13 22:34:13,548 [INFO] dense_1 (Dense)              (None, 512)               39936     
+2020-01-13 22:34:13,548 [INFO] _________________________________________________________________
+2020-01-13 22:34:13,548 [INFO] batch_normalization_1 (Batch (None, 512)               2048      
+2020-01-13 22:34:13,548 [INFO] _________________________________________________________________
+2020-01-13 22:34:13,548 [INFO] dropout_1 (Dropout)          (None, 512)               0         
+2020-01-13 22:34:13,548 [INFO] _________________________________________________________________
+2020-01-13 22:34:13,548 [INFO] dense_2 (Dense)              (None, 15)                7695      
+2020-01-13 22:34:13,548 [INFO] =================================================================
+2020-01-13 22:34:13,548 [INFO] Total params: 49,679
+2020-01-13 22:34:13,549 [INFO] Trainable params: 48,655
+2020-01-13 22:34:13,549 [INFO] Non-trainable params: 1,024
+2020-01-13 22:34:13,549 [INFO] _________________________________________________________________
+2020-01-13 22:34:13,549 [INFO] Training model
+2020-01-13 22:34:13,935 [WARNING] From /home/sunanda/test/ml_env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2020-01-13 22:44:10,084 [INFO] epoch = 10. Intermediate model saved to results_additional_exps/train_time_ids18_subset_ann_shallow_rep1/ann_model_epoch_10.pickle
+2020-01-13 22:53:28,923 [INFO] epoch = 20. Intermediate model saved to results_additional_exps/train_time_ids18_subset_ann_shallow_rep1/ann_model_epoch_20.pickle
+2020-01-13 22:57:32,178 [INFO] StopperOnGoal: reached goal_metric (accuracy). Stopping training. goal_metric = 0.9834, current_metric = 0.9836, num_epochs = 25
+2020-01-13 22:57:32,180 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-13 22:58:14,279 [INFO] Last epoch loss evaluation: train_loss = 0.007929, val_loss = 0.007949
+2020-01-13 22:58:14,279 [INFO] Training complete. time_to_train = 1440.73 sec, 24.01 min
+2020-01-13 22:58:14,283 [INFO] Model saved to results_additional_exps/train_time_ids18_subset_ann_shallow_rep1/best_model.pickle
+2020-01-13 22:58:14,286 [INFO] Training history saved to: results_additional_exps/train_time_ids18_subset_ann_shallow_rep1/training_error_history.csv
+2020-01-13 22:58:14,468 [INFO] Plot saved to: results_additional_exps/train_time_ids18_subset_ann_shallow_rep1/training_error_history.png
+2020-01-13 22:58:14,635 [INFO] Plot saved to: results_additional_exps/train_time_ids18_subset_ann_shallow_rep1/training_f1_history.png
+2020-01-13 22:58:14,635 [INFO] Making predictions on training, validation, testing data
+2020-01-13 22:59:01,189 [INFO] Making predictions complete. time_to_predict = 46.55 sec, 0.78 min
+2020-01-13 22:59:01,252 [INFO] Evaluating predictions (results)
+2020-01-13 22:59:13,366 [INFO] Dataset: Testing. Classification report below
+2020-01-13 22:59:13,366 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99    535650
+                     Bot       1.00      1.00      1.00     11465
+        Brute Force -Web       0.89      0.33      0.48        24
+        Brute Force -XSS       1.00      0.33      0.50         9
+        DDOS attack-HOIC       1.00      1.00      1.00     27447
+    DDOS attack-LOIC-UDP       0.68      1.00      0.81        67
+  DDoS attacks-LOIC-HTTP       0.99      1.00      0.99     23010
+   DoS attacks-GoldenEye       0.99      1.00      0.99      1651
+        DoS attacks-Hulk       1.00      1.00      1.00     18478
+DoS attacks-SlowHTTPTest       0.72      0.47      0.57      5596
+   DoS attacks-Slowloris       0.82      0.98      0.89       440
+          FTP-BruteForce       0.69      0.87      0.77      7718
+           Infilteration       0.44      0.01      0.01      6404
+           SQL Injection       1.00      0.50      0.67         4
+          SSH-Bruteforce       1.00      1.00      1.00      7525
+
+               micro avg       0.98      0.98      0.98    645488
+               macro avg       0.88      0.77      0.78    645488
+            weighted avg       0.98      0.98      0.98    645488
+
+2020-01-13 22:59:13,366 [INFO] Overall accuracy (micro avg): 0.9829942617058721
+2020-01-13 22:59:26,972 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9830         0.9830                       0.9830                0.0012                   0.0170  0.9830
+1     Macro avg        0.9977         0.8800                       0.7657                0.0044                   0.2343  0.7786
+2  Weighted avg        0.9908         0.9778                       0.9830                0.0485                   0.0170  0.9779
+2020-01-13 22:59:38,945 [INFO] Dataset: Validation. Classification report below
+2020-01-13 22:59:38,945 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99    535650
+                     Bot       1.00      1.00      1.00     11465
+        Brute Force -Web       0.80      0.48      0.60        25
+        Brute Force -XSS       1.00      0.67      0.80         9
+        DDOS attack-HOIC       1.00      1.00      1.00     27447
+    DDOS attack-LOIC-UDP       0.72      1.00      0.84        68
+  DDoS attacks-LOIC-HTTP       0.98      1.00      0.99     23009
+   DoS attacks-GoldenEye       0.99      1.00      0.99      1651
+        DoS attacks-Hulk       1.00      1.00      1.00     18478
+DoS attacks-SlowHTTPTest       0.73      0.46      0.57      5596
+   DoS attacks-Slowloris       0.82      0.98      0.89       439
+          FTP-BruteForce       0.69      0.88      0.77      7718
+           Infilteration       0.47      0.01      0.01      6403
+           SQL Injection       0.00      0.00      0.00         4
+          SSH-Bruteforce       1.00      1.00      1.00      7525
+
+               micro avg       0.98      0.98      0.98    645487
+               macro avg       0.81      0.76      0.76    645487
+            weighted avg       0.98      0.98      0.98    645487
+
+2020-01-13 22:59:38,945 [INFO] Overall accuracy (micro avg): 0.9830066291032972
+2020-01-13 22:59:52,533 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9830         0.9830                       0.9830                0.0012                   0.0170  0.9830
+1     Macro avg        0.9977         0.8127                       0.7647                0.0044                   0.2353  0.7641
+2  Weighted avg        0.9908         0.9781                       0.9830                0.0484                   0.0170  0.9779
+2020-01-13 23:00:31,669 [INFO] Dataset: Training. Classification report below
+2020-01-13 23:00:31,669 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99   1606949
+                     Bot       1.00      1.00      1.00     34396
+        Brute Force -Web       0.90      0.37      0.52        73
+        Brute Force -XSS       1.00      0.50      0.67        26
+        DDOS attack-HOIC       1.00      1.00      1.00     82341
+    DDOS attack-LOIC-UDP       0.71      1.00      0.83       203
+  DDoS attacks-LOIC-HTTP       0.99      1.00      0.99     69029
+   DoS attacks-GoldenEye       0.99      1.00      0.99      4954
+        DoS attacks-Hulk       1.00      1.00      1.00     55435
+DoS attacks-SlowHTTPTest       0.73      0.46      0.56     16787
+   DoS attacks-Slowloris       0.85      0.99      0.92      1318
+          FTP-BruteForce       0.69      0.87      0.77     23153
+           Infilteration       0.49      0.01      0.01     19210
+           SQL Injection       1.00      0.17      0.29        12
+          SSH-Bruteforce       1.00      1.00      1.00     22576
+
+               micro avg       0.98      0.98      0.98   1936462
+               macro avg       0.89      0.76      0.77   1936462
+            weighted avg       0.98      0.98      0.98   1936462
+
+2020-01-13 23:00:31,670 [INFO] Overall accuracy (micro avg): 0.9830546636081678
+2020-01-13 23:01:16,130 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9831         0.9831                       0.9831                0.0012                   0.0169  0.9831
+1     Macro avg        0.9977         0.8882                       0.7580                0.0044                   0.2420  0.7702
+2  Weighted avg        0.9909         0.9783                       0.9831                0.0484                   0.0169  0.9779
+2020-01-13 23:01:16,189 [INFO] Results saved to: results_additional_exps/train_time_ids18_subset_ann_shallow_rep1/train_time_ids18_subset_ann_shallow_rep1_results.xlsx
+2020-01-13 23:01:16,196 [INFO] ================= Finished running experiment no. 1 ================= 
+
+2020-01-13 23:01:16,274 [INFO] Created directory: results_additional_exps/train_time_ids18_subset_ann_shallow_rep2

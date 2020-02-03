@@ -1,0 +1,142 @@
+2020-01-14 12:21:51,319 [INFO] Initialized logging. log_filename = results_additional_exps/train_time_nsl_dbn_deep_rep1/run_log.log
+2020-01-14 12:21:51,319 [INFO] ================= Running experiment no. 1  ================= 
+
+2020-01-14 12:21:51,319 [INFO] Experiment parameters given below
+2020-01-14 12:21:51,319 [INFO] 
+{'experiment_num': 1, 'results_dir': 'results_additional_exps/train_time_nsl_dbn_deep_rep1', 'model_type': 'classifier', 'model': 'dbn', 'normal_label': 'normal', 'scaling_type': 'NA', 'dbn_layer_units': [128, 64, 32], 'ann_layer_activations': ['relu', 'relu', 'relu'], 'ann_layer_dropout_rates': [0.2, 0.2, 0.2], 'unsupervised_ratio': 0.25, 'dbn_learning_rate': 0.001, 'pretrain_epochs': 10, 'fine_tune_epochs': 100, 'early_stop_patience': 100, 'batch_size': 256, 'goal_metric': 0.740772514, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/small_datasets/nsl_kdd_five_classes', 'description': 'train_time_nsl_dbn_deep_rep1'}
+2020-01-14 12:21:51,319 [INFO] Created tensorboard log directory: results_additional_exps/train_time_nsl_dbn_deep_rep1/tf_logs_run_2020_01_14-12_21_51
+2020-01-14 12:21:51,319 [INFO] Loading datsets from: ../Datasets/small_datasets/nsl_kdd_five_classes
+2020-01-14 12:21:51,320 [INFO] Reading X, y files
+2020-01-14 12:21:51,320 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_train.h5
+2020-01-14 12:21:51,329 [INFO] NumExpr defaulting to 8 threads.
+2020-01-14 12:21:51,566 [INFO] Reading complete. time_to_read=0.25 seconds
+2020-01-14 12:21:51,566 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_val.h5
+2020-01-14 12:21:51,627 [INFO] Reading complete. time_to_read=0.06 seconds
+2020-01-14 12:21:51,627 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_test.h5
+2020-01-14 12:21:51,683 [INFO] Reading complete. time_to_read=0.06 seconds
+2020-01-14 12:21:51,683 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_train.h5
+2020-01-14 12:21:51,691 [INFO] Reading complete. time_to_read=0.01 seconds
+2020-01-14 12:21:51,691 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_val.h5
+2020-01-14 12:21:51,696 [INFO] Reading complete. time_to_read=0.00 seconds
+2020-01-14 12:21:51,696 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_test.h5
+2020-01-14 12:21:51,700 [INFO] Reading complete. time_to_read=0.00 seconds
+2020-01-14 12:21:51,820 [INFO] Initializing model
+2020-01-14 12:21:51,821 [INFO] Training model
+2020-01-14 12:21:51,821 [INFO] Splitting train set into 2 sets (unsupervised, supervised), random_seed = None
+2020-01-14 12:21:52,869 [INFO] Split sizes (instances). total = 100778, unsupervised = 25194, supervised = 75584, unsupervised dataset hash = a5039bcf5af08b73e8acb2f2a61a872a189c06e9
+2020-01-14 12:21:52,869 [INFO] Pretraining Deep Belief Network
+2020-01-14 12:22:05,904 [INFO] Pretraining Complete
+2020-01-14 12:22:05,904 [INFO] Getting pretrained weights
+2020-01-14 12:22:05,904 [INFO] Creating and initializing feed forward neural network
+2020-01-14 12:22:05,919 [WARNING] From /home/sunanda/anaconda3/envs/ml_env_cpu/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2020-01-14 12:22:05,995 [WARNING] From /home/sunanda/anaconda3/envs/ml_env_cpu/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-01-14 12:22:06,214 [INFO] _________________________________________________________________
+2020-01-14 12:22:06,214 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-14 12:22:06,214 [INFO] =================================================================
+2020-01-14 12:22:06,215 [INFO] dense_1 (Dense)              (None, 128)               15744     
+2020-01-14 12:22:06,215 [INFO] _________________________________________________________________
+2020-01-14 12:22:06,215 [INFO] batch_normalization_1 (Batch (None, 128)               512       
+2020-01-14 12:22:06,215 [INFO] _________________________________________________________________
+2020-01-14 12:22:06,215 [INFO] dropout_1 (Dropout)          (None, 128)               0         
+2020-01-14 12:22:06,215 [INFO] _________________________________________________________________
+2020-01-14 12:22:06,215 [INFO] dense_2 (Dense)              (None, 64)                8256      
+2020-01-14 12:22:06,215 [INFO] _________________________________________________________________
+2020-01-14 12:22:06,215 [INFO] batch_normalization_2 (Batch (None, 64)                256       
+2020-01-14 12:22:06,215 [INFO] _________________________________________________________________
+2020-01-14 12:22:06,215 [INFO] dropout_2 (Dropout)          (None, 64)                0         
+2020-01-14 12:22:06,216 [INFO] _________________________________________________________________
+2020-01-14 12:22:06,216 [INFO] dense_3 (Dense)              (None, 32)                2080      
+2020-01-14 12:22:06,216 [INFO] _________________________________________________________________
+2020-01-14 12:22:06,216 [INFO] batch_normalization_3 (Batch (None, 32)                128       
+2020-01-14 12:22:06,216 [INFO] _________________________________________________________________
+2020-01-14 12:22:06,216 [INFO] dropout_3 (Dropout)          (None, 32)                0         
+2020-01-14 12:22:06,216 [INFO] _________________________________________________________________
+2020-01-14 12:22:06,216 [INFO] dense_4 (Dense)              (None, 5)                 165       
+2020-01-14 12:22:06,216 [INFO] =================================================================
+2020-01-14 12:22:06,217 [INFO] Total params: 27,141
+2020-01-14 12:22:06,217 [INFO] Trainable params: 26,693
+2020-01-14 12:22:06,217 [INFO] Non-trainable params: 448
+2020-01-14 12:22:06,217 [INFO] _________________________________________________________________
+2020-01-14 12:22:06,451 [INFO] Fine-tuning final neural network
+2020-01-14 12:22:06,869 [WARNING] From /home/sunanda/anaconda3/envs/ml_env_cpu/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2020-01-14 12:22:14,586 [INFO] StopperOnGoal: reached goal_metric (accuracy). Stopping training. goal_metric = 0.7408, current_metric = 0.7594, num_epochs = 2
+2020-01-14 12:22:14,587 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-14 12:22:16,972 [INFO] Last epoch loss evaluation: train_loss = 0.011964, val_loss = 0.012137
+2020-01-14 12:22:16,972 [INFO] Training complete. time_to_train = 25.15 sec, 0.42 min
+2020-01-14 12:22:17,145 [INFO] Model saved to results_additional_exps/train_time_nsl_dbn_deep_rep1/best_model.pickle
+2020-01-14 12:22:17,147 [INFO] Training history saved to: results_additional_exps/train_time_nsl_dbn_deep_rep1/training_error_history.csv
+2020-01-14 12:22:17,325 [INFO] Plot saved to: results_additional_exps/train_time_nsl_dbn_deep_rep1/training_error_history.png
+2020-01-14 12:22:17,487 [INFO] Plot saved to: results_additional_exps/train_time_nsl_dbn_deep_rep1/training_f1_history.png
+2020-01-14 12:22:17,487 [INFO] Making predictions on training, validation, testing data
+2020-01-14 12:22:20,439 [INFO] Making predictions complete. time_to_predict = 2.95 sec, 0.05 min
+2020-01-14 12:22:20,442 [INFO] Evaluating predictions (results)
+2020-01-14 12:22:21,099 [INFO] Dataset: Testing. Classification report below
+2020-01-14 12:22:21,100 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       0.95      0.84      0.89      7458
+      normal       0.69      0.95      0.80      9711
+       probe       0.76      0.76      0.76      2421
+         r2l       0.92      0.09      0.16      2421
+         u2r       0.00      0.00      0.00       533
+
+    accuracy                           0.78     22544
+   macro avg       0.67      0.53      0.52     22544
+weighted avg       0.79      0.78      0.74     22544
+
+2020-01-14 12:22:21,100 [INFO] Overall accuracy (micro avg): 0.7775017743080199
+2020-01-14 12:22:21,696 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.7775         0.7775                       0.7775                0.0556                   0.2225  0.7775
+1     Macro avg        0.9110         0.6654                       0.5271                0.0740                   0.4729  0.5217
+2  Weighted avg        0.8734         0.7942                       0.7775                0.1477                   0.2225  0.7385
+2020-01-14 12:22:22,364 [INFO] Dataset: Validation. Classification report below
+2020-01-14 12:22:22,364 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00      9186
+      normal       0.99      0.99      0.99     13469
+       probe       0.98      0.98      0.98      2331
+         r2l       0.90      0.73      0.81       199
+         u2r       0.00      0.00      0.00        10
+
+    accuracy                           0.99     25195
+   macro avg       0.77      0.74      0.76     25195
+weighted avg       0.99      0.99      0.99     25195
+
+2020-01-14 12:22:22,364 [INFO] Overall accuracy (micro avg): 0.9917443937289144
+2020-01-14 12:22:23,033 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9917         0.9917                       0.9917                0.0021                   0.0083  0.9917
+1     Macro avg        0.9967         0.7736                       0.7404                0.0028                   0.2596  0.7552
+2  Weighted avg        0.9948         0.9912                       0.9917                0.0058                   0.0083  0.9914
+2020-01-14 12:22:25,875 [INFO] Dataset: Training. Classification report below
+2020-01-14 12:22:25,875 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00     36741
+      normal       0.99      0.99      0.99     53874
+       probe       0.99      0.98      0.98      9325
+         r2l       0.89      0.74      0.81       796
+         u2r       0.00      0.00      0.00        42
+
+    accuracy                           0.99    100778
+   macro avg       0.77      0.74      0.76    100778
+weighted avg       0.99      0.99      0.99    100778
+
+2020-01-14 12:22:25,875 [INFO] Overall accuracy (micro avg): 0.9916747702871659
+2020-01-14 12:22:28,919 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9917         0.9917                       0.9917                0.0021                   0.0083  0.9917
+1     Macro avg        0.9967         0.7724                       0.7411                0.0030                   0.2589  0.7553
+2  Weighted avg        0.9947         0.9911                       0.9917                0.0066                   0.0083  0.9913
+2020-01-14 12:22:28,967 [INFO] Results saved to: results_additional_exps/train_time_nsl_dbn_deep_rep1/train_time_nsl_dbn_deep_rep1_results.xlsx
+2020-01-14 12:22:28,967 [INFO] ================= Finished running experiment no. 1 ================= 
+
+2020-01-14 12:22:28,968 [INFO] Created directory: results_additional_exps/train_time_nsl_dbn_deep_rep2

@@ -1,0 +1,125 @@
+2020-01-13 23:10:51,917 [INFO] Initialized logging. log_filename = results_additional_exps/train_time_kdd99_ann_deep_rep1/run_log.log
+2020-01-13 23:10:51,917 [INFO] ================= Running experiment no. 1  ================= 
+
+2020-01-13 23:10:51,917 [INFO] Experiment parameters given below
+2020-01-13 23:10:51,917 [INFO] 
+{'experiment_num': 1, 'results_dir': 'results_additional_exps/train_time_kdd99_ann_deep_rep1', 'model_type': 'classifier', 'model': 'ann', 'normal_label': 'normal', 'training_data_feed': 'preload', 'scaling_type': 'NA', 'ann_layer_units': [64, 32, 64], 'ann_layer_activations': ['relu', 'relu', 'relu'], 'ann_layer_dropout_rates': [0.2, 0.2, 0.2], 'epochs': 100, 'early_stop_patience': 100, 'batch_size': 256, 'goal_metric': 0.922468135, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/full_datasets/kdd99_five_classes', 'description': 'train_time_kdd99_ann_deep_rep1'}
+2020-01-13 23:10:51,917 [INFO] Created tensorboard log directory: results_additional_exps/train_time_kdd99_ann_deep_rep1/tf_logs_run_2020_01_13-23_10_51
+2020-01-13 23:10:51,917 [INFO] Loading datsets from: ../Datasets/full_datasets/kdd99_five_classes
+2020-01-13 23:10:51,918 [INFO] Reading X, y files
+2020-01-13 23:10:51,918 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_train.h5
+2020-01-13 23:10:58,552 [INFO] Reading complete. time_to_read=6.63 seconds
+2020-01-13 23:10:58,552 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_val.h5
+2020-01-13 23:11:00,250 [INFO] Reading complete. time_to_read=1.70 seconds
+2020-01-13 23:11:00,250 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_test.h5
+2020-01-13 23:11:00,728 [INFO] Reading complete. time_to_read=0.48 seconds
+2020-01-13 23:11:00,728 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_train.h5
+2020-01-13 23:11:00,950 [INFO] Reading complete. time_to_read=0.22 seconds
+2020-01-13 23:11:00,950 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_val.h5
+2020-01-13 23:11:01,007 [INFO] Reading complete. time_to_read=0.06 seconds
+2020-01-13 23:11:01,007 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_test.h5
+2020-01-13 23:11:01,026 [INFO] Reading complete. time_to_read=0.02 seconds
+2020-01-13 23:11:08,358 [INFO] Initializing model
+2020-01-13 23:11:08,837 [INFO] _________________________________________________________________
+2020-01-13 23:11:08,837 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-13 23:11:08,837 [INFO] =================================================================
+2020-01-13 23:11:08,837 [INFO] dense_28 (Dense)             (None, 64)                7936      
+2020-01-13 23:11:08,837 [INFO] _________________________________________________________________
+2020-01-13 23:11:08,838 [INFO] batch_normalization_22 (Batc (None, 64)                256       
+2020-01-13 23:11:08,838 [INFO] _________________________________________________________________
+2020-01-13 23:11:08,838 [INFO] dropout_22 (Dropout)         (None, 64)                0         
+2020-01-13 23:11:08,838 [INFO] _________________________________________________________________
+2020-01-13 23:11:08,838 [INFO] dense_29 (Dense)             (None, 32)                2080      
+2020-01-13 23:11:08,838 [INFO] _________________________________________________________________
+2020-01-13 23:11:08,838 [INFO] batch_normalization_23 (Batc (None, 32)                128       
+2020-01-13 23:11:08,838 [INFO] _________________________________________________________________
+2020-01-13 23:11:08,838 [INFO] dropout_23 (Dropout)         (None, 32)                0         
+2020-01-13 23:11:08,838 [INFO] _________________________________________________________________
+2020-01-13 23:11:08,838 [INFO] dense_30 (Dense)             (None, 64)                2112      
+2020-01-13 23:11:08,838 [INFO] _________________________________________________________________
+2020-01-13 23:11:08,839 [INFO] batch_normalization_24 (Batc (None, 64)                256       
+2020-01-13 23:11:08,839 [INFO] _________________________________________________________________
+2020-01-13 23:11:08,839 [INFO] dropout_24 (Dropout)         (None, 64)                0         
+2020-01-13 23:11:08,839 [INFO] _________________________________________________________________
+2020-01-13 23:11:08,839 [INFO] dense_31 (Dense)             (None, 5)                 325       
+2020-01-13 23:11:08,839 [INFO] =================================================================
+2020-01-13 23:11:08,839 [INFO] Total params: 13,093
+2020-01-13 23:11:08,839 [INFO] Trainable params: 12,773
+2020-01-13 23:11:08,839 [INFO] Non-trainable params: 320
+2020-01-13 23:11:08,839 [INFO] _________________________________________________________________
+2020-01-13 23:11:08,839 [INFO] Training model
+2020-01-13 23:16:51,866 [INFO] StopperOnGoal: reached goal_metric (accuracy). Stopping training. goal_metric = 0.9225, current_metric = 0.9235, num_epochs = 2
+2020-01-13 23:16:51,868 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-13 23:20:44,186 [INFO] Last epoch loss evaluation: train_loss = 0.000441, val_loss = 0.000474
+2020-01-13 23:20:44,186 [INFO] Training complete. time_to_train = 575.35 sec, 9.59 min
+2020-01-13 23:20:45,845 [INFO] Model saved to results_additional_exps/train_time_kdd99_ann_deep_rep1/best_model.pickle
+2020-01-13 23:20:45,847 [INFO] Training history saved to: results_additional_exps/train_time_kdd99_ann_deep_rep1/training_error_history.csv
+2020-01-13 23:20:46,028 [INFO] Plot saved to: results_additional_exps/train_time_kdd99_ann_deep_rep1/training_error_history.png
+2020-01-13 23:20:46,202 [INFO] Plot saved to: results_additional_exps/train_time_kdd99_ann_deep_rep1/training_f1_history.png
+2020-01-13 23:20:46,202 [INFO] Making predictions on training, validation, testing data
+2020-01-13 23:24:35,522 [INFO] Making predictions complete. time_to_predict = 229.32 sec, 3.82 min
+2020-01-13 23:24:35,640 [INFO] Evaluating predictions (results)
+2020-01-13 23:24:44,352 [INFO] Dataset: Testing. Classification report below
+2020-01-13 23:24:44,352 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      0.97      0.99    229853
+     normal.       0.73      0.98      0.84     60593
+       probe       0.77      0.78      0.77      4166
+         r2l       0.97      0.03      0.07     13781
+         u2r       0.00      0.00      0.00      2636
+
+    accuracy                           0.92    311029
+   macro avg       0.69      0.55      0.53    311029
+weighted avg       0.93      0.92      0.90    311029
+
+2020-01-13 23:24:44,352 [INFO] Overall accuracy (micro avg): 0.9235376765510611
+2020-01-13 23:24:53,691 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9235         0.9235                       0.9235                0.0191                   0.0765  0.9235
+1     Macro avg        0.9694         0.6932                       0.5542                0.0195                   0.4458  0.5326
+2  Weighted avg        0.9682         0.9326                       0.9235                0.0213                   0.0765  0.9049
+2020-01-13 23:25:23,904 [INFO] Dataset: Validation. Classification report below
+2020-01-13 23:25:23,904 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00    776675
+     normal.       1.00      1.00      1.00    194556
+       probe       0.99      0.99      0.99      8221
+         r2l       0.87      0.56      0.68       225
+         u2r       0.00      0.00      0.00        10
+
+    accuracy                           1.00    979687
+   macro avg       0.77      0.71      0.73    979687
+weighted avg       1.00      1.00      1.00    979687
+
+2020-01-13 23:25:23,905 [INFO] Overall accuracy (micro avg): 0.9997070492922739
+2020-01-13 23:25:56,534 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9997         0.9997                       0.9997                0.0001                   0.0003  0.9997
+1     Macro avg        0.9999         0.7722                       0.7094                0.0001                   0.2906  0.7340
+2  Weighted avg        0.9999         0.9997                       0.9997                0.0002                   0.0003  0.9997
+2020-01-13 23:28:10,069 [INFO] Dataset: Training. Classification report below
+2020-01-13 23:28:10,069 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00   3106695
+     normal.       1.00      1.00      1.00    778225
+       probe       0.99      0.99      0.99     32881
+         r2l       0.87      0.55      0.67       901
+         u2r       0.00      0.00      0.00        42
+
+    accuracy                           1.00   3918744
+   macro avg       0.77      0.71      0.73   3918744
+weighted avg       1.00      1.00      1.00   3918744
+
+2020-01-13 23:28:10,070 [INFO] Overall accuracy (micro avg): 0.9997009245819579
+2020-01-13 23:30:34,288 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9997         0.9997                       0.9997                0.0001                   0.0003  0.9997
+1     Macro avg        0.9999         0.7720                       0.7084                0.0001                   0.2916  0.7332
+2  Weighted avg        0.9999         0.9997                       0.9997                0.0003                   0.0003  0.9997
+2020-01-13 23:30:34,335 [INFO] Results saved to: results_additional_exps/train_time_kdd99_ann_deep_rep1/train_time_kdd99_ann_deep_rep1_results.xlsx
+2020-01-13 23:30:34,342 [INFO] ================= Finished running experiment no. 1 ================= 
+
+2020-01-13 23:30:34,366 [INFO] Created directory: results_additional_exps/train_time_kdd99_ann_deep_rep2

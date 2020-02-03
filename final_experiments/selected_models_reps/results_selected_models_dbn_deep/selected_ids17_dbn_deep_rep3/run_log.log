@@ -1,0 +1,159 @@
+2019-12-24 17:28:40,925 [INFO] Initialized logging. log_filename = results_selected_models/selected_ids17_dbn_deep_rep3/run_log.log
+2019-12-24 17:28:40,925 [INFO] ================= Running experiment no. 1  ================= 
+
+2019-12-24 17:28:40,925 [INFO] Experiment parameters given below
+2019-12-24 17:28:40,925 [INFO] 
+{'experiment_num': 1, 'results_dir': 'results_selected_models/selected_ids17_dbn_deep_rep3', 'model_type': 'classifier', 'model': 'dbn', 'normal_label': 'BENIGN', 'scaling_type': 'NA', 'dbn_layer_units': [128, 64, 34], 'ann_layer_activations': ['relu', 'relu', 'relu'], 'ann_layer_dropout_rates': [0.2, 0.2, 0.4], 'unsupervised_ratio': 0.5, 'dbn_learning_rate': 0.0001, 'pretrain_epochs': 50, 'fine_tune_epochs': 300, 'early_stop_patience': 50, 'batch_size': 256, 'dataset_dir': '../Datasets/full_datasets/ids2017', 'description': 'selected_ids17_dbn_deep_rep3'}
+2019-12-24 17:28:40,925 [INFO] Created tensorboard log directory: results_selected_models/selected_ids17_dbn_deep_rep3/tf_logs_run_2019_12_24-17_28_40
+2019-12-24 17:28:40,925 [INFO] Loading datsets from: ../Datasets/full_datasets/ids2017
+2019-12-24 17:28:40,926 [INFO] Reading X, y files
+2019-12-24 17:28:40,926 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_train.h5
+2019-12-24 17:28:46,309 [INFO] Reading complete. time_to_read=5.38 seconds
+2019-12-24 17:28:46,309 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_val.h5
+2019-12-24 17:28:47,739 [INFO] Reading complete. time_to_read=1.43 seconds
+2019-12-24 17:28:47,739 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_test.h5
+2019-12-24 17:28:49,169 [INFO] Reading complete. time_to_read=1.43 seconds
+2019-12-24 17:28:49,169 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_train.h5
+2019-12-24 17:28:49,395 [INFO] Reading complete. time_to_read=0.23 seconds
+2019-12-24 17:28:49,395 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_val.h5
+2019-12-24 17:28:49,469 [INFO] Reading complete. time_to_read=0.07 seconds
+2019-12-24 17:28:49,469 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_test.h5
+2019-12-24 17:28:49,543 [INFO] Reading complete. time_to_read=0.07 seconds
+2019-12-24 17:28:53,001 [INFO] Initializing model
+2019-12-24 17:28:53,001 [INFO] Training model
+2019-12-24 17:28:53,001 [INFO] Splitting train set into 2 sets (unsupervised, supervised), random_seed = None
+2019-12-24 17:29:12,570 [INFO] Split sizes (instances). total = 1696684, unsupervised = 848342, supervised = 848342, unsupervised dataset hash = a7d23749ad325e93e633726cf91d7fab53f80692
+2019-12-24 17:29:12,570 [INFO] Pretraining Deep Belief Network
+2019-12-24 17:59:37,767 [INFO] Pretraining Complete
+2019-12-24 17:59:37,791 [INFO] Getting pretrained weights
+2019-12-24 17:59:37,792 [INFO] Creating and initializing feed forward neural network
+2019-12-24 17:59:38,078 [INFO] _________________________________________________________________
+2019-12-24 17:59:38,078 [INFO] Layer (type)                 Output Shape              Param #   
+2019-12-24 17:59:38,078 [INFO] =================================================================
+2019-12-24 17:59:38,078 [INFO] dense_29 (Dense)             (None, 128)               10112     
+2019-12-24 17:59:38,078 [INFO] _________________________________________________________________
+2019-12-24 17:59:38,078 [INFO] batch_normalization_22 (Batc (None, 128)               512       
+2019-12-24 17:59:38,078 [INFO] _________________________________________________________________
+2019-12-24 17:59:38,078 [INFO] dropout_22 (Dropout)         (None, 128)               0         
+2019-12-24 17:59:38,078 [INFO] _________________________________________________________________
+2019-12-24 17:59:38,079 [INFO] dense_30 (Dense)             (None, 64)                8256      
+2019-12-24 17:59:38,079 [INFO] _________________________________________________________________
+2019-12-24 17:59:38,079 [INFO] batch_normalization_23 (Batc (None, 64)                256       
+2019-12-24 17:59:38,079 [INFO] _________________________________________________________________
+2019-12-24 17:59:38,079 [INFO] dropout_23 (Dropout)         (None, 64)                0         
+2019-12-24 17:59:38,079 [INFO] _________________________________________________________________
+2019-12-24 17:59:38,079 [INFO] dense_31 (Dense)             (None, 34)                2210      
+2019-12-24 17:59:38,079 [INFO] _________________________________________________________________
+2019-12-24 17:59:38,079 [INFO] batch_normalization_24 (Batc (None, 34)                136       
+2019-12-24 17:59:38,079 [INFO] _________________________________________________________________
+2019-12-24 17:59:38,079 [INFO] dropout_24 (Dropout)         (None, 34)                0         
+2019-12-24 17:59:38,079 [INFO] _________________________________________________________________
+2019-12-24 17:59:38,079 [INFO] dense_32 (Dense)             (None, 12)                420       
+2019-12-24 17:59:38,079 [INFO] =================================================================
+2019-12-24 17:59:38,079 [INFO] Total params: 21,902
+2019-12-24 17:59:38,080 [INFO] Trainable params: 21,450
+2019-12-24 17:59:38,080 [INFO] Non-trainable params: 452
+2019-12-24 17:59:38,080 [INFO] _________________________________________________________________
+2019-12-24 17:59:40,409 [INFO] Fine-tuning final neural network
+2019-12-24 18:15:54,025 [INFO] epoch = 30. Intermediate model saved to results_selected_models/selected_ids17_dbn_deep_rep3/ann_model_epoch_30.pickle
+2019-12-24 18:31:41,956 [INFO] epoch = 60. Intermediate model saved to results_selected_models/selected_ids17_dbn_deep_rep3/ann_model_epoch_60.pickle
+2019-12-24 18:47:30,026 [INFO] epoch = 90. Intermediate model saved to results_selected_models/selected_ids17_dbn_deep_rep3/ann_model_epoch_90.pickle
+2019-12-24 19:03:18,541 [INFO] epoch = 120. Intermediate model saved to results_selected_models/selected_ids17_dbn_deep_rep3/ann_model_epoch_120.pickle
+2019-12-24 19:19:06,674 [INFO] epoch = 150. Intermediate model saved to results_selected_models/selected_ids17_dbn_deep_rep3/ann_model_epoch_150.pickle
+2019-12-24 19:34:53,508 [INFO] epoch = 180. Intermediate model saved to results_selected_models/selected_ids17_dbn_deep_rep3/ann_model_epoch_180.pickle
+2019-12-24 19:50:42,108 [INFO] epoch = 210. Intermediate model saved to results_selected_models/selected_ids17_dbn_deep_rep3/ann_model_epoch_210.pickle
+2019-12-24 20:06:30,677 [INFO] epoch = 240. Intermediate model saved to results_selected_models/selected_ids17_dbn_deep_rep3/ann_model_epoch_240.pickle
+2019-12-24 20:20:58,584 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2019-12-24 20:21:33,996 [INFO] Last epoch loss evaluation: train_loss = 0.002174, val_loss = 0.002284
+2019-12-24 20:21:34,036 [INFO] Training complete. time_to_train = 10361.03 sec, 172.68 min
+2019-12-24 20:21:34,043 [INFO] Model saved to results_selected_models/selected_ids17_dbn_deep_rep3/best_model.pickle
+2019-12-24 20:21:34,046 [INFO] Training history saved to: results_selected_models/selected_ids17_dbn_deep_rep3/training_error_history.csv
+2019-12-24 20:21:34,229 [INFO] Plot saved to: results_selected_models/selected_ids17_dbn_deep_rep3/training_error_history.png
+2019-12-24 20:21:34,355 [INFO] Plot saved to: results_selected_models/selected_ids17_dbn_deep_rep3/training_f1_history.png
+2019-12-24 20:21:34,355 [INFO] Making predictions on training, validation, testing data
+2019-12-24 20:22:41,390 [INFO] Evaluating predictions (results)
+2019-12-24 20:22:51,741 [INFO] Dataset: Testing. Classification report below
+2019-12-24 20:22:51,741 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00    454265
+                   Bot       0.97      0.38      0.55       391
+                  DDoS       1.00      1.00      1.00     25605
+         DoS GoldenEye       0.99      0.98      0.99      2058
+              DoS Hulk       0.98      0.99      0.99     46025
+      DoS Slowhttptest       0.88      0.99      0.93      1100
+         DoS slowloris       0.97      0.98      0.98      1159
+           FTP-Patator       1.00      0.99      0.99      1587
+              PortScan       0.99      1.00      1.00     31761
+           SSH-Patator       0.94      0.98      0.96      1179
+Web Attack Brute Force       1.00      0.06      0.11       302
+        Web Attack XSS       0.00      0.00      0.00       130
+
+             micro avg       1.00      1.00      1.00    565562
+             macro avg       0.89      0.78      0.79    565562
+          weighted avg       1.00      1.00      1.00    565562
+
+2019-12-24 20:22:51,741 [INFO] Overall accuracy (micro avg): 0.9955301098730113
+2019-12-24 20:23:03,488 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9955         0.9955                       0.9955                0.0004                   0.0045  0.9955
+1     Macro avg        0.9993         0.8932                       0.7792                0.0010                   0.2208  0.7905
+2  Weighted avg        0.9963         0.9953                       0.9955                0.0079                   0.0045  0.9951
+2019-12-24 20:23:13,935 [INFO] Dataset: Validation. Classification report below
+2019-12-24 20:23:13,935 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00    454264
+                   Bot       0.96      0.35      0.51       391
+                  DDoS       1.00      1.00      1.00     25605
+         DoS GoldenEye       0.99      0.98      0.98      2059
+              DoS Hulk       0.98      0.99      0.99     46025
+      DoS Slowhttptest       0.88      0.98      0.93      1099
+         DoS slowloris       0.97      0.97      0.97      1159
+           FTP-Patator       1.00      0.99      0.99      1587
+              PortScan       0.99      1.00      1.00     31761
+           SSH-Patator       0.94      0.97      0.95      1180
+Web Attack Brute Force       0.86      0.04      0.08       301
+        Web Attack XSS       0.00      0.00      0.00       131
+
+             micro avg       1.00      1.00      1.00    565562
+             macro avg       0.88      0.77      0.78    565562
+          weighted avg       1.00      1.00      1.00    565562
+
+2019-12-24 20:23:13,935 [INFO] Overall accuracy (micro avg): 0.9955672410805535
+2019-12-24 20:23:25,825 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9956         0.9956                       0.9956                0.0004                   0.0044  0.9956
+1     Macro avg        0.9993         0.8801                       0.7723                0.0010                   0.2277  0.7829
+2  Weighted avg        0.9964         0.9953                       0.9956                0.0077                   0.0044  0.9951
+2019-12-24 20:24:00,429 [INFO] Dataset: Training. Classification report below
+2019-12-24 20:24:00,429 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00   1362791
+                   Bot       0.97      0.37      0.53      1174
+                  DDoS       1.00      1.00      1.00     76815
+         DoS GoldenEye       0.99      0.98      0.98      6176
+              DoS Hulk       0.98      0.99      0.99    138074
+      DoS Slowhttptest       0.90      0.98      0.94      3300
+         DoS slowloris       0.98      0.99      0.98      3478
+           FTP-Patator       1.00      0.99      0.99      4761
+              PortScan       0.99      1.00      1.00     95282
+           SSH-Patator       0.95      0.98      0.97      3538
+Web Attack Brute Force       0.80      0.05      0.09       904
+        Web Attack XSS       0.00      0.00      0.00       391
+
+             micro avg       1.00      1.00      1.00   1696684
+             macro avg       0.88      0.78      0.79   1696684
+          weighted avg       1.00      1.00      1.00   1696684
+
+2019-12-24 20:24:00,429 [INFO] Overall accuracy (micro avg): 0.9957216547100108
+2019-12-24 20:24:39,715 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9957         0.9957                       0.9957                0.0004                   0.0043  0.9957
+1     Macro avg        0.9993         0.8799                       0.7769                0.0010                   0.2231  0.7888
+2  Weighted avg        0.9965         0.9954                       0.9957                0.0077                   0.0043  0.9953
+2019-12-24 20:24:39,743 [INFO] Results saved to: results_selected_models/selected_ids17_dbn_deep_rep3/selected_ids17_dbn_deep_rep3_results.xlsx
+2019-12-24 20:24:39,747 [INFO] ================= Finished running experiment no. 1 ================= 
+
+2019-12-24 20:24:39,817 [INFO] Created directory: results_selected_models/selected_ids17_dbn_deep_rep4

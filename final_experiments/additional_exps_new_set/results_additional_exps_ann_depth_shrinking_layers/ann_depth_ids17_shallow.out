@@ -1,0 +1,1823 @@
+Using TensorFlow backend.
+2020-01-04 19:31:51,495 [INFO] Read 3 experiments from file: experiment_specs/additional_exps/ann_depth.csv
+2020-01-04 19:31:51,495 [INFO] ================= Started running experiments ================= 
+
+2020-01-04 19:31:51,495 [INFO] Created directory: results_additional_exps/ann_depth_ids17_shallow_21
+2020-01-04 19:31:51,495 [INFO] Initialized logging. log_filename = results_additional_exps/ann_depth_ids17_shallow_21/run_log.log
+2020-01-04 19:31:51,495 [INFO] ================= Running experiment no. 11  ================= 
+
+2020-01-04 19:31:51,495 [INFO] Experiment parameters given below
+2020-01-04 19:31:51,495 [INFO] 
+{'experiment_num': 11, 'results_dir': 'results_additional_exps/ann_depth_ids17_shallow_21', 'model_type': 'classifier', 'model': 'ann', 'normal_label': 'BENIGN', 'training_data_feed': 'preload', 'scaling_type': 'NA', 'ann_layer_units': [1000, 500, 200], 'ann_layer_activations': ['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu'], 'ann_layer_dropout_rates': [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2], 'epochs': 200, 'early_stop_patience': 50, 'batch_size': 256, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/full_datasets/ids2017', 'description': 'ann_depth_ids17_shallow_21'}
+2020-01-04 19:31:51,495 [INFO] Created tensorboard log directory: results_additional_exps/ann_depth_ids17_shallow_21/tf_logs_run_2020_01_04-19_31_51
+2020-01-04 19:31:51,495 [INFO] Loading datsets from: ../Datasets/full_datasets/ids2017
+2020-01-04 19:31:51,496 [INFO] Reading X, y files
+2020-01-04 19:31:51,496 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_train.h5
+2020-01-04 19:31:55,556 [INFO] Reading complete. time_to_read=4.06 seconds
+2020-01-04 19:31:55,556 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_val.h5
+2020-01-04 19:31:56,938 [INFO] Reading complete. time_to_read=1.38 seconds
+2020-01-04 19:31:56,938 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_test.h5
+2020-01-04 19:31:58,318 [INFO] Reading complete. time_to_read=1.38 seconds
+2020-01-04 19:31:58,318 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_train.h5
+2020-01-04 19:31:58,549 [INFO] Reading complete. time_to_read=0.23 seconds
+2020-01-04 19:31:58,549 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_val.h5
+2020-01-04 19:31:58,617 [INFO] Reading complete. time_to_read=0.07 seconds
+2020-01-04 19:31:58,617 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_test.h5
+2020-01-04 19:31:58,685 [INFO] Reading complete. time_to_read=0.07 seconds
+2020-01-04 19:32:01,854 [INFO] Initializing model
+WARNING:tensorflow:From /home/sunanda/test/ml_env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2020-01-04 19:32:01,867 [WARNING] From /home/sunanda/test/ml_env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+WARNING:tensorflow:From /home/sunanda/test/ml_env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-01-04 19:32:01,931 [WARNING] From /home/sunanda/test/ml_env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-01-04 19:32:02,110 [INFO] _________________________________________________________________
+2020-01-04 19:32:02,110 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-04 19:32:02,110 [INFO] =================================================================
+2020-01-04 19:32:02,110 [INFO] dense_1 (Dense)              (None, 1000)              79000     
+2020-01-04 19:32:02,110 [INFO] _________________________________________________________________
+2020-01-04 19:32:02,111 [INFO] batch_normalization_1 (Batch (None, 1000)              4000      
+2020-01-04 19:32:02,111 [INFO] _________________________________________________________________
+2020-01-04 19:32:02,111 [INFO] dropout_1 (Dropout)          (None, 1000)              0         
+2020-01-04 19:32:02,111 [INFO] _________________________________________________________________
+2020-01-04 19:32:02,111 [INFO] dense_2 (Dense)              (None, 500)               500500    
+2020-01-04 19:32:02,111 [INFO] _________________________________________________________________
+2020-01-04 19:32:02,111 [INFO] batch_normalization_2 (Batch (None, 500)               2000      
+2020-01-04 19:32:02,111 [INFO] _________________________________________________________________
+2020-01-04 19:32:02,111 [INFO] dropout_2 (Dropout)          (None, 500)               0         
+2020-01-04 19:32:02,111 [INFO] _________________________________________________________________
+2020-01-04 19:32:02,111 [INFO] dense_3 (Dense)              (None, 200)               100200    
+2020-01-04 19:32:02,111 [INFO] _________________________________________________________________
+2020-01-04 19:32:02,111 [INFO] batch_normalization_3 (Batch (None, 200)               800       
+2020-01-04 19:32:02,111 [INFO] _________________________________________________________________
+2020-01-04 19:32:02,111 [INFO] dropout_3 (Dropout)          (None, 200)               0         
+2020-01-04 19:32:02,111 [INFO] _________________________________________________________________
+2020-01-04 19:32:02,111 [INFO] dense_4 (Dense)              (None, 12)                2412      
+2020-01-04 19:32:02,111 [INFO] =================================================================
+2020-01-04 19:32:02,112 [INFO] Total params: 688,912
+2020-01-04 19:32:02,112 [INFO] Trainable params: 685,512
+2020-01-04 19:32:02,112 [INFO] Non-trainable params: 3,400
+2020-01-04 19:32:02,112 [INFO] _________________________________________________________________
+2020-01-04 19:32:02,112 [INFO] Training model
+WARNING:tensorflow:From /home/sunanda/test/ml_env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2020-01-04 19:32:02,488 [WARNING] From /home/sunanda/test/ml_env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2020-01-04 19:32:03.085234: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-01-04 19:32:03.104698: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3299620000 Hz
+2020-01-04 19:32:03.104857: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x1b549b0 executing computations on platform Host. Devices:
+2020-01-04 19:32:03.104875: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+Train on 1696684 samples, validate on 565562 samples
+Epoch 1/200
+ - 135s - loss: 0.0119 - val_loss: 0.0101
+ - val_f1: 0.9748
+Epoch 2/200
+ - 135s - loss: 0.0068 - val_loss: 0.0043
+ - val_f1: 0.9902
+Epoch 3/200
+ - 136s - loss: 0.0047 - val_loss: 0.0074
+ - val_f1: 0.9810
+Epoch 4/200
+ - 135s - loss: 0.0041 - val_loss: 0.0038
+ - val_f1: 0.9919
+Epoch 5/200
+ - 135s - loss: 0.0039 - val_loss: 0.0066
+ - val_f1: 0.9857
+Epoch 6/200
+ - 135s - loss: 0.0040 - val_loss: 0.0034
+ - val_f1: 0.9918
+Epoch 7/200
+ - 136s - loss: 0.0036 - val_loss: 0.0036
+ - val_f1: 0.9916
+Epoch 8/200
+ - 135s - loss: 0.0034 - val_loss: 0.0054
+ - val_f1: 0.9850
+Epoch 9/200
+ - 135s - loss: 0.0033 - val_loss: 0.0033
+ - val_f1: 0.9919
+Epoch 10/200
+ - 135s - loss: 0.0033 - val_loss: 0.0028
+ - val_f1: 0.9939
+Epoch 11/200
+ - 135s - loss: 0.0033 - val_loss: 0.0031
+ - val_f1: 0.9921
+Epoch 12/200
+ - 136s - loss: 0.0032 - val_loss: 0.0039
+ - val_f1: 0.9908
+Epoch 13/200
+ - 135s - loss: 0.0034 - val_loss: 0.0026
+ - val_f1: 0.9941
+Epoch 14/200
+ - 135s - loss: 0.0030 - val_loss: 0.0027
+ - val_f1: 0.9935
+Epoch 15/200
+ - 135s - loss: 0.0032 - val_loss: 0.0038
+ - val_f1: 0.9918
+Epoch 16/200
+ - 135s - loss: 0.0030 - val_loss: 0.0026
+ - val_f1: 0.9942
+Epoch 17/200
+ - 135s - loss: 0.0029 - val_loss: 0.0042
+ - val_f1: 0.9879
+Epoch 18/200
+ - 135s - loss: 0.0032 - val_loss: 0.0031
+ - val_f1: 0.9933
+Epoch 19/200
+ - 135s - loss: 0.0029 - val_loss: 0.0048
+ - val_f1: 0.9877
+Epoch 20/200
+ - 135s - loss: 0.0029 - val_loss: 0.0040
+ - val_f1: 0.9906
+Epoch 21/200
+ - 135s - loss: 0.0029 - val_loss: 0.0031
+/home/sunanda/test/ml_env/lib/python3.6/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+2020-01-04 20:26:48,397 [INFO] epoch = 20. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_21/ann_model_epoch_20.pickle
+ - val_f1: 0.9939
+Epoch 22/200
+ - 135s - loss: 0.0028 - val_loss: 0.0027
+ - val_f1: 0.9947
+Epoch 23/200
+ - 135s - loss: 0.0030 - val_loss: 0.0029
+ - val_f1: 0.9934
+Epoch 24/200
+ - 135s - loss: 0.0030 - val_loss: 0.0026
+ - val_f1: 0.9938
+Epoch 25/200
+ - 136s - loss: 0.0029 - val_loss: 0.0033
+ - val_f1: 0.9919
+Epoch 26/200
+ - 136s - loss: 0.0028 - val_loss: 0.0027
+ - val_f1: 0.9933
+Epoch 27/200
+ - 136s - loss: 0.0027 - val_loss: 0.0032
+ - val_f1: 0.9934
+Epoch 28/200
+ - 135s - loss: 0.0027 - val_loss: 0.0028
+ - val_f1: 0.9936
+Epoch 29/200
+ - 135s - loss: 0.0027 - val_loss: 0.0027
+ - val_f1: 0.9940
+Epoch 30/200
+ - 136s - loss: 0.0027 - val_loss: 0.0026
+ - val_f1: 0.9949
+Epoch 31/200
+ - 135s - loss: 0.0026 - val_loss: 0.0024
+ - val_f1: 0.9945
+Epoch 32/200
+ - 135s - loss: 0.0026 - val_loss: 0.0024
+ - val_f1: 0.9947
+Epoch 33/200
+ - 135s - loss: 0.0025 - val_loss: 0.0026
+ - val_f1: 0.9952
+Epoch 34/200
+ - 135s - loss: 0.0027 - val_loss: 0.0035
+ - val_f1: 0.9935
+Epoch 35/200
+ - 135s - loss: 0.0026 - val_loss: 0.0038
+ - val_f1: 0.9937
+Epoch 36/200
+ - 135s - loss: 0.0025 - val_loss: 0.0025
+ - val_f1: 0.9943
+Epoch 37/200
+ - 135s - loss: 0.0026 - val_loss: 0.0028
+ - val_f1: 0.9932
+Epoch 38/200
+ - 135s - loss: 0.0026 - val_loss: 0.0028
+ - val_f1: 0.9936
+Epoch 39/200
+ - 135s - loss: 0.0026 - val_loss: 0.0030
+ - val_f1: 0.9929
+Epoch 40/200
+ - 135s - loss: 0.0026 - val_loss: 0.0025
+ - val_f1: 0.9939
+Epoch 41/200
+ - 135s - loss: 0.0025 - val_loss: 0.0025
+2020-01-04 21:19:18,014 [INFO] epoch = 40. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_21/ann_model_epoch_40.pickle
+ - val_f1: 0.9935
+Epoch 42/200
+ - 135s - loss: 0.0025 - val_loss: 0.0024
+ - val_f1: 0.9945
+Epoch 43/200
+ - 135s - loss: 0.0024 - val_loss: 0.0051
+ - val_f1: 0.9822
+Epoch 44/200
+ - 135s - loss: 0.0024 - val_loss: 0.0022
+ - val_f1: 0.9953
+Epoch 45/200
+ - 135s - loss: 0.0024 - val_loss: 0.0025
+ - val_f1: 0.9942
+Epoch 46/200
+ - 136s - loss: 0.0024 - val_loss: 0.0022
+ - val_f1: 0.9956
+Epoch 47/200
+ - 136s - loss: 0.0023 - val_loss: 0.0023
+ - val_f1: 0.9949
+Epoch 48/200
+ - 136s - loss: 0.0024 - val_loss: 0.0026
+ - val_f1: 0.9942
+Epoch 49/200
+ - 136s - loss: 0.0025 - val_loss: 0.0025
+ - val_f1: 0.9940
+Epoch 50/200
+ - 136s - loss: 0.0024 - val_loss: 0.0024
+ - val_f1: 0.9956
+Epoch 51/200
+ - 136s - loss: 0.0025 - val_loss: 0.0021
+ - val_f1: 0.9957
+Epoch 52/200
+ - 135s - loss: 0.0025 - val_loss: 0.0069
+ - val_f1: 0.9755
+Epoch 53/200
+ - 136s - loss: 0.0024 - val_loss: 0.0025
+ - val_f1: 0.9951
+Epoch 54/200
+ - 135s - loss: 0.0024 - val_loss: 0.0032
+ - val_f1: 0.9931
+Epoch 55/200
+ - 136s - loss: 0.0023 - val_loss: 0.0048
+ - val_f1: 0.9837
+Epoch 56/200
+ - 135s - loss: 0.0023 - val_loss: 0.0027
+ - val_f1: 0.9937
+Epoch 57/200
+ - 135s - loss: 0.0024 - val_loss: 0.0024
+ - val_f1: 0.9944
+Epoch 58/200
+ - 136s - loss: 0.0023 - val_loss: 0.0025
+ - val_f1: 0.9943
+Epoch 59/200
+ - 136s - loss: 0.0024 - val_loss: 0.0026
+ - val_f1: 0.9942
+Epoch 60/200
+ - 135s - loss: 0.0025 - val_loss: 0.0043
+ - val_f1: 0.9917
+Epoch 61/200
+ - 136s - loss: 0.0024 - val_loss: 0.0025
+2020-01-04 22:11:52,876 [INFO] epoch = 60. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_21/ann_model_epoch_60.pickle
+ - val_f1: 0.9948
+Epoch 62/200
+ - 135s - loss: 0.0024 - val_loss: 0.0028
+ - val_f1: 0.9951
+Epoch 63/200
+ - 136s - loss: 0.0023 - val_loss: 0.0027
+ - val_f1: 0.9940
+Epoch 64/200
+ - 135s - loss: 0.0024 - val_loss: 0.0025
+ - val_f1: 0.9946
+Epoch 65/200
+ - 135s - loss: 0.0023 - val_loss: 0.0023
+ - val_f1: 0.9949
+Epoch 66/200
+ - 135s - loss: 0.0023 - val_loss: 0.0024
+ - val_f1: 0.9944
+Epoch 67/200
+ - 136s - loss: 0.0024 - val_loss: 0.0028
+ - val_f1: 0.9936
+Epoch 68/200
+ - 135s - loss: 0.0022 - val_loss: 0.0022
+ - val_f1: 0.9948
+Epoch 69/200
+ - 135s - loss: 0.0023 - val_loss: 0.0023
+ - val_f1: 0.9951
+Epoch 70/200
+ - 135s - loss: 0.0023 - val_loss: 0.0027
+ - val_f1: 0.9941
+Epoch 71/200
+ - 136s - loss: 0.0023 - val_loss: 0.0026
+ - val_f1: 0.9941
+Epoch 72/200
+ - 136s - loss: 0.0022 - val_loss: 0.0024
+ - val_f1: 0.9947
+Epoch 73/200
+ - 136s - loss: 0.0024 - val_loss: 0.0032
+ - val_f1: 0.9945
+Epoch 74/200
+ - 135s - loss: 0.0024 - val_loss: 0.0023
+ - val_f1: 0.9931
+Epoch 75/200
+ - 136s - loss: 0.0023 - val_loss: 0.0027
+ - val_f1: 0.9952
+Epoch 76/200
+ - 136s - loss: 0.0024 - val_loss: 0.0021
+ - val_f1: 0.9956
+Epoch 77/200
+ - 136s - loss: 0.0023 - val_loss: 0.0022
+ - val_f1: 0.9953
+Epoch 78/200
+ - 136s - loss: 0.0025 - val_loss: 0.0042
+ - val_f1: 0.9881
+Epoch 79/200
+ - 136s - loss: 0.0024 - val_loss: 0.0024
+ - val_f1: 0.9946
+Epoch 80/200
+ - 136s - loss: 0.0024 - val_loss: 0.0037
+ - val_f1: 0.9917
+Epoch 81/200
+ - 136s - loss: 0.0024 - val_loss: 0.0024
+2020-01-04 23:04:28,893 [INFO] epoch = 80. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_21/ann_model_epoch_80.pickle
+ - val_f1: 0.9946
+Epoch 82/200
+ - 136s - loss: 0.0023 - val_loss: 0.0044
+ - val_f1: 0.9914
+Epoch 83/200
+ - 136s - loss: 0.0023 - val_loss: 0.0034
+ - val_f1: 0.9914
+Epoch 84/200
+ - 136s - loss: 0.0023 - val_loss: 0.0027
+ - val_f1: 0.9939
+Epoch 85/200
+ - 136s - loss: 0.0024 - val_loss: 0.0041
+ - val_f1: 0.9917
+Epoch 86/200
+ - 136s - loss: 0.0024 - val_loss: 0.0032
+ - val_f1: 0.9937
+Epoch 87/200
+ - 136s - loss: 0.0024 - val_loss: 0.0025
+ - val_f1: 0.9957
+Epoch 88/200
+ - 136s - loss: 0.0024 - val_loss: 0.0024
+ - val_f1: 0.9951
+Epoch 89/200
+ - 136s - loss: 0.0024 - val_loss: 0.0023
+ - val_f1: 0.9951
+Epoch 90/200
+ - 136s - loss: 0.0024 - val_loss: 0.0022
+ - val_f1: 0.9949
+Epoch 91/200
+ - 136s - loss: 0.0023 - val_loss: 0.0026
+ - val_f1: 0.9944
+Epoch 92/200
+ - 135s - loss: 0.0024 - val_loss: 0.0028
+ - val_f1: 0.9944
+Epoch 93/200
+ - 136s - loss: 0.0024 - val_loss: 0.0026
+ - val_f1: 0.9944
+Epoch 94/200
+ - 136s - loss: 0.0023 - val_loss: 0.0025
+ - val_f1: 0.9949
+Epoch 95/200
+ - 136s - loss: 0.0024 - val_loss: 0.0025
+ - val_f1: 0.9951
+Epoch 96/200
+ - 136s - loss: 0.0024 - val_loss: 0.0050
+ - val_f1: 0.9870
+Epoch 97/200
+ - 135s - loss: 0.0024 - val_loss: 0.0026
+ - val_f1: 0.9944
+Epoch 98/200
+ - 135s - loss: 0.0023 - val_loss: 0.0026
+ - val_f1: 0.9930
+Epoch 99/200
+ - 136s - loss: 0.0023 - val_loss: 0.0026
+ - val_f1: 0.9932
+Epoch 100/200
+ - 136s - loss: 0.0024 - val_loss: 0.0085
+ - val_f1: 0.9843
+Epoch 101/200
+ - 136s - loss: 0.0023 - val_loss: 0.0029
+2020-01-04 23:57:04,854 [INFO] epoch = 100. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_21/ann_model_epoch_100.pickle
+ - val_f1: 0.9942
+Epoch 102/200
+ - 136s - loss: 0.0023 - val_loss: 0.0027
+ - val_f1: 0.9940
+Epoch 103/200
+ - 136s - loss: 0.0023 - val_loss: 0.0022
+ - val_f1: 0.9953
+Epoch 104/200
+ - 136s - loss: 0.0022 - val_loss: 0.0024
+ - val_f1: 0.9949
+Epoch 105/200
+ - 136s - loss: 0.0022 - val_loss: 0.0024
+ - val_f1: 0.9949
+Epoch 106/200
+ - 136s - loss: 0.0022 - val_loss: 0.0030
+ - val_f1: 0.9935
+Epoch 107/200
+ - 136s - loss: 0.0022 - val_loss: 0.0036
+ - val_f1: 0.9918
+Epoch 108/200
+ - 136s - loss: 0.0022 - val_loss: 0.0023
+ - val_f1: 0.9952
+Epoch 109/200
+ - 136s - loss: 0.0022 - val_loss: 0.0028
+ - val_f1: 0.9958
+Epoch 110/200
+ - 136s - loss: 0.0022 - val_loss: 0.0023
+ - val_f1: 0.9952
+Epoch 111/200
+ - 136s - loss: 0.0022 - val_loss: 0.0026
+ - val_f1: 0.9947
+Epoch 112/200
+ - 136s - loss: 0.0022 - val_loss: 0.0025
+ - val_f1: 0.9949
+Epoch 113/200
+ - 136s - loss: 0.0023 - val_loss: 0.0023
+ - val_f1: 0.9952
+Epoch 114/200
+ - 136s - loss: 0.0022 - val_loss: 0.0027
+ - val_f1: 0.9945
+Epoch 115/200
+ - 136s - loss: 0.0022 - val_loss: 0.0023
+ - val_f1: 0.9949
+Epoch 116/200
+ - 136s - loss: 0.0023 - val_loss: 0.0025
+ - val_f1: 0.9950
+Epoch 117/200
+ - 136s - loss: 0.0022 - val_loss: 0.0023
+ - val_f1: 0.9950
+Epoch 118/200
+ - 136s - loss: 0.0021 - val_loss: 0.0021
+ - val_f1: 0.9955
+Epoch 119/200
+ - 136s - loss: 0.0021 - val_loss: 0.0023
+ - val_f1: 0.9949
+Epoch 120/200
+ - 136s - loss: 0.0022 - val_loss: 0.0032
+ - val_f1: 0.9919
+Epoch 121/200
+ - 136s - loss: 0.0021 - val_loss: 0.0022
+2020-01-05 00:49:47,055 [INFO] epoch = 120. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_21/ann_model_epoch_120.pickle
+ - val_f1: 0.9950
+Epoch 122/200
+ - 136s - loss: 0.0021 - val_loss: 0.0055
+ - val_f1: 0.9881
+Epoch 123/200
+ - 136s - loss: 0.0022 - val_loss: 0.0025
+ - val_f1: 0.9942
+Epoch 124/200
+ - 136s - loss: 0.0022 - val_loss: 0.0023
+ - val_f1: 0.9949
+Epoch 125/200
+ - 136s - loss: 0.0022 - val_loss: 0.0025
+ - val_f1: 0.9942
+Epoch 126/200
+ - 136s - loss: 0.0022 - val_loss: 0.0021
+2020-01-05 01:03:19,059 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-05 01:04:50,858 [INFO] Last epoch loss evaluation: train_loss = 0.002011, val_loss = 0.002067
+2020-01-05 01:04:50,859 [INFO] Training complete. time_to_train = 19968.75 sec, 332.81 min
+2020-01-05 01:04:50,873 [INFO] Model saved to results_additional_exps/ann_depth_ids17_shallow_21/best_model.pickle
+2020-01-05 01:04:50,876 [INFO] Training history saved to: results_additional_exps/ann_depth_ids17_shallow_21/training_error_history.csv
+2020-01-05 01:04:51,069 [INFO] Plot saved to: results_additional_exps/ann_depth_ids17_shallow_21/training_error_history.png
+2020-01-05 01:04:51,238 [INFO] Plot saved to: results_additional_exps/ann_depth_ids17_shallow_21/training_f1_history.png
+2020-01-05 01:04:51,238 [INFO] Making predictions on training, validation, testing data
+2020-01-05 01:06:40,518 [INFO] Evaluating predictions (results)
+/home/sunanda/test/ml_env/lib/python3.6/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+2020-01-05 01:06:50,744 [INFO] Dataset: Testing. Classification report below
+2020-01-05 01:06:50,744 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00    454265
+                   Bot       0.99      0.39      0.56       391
+                  DDoS       1.00      1.00      1.00     25605
+         DoS GoldenEye       1.00      0.99      0.99      2058
+              DoS Hulk       0.98      1.00      0.99     46025
+      DoS Slowhttptest       0.89      0.99      0.94      1100
+         DoS slowloris       0.99      0.96      0.98      1159
+           FTP-Patator       1.00      0.99      1.00      1587
+              PortScan       0.99      1.00      1.00     31761
+           SSH-Patator       0.96      0.96      0.96      1179
+Web Attack Brute Force       0.96      0.15      0.26       302
+        Web Attack XSS       0.00      0.00      0.00       130
+
+             micro avg       1.00      1.00      1.00    565562
+             macro avg       0.90      0.79      0.81    565562
+          weighted avg       1.00      1.00      1.00    565562
+
+2020-01-05 01:06:50,744 [INFO] Overall accuracy (micro avg): 0.9959120308648742
+/home/sunanda/test/ids_experiments/utility.py:328: RuntimeWarning: invalid value encountered in true_divide
+  PPV = TP / (TP + FP)    # Precision or positive predictive value
+/home/sunanda/test/ids_experiments/utility.py:332: RuntimeWarning: invalid value encountered in true_divide
+  FDR = FP / (TP + FP)    # False discovery rate
+2020-01-05 01:07:02,286 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9959         0.9959                       0.9959                0.0004                   0.0041  0.9959
+1     Macro avg        0.9993         0.8961                       0.7861                0.0009                   0.2139  0.8055
+2  Weighted avg        0.9966         0.9957                       0.9959                0.0068                   0.0041  0.9956
+2020-01-05 01:07:12,590 [INFO] Dataset: Validation. Classification report below
+2020-01-05 01:07:12,590 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00    454264
+                   Bot       0.99      0.36      0.53       391
+                  DDoS       1.00      1.00      1.00     25605
+         DoS GoldenEye       0.99      0.99      0.99      2059
+              DoS Hulk       0.98      1.00      0.99     46025
+      DoS Slowhttptest       0.89      0.99      0.94      1099
+         DoS slowloris       0.99      0.95      0.97      1159
+           FTP-Patator       1.00      0.99      0.99      1587
+              PortScan       0.99      1.00      1.00     31761
+           SSH-Patator       0.97      0.96      0.96      1180
+Web Attack Brute Force       0.88      0.14      0.25       301
+        Web Attack XSS       1.00      0.03      0.06       131
+
+             micro avg       1.00      1.00      1.00    565562
+             macro avg       0.97      0.78      0.81    565562
+          weighted avg       1.00      1.00      1.00    565562
+
+2020-01-05 01:07:12,590 [INFO] Overall accuracy (micro avg): 0.9959686117525577
+2020-01-05 01:07:24,290 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9960         0.9960                       0.9960                0.0004                   0.0040  0.9960
+1     Macro avg        0.9993         0.9723                       0.7841                0.0009                   0.2159  0.8059
+2  Weighted avg        0.9967         0.9960                       0.9960                0.0065                   0.0040  0.9956
+2020-01-05 01:07:58,326 [INFO] Dataset: Training. Classification report below
+2020-01-05 01:07:58,326 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00   1362791
+                   Bot       1.00      0.37      0.54      1174
+                  DDoS       1.00      1.00      1.00     76815
+         DoS GoldenEye       0.99      0.99      0.99      6176
+              DoS Hulk       0.98      1.00      0.99    138074
+      DoS Slowhttptest       0.91      0.99      0.95      3300
+         DoS slowloris       0.99      0.97      0.98      3478
+           FTP-Patator       1.00      0.99      1.00      4761
+              PortScan       0.99      1.00      1.00     95282
+           SSH-Patator       0.97      0.97      0.97      3538
+Web Attack Brute Force       0.98      0.13      0.24       904
+        Web Attack XSS       1.00      0.03      0.06       391
+
+             micro avg       1.00      1.00      1.00   1696684
+             macro avg       0.98      0.79      0.81   1696684
+          weighted avg       1.00      1.00      1.00   1696684
+
+2020-01-05 01:07:58,326 [INFO] Overall accuracy (micro avg): 0.9961035761520708
+2020-01-05 01:08:37,020 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9961         0.9961                       0.9961                0.0004                   0.0039  0.9961
+1     Macro avg        0.9994         0.9838                       0.7865                0.0009                   0.2135  0.8086
+2  Weighted avg        0.9968         0.9961                       0.9961                0.0065                   0.0039  0.9957
+2020-01-05 01:08:37,073 [INFO] Results saved to: results_additional_exps/ann_depth_ids17_shallow_21/ann_depth_ids17_shallow_21_results.xlsx
+2020-01-05 01:08:37,079 [INFO] ================= Finished running experiment no. 11 ================= 
+
+2020-01-05 01:08:37,146 [INFO] Created directory: results_additional_exps/ann_depth_ids17_shallow_22
+2020-01-05 01:08:37,146 [INFO] Initialized logging. log_filename = results_additional_exps/ann_depth_ids17_shallow_22/run_log.log
+2020-01-05 01:08:37,146 [INFO] ================= Running experiment no. 12  ================= 
+
+2020-01-05 01:08:37,146 [INFO] Experiment parameters given below
+2020-01-05 01:08:37,146 [INFO] 
+{'experiment_num': 12, 'results_dir': 'results_additional_exps/ann_depth_ids17_shallow_22', 'model_type': 'classifier', 'model': 'ann', 'normal_label': 'BENIGN', 'training_data_feed': 'preload', 'scaling_type': 'NA', 'ann_layer_units': [2000, 1000, 500], 'ann_layer_activations': ['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu'], 'ann_layer_dropout_rates': [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2], 'epochs': 200, 'early_stop_patience': 50, 'batch_size': 256, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/full_datasets/ids2017', 'description': 'ann_depth_ids17_shallow_22'}
+2020-01-05 01:08:37,146 [INFO] Created tensorboard log directory: results_additional_exps/ann_depth_ids17_shallow_22/tf_logs_run_2020_01_05-01_08_37
+2020-01-05 01:08:37,146 [INFO] Loading datsets from: ../Datasets/full_datasets/ids2017
+2020-01-05 01:08:37,146 [INFO] Reading X, y files
+2020-01-05 01:08:37,146 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_train.h5
+2020-01-05 01:08:41,174 [INFO] Reading complete. time_to_read=4.03 seconds
+2020-01-05 01:08:41,174 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_val.h5
+2020-01-05 01:08:42,552 [INFO] Reading complete. time_to_read=1.38 seconds
+2020-01-05 01:08:42,552 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_test.h5
+2020-01-05 01:08:43,924 [INFO] Reading complete. time_to_read=1.37 seconds
+2020-01-05 01:08:43,924 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_train.h5
+2020-01-05 01:08:44,141 [INFO] Reading complete. time_to_read=0.22 seconds
+2020-01-05 01:08:44,141 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_val.h5
+2020-01-05 01:08:44,208 [INFO] Reading complete. time_to_read=0.07 seconds
+2020-01-05 01:08:44,208 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_test.h5
+2020-01-05 01:08:44,275 [INFO] Reading complete. time_to_read=0.07 seconds
+2020-01-05 01:08:47,449 [INFO] Initializing model
+2020-01-05 01:08:47,701 [INFO] _________________________________________________________________
+2020-01-05 01:08:47,702 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-05 01:08:47,702 [INFO] =================================================================
+2020-01-05 01:08:47,702 [INFO] dense_5 (Dense)              (None, 2000)              158000    
+2020-01-05 01:08:47,702 [INFO] _________________________________________________________________
+2020-01-05 01:08:47,702 [INFO] batch_normalization_4 (Batch (None, 2000)              8000      
+2020-01-05 01:08:47,702 [INFO] _________________________________________________________________
+2020-01-05 01:08:47,702 [INFO] dropout_4 (Dropout)          (None, 2000)              0         
+2020-01-05 01:08:47,702 [INFO] _________________________________________________________________
+2020-01-05 01:08:47,702 [INFO] dense_6 (Dense)              (None, 1000)              2001000   
+2020-01-05 01:08:47,702 [INFO] _________________________________________________________________
+2020-01-05 01:08:47,702 [INFO] batch_normalization_5 (Batch (None, 1000)              4000      
+2020-01-05 01:08:47,702 [INFO] _________________________________________________________________
+2020-01-05 01:08:47,702 [INFO] dropout_5 (Dropout)          (None, 1000)              0         
+2020-01-05 01:08:47,702 [INFO] _________________________________________________________________
+2020-01-05 01:08:47,702 [INFO] dense_7 (Dense)              (None, 500)               500500    
+2020-01-05 01:08:47,702 [INFO] _________________________________________________________________
+2020-01-05 01:08:47,702 [INFO] batch_normalization_6 (Batch (None, 500)               2000      
+2020-01-05 01:08:47,703 [INFO] _________________________________________________________________
+2020-01-05 01:08:47,703 [INFO] dropout_6 (Dropout)          (None, 500)               0         
+2020-01-05 01:08:47,703 [INFO] _________________________________________________________________
+2020-01-05 01:08:47,703 [INFO] dense_8 (Dense)              (None, 12)                6012      
+2020-01-05 01:08:47,703 [INFO] =================================================================
+2020-01-05 01:08:47,703 [INFO] Total params: 2,679,512
+2020-01-05 01:08:47,703 [INFO] Trainable params: 2,672,512
+2020-01-05 01:08:47,703 [INFO] Non-trainable params: 7,000
+2020-01-05 01:08:47,703 [INFO] _________________________________________________________________
+2020-01-05 01:08:47,703 [INFO] Training model
+ - val_f1: 0.9959
+Epoch 00126: early stopping
+Train on 1696684 samples, validate on 565562 samples
+Epoch 1/200
+ - 418s - loss: 0.0114 - val_loss: 0.0080
+ - val_f1: 0.9786
+Epoch 2/200
+ - 417s - loss: 0.0071 - val_loss: 0.0087
+ - val_f1: 0.9802
+Epoch 3/200
+ - 417s - loss: 0.0047 - val_loss: 0.0039
+ - val_f1: 0.9913
+Epoch 4/200
+ - 419s - loss: 0.0042 - val_loss: 0.0098
+ - val_f1: 0.9803
+Epoch 5/200
+ - 419s - loss: 0.0038 - val_loss: 0.0087
+ - val_f1: 0.9805
+Epoch 6/200
+ - 418s - loss: 0.0035 - val_loss: 0.0043
+ - val_f1: 0.9919
+Epoch 7/200
+ - 418s - loss: 0.0033 - val_loss: 0.0043
+ - val_f1: 0.9901
+Epoch 8/200
+ - 419s - loss: 0.0033 - val_loss: 0.0086
+ - val_f1: 0.9819
+Epoch 9/200
+ - 419s - loss: 0.0032 - val_loss: 0.0049
+ - val_f1: 0.9906
+Epoch 10/200
+ - 419s - loss: 0.0032 - val_loss: 0.0058
+ - val_f1: 0.9837
+Epoch 11/200
+ - 418s - loss: 0.0031 - val_loss: 0.0034
+ - val_f1: 0.9927
+Epoch 12/200
+ - 417s - loss: 0.0030 - val_loss: 0.0029
+ - val_f1: 0.9941
+Epoch 13/200
+ - 418s - loss: 0.0030 - val_loss: 0.0046
+ - val_f1: 0.9882
+Epoch 14/200
+ - 417s - loss: 0.0030 - val_loss: 0.0026
+ - val_f1: 0.9939
+Epoch 15/200
+ - 418s - loss: 0.0029 - val_loss: 0.0034
+ - val_f1: 0.9931
+Epoch 16/200
+ - 418s - loss: 0.0029 - val_loss: 0.0028
+ - val_f1: 0.9953
+Epoch 17/200
+ - 417s - loss: 0.0027 - val_loss: 0.0031
+ - val_f1: 0.9929
+Epoch 18/200
+ - 417s - loss: 0.0027 - val_loss: 0.0046
+ - val_f1: 0.9886
+Epoch 19/200
+ - 418s - loss: 0.0027 - val_loss: 0.0044
+ - val_f1: 0.9912
+Epoch 20/200
+ - 417s - loss: 0.0026 - val_loss: 0.0028
+ - val_f1: 0.9930
+Epoch 21/200
+ - 417s - loss: 0.0025 - val_loss: 0.0028
+2020-01-05 03:54:01,926 [INFO] epoch = 20. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_22/ann_model_epoch_20.pickle
+ - val_f1: 0.9935
+Epoch 22/200
+ - 417s - loss: 0.0025 - val_loss: 0.0030
+ - val_f1: 0.9934
+Epoch 23/200
+ - 417s - loss: 0.0026 - val_loss: 0.0037
+ - val_f1: 0.9917
+Epoch 24/200
+ - 418s - loss: 0.0025 - val_loss: 0.0034
+ - val_f1: 0.9926
+Epoch 25/200
+ - 417s - loss: 0.0026 - val_loss: 0.0033
+ - val_f1: 0.9929
+Epoch 26/200
+ - 417s - loss: 0.0025 - val_loss: 0.0030
+ - val_f1: 0.9947
+Epoch 27/200
+ - 418s - loss: 0.0023 - val_loss: 0.0029
+ - val_f1: 0.9913
+Epoch 28/200
+ - 418s - loss: 0.0024 - val_loss: 0.0032
+ - val_f1: 0.9938
+Epoch 29/200
+ - 417s - loss: 0.0024 - val_loss: 0.0026
+ - val_f1: 0.9940
+Epoch 30/200
+ - 417s - loss: 0.0023 - val_loss: 0.0026
+ - val_f1: 0.9941
+Epoch 31/200
+ - 417s - loss: 0.0025 - val_loss: 0.0029
+ - val_f1: 0.9925
+Epoch 32/200
+ - 417s - loss: 0.0025 - val_loss: 0.0129
+ - val_f1: 0.9676
+Epoch 33/200
+ - 417s - loss: 0.0025 - val_loss: 0.0026
+ - val_f1: 0.9942
+Epoch 34/200
+ - 417s - loss: 0.0024 - val_loss: 0.0048
+ - val_f1: 0.9857
+Epoch 35/200
+ - 417s - loss: 0.0023 - val_loss: 0.0021
+ - val_f1: 0.9953
+Epoch 36/200
+ - 417s - loss: 0.0024 - val_loss: 0.0024
+ - val_f1: 0.9952
+Epoch 37/200
+ - 417s - loss: 0.0024 - val_loss: 0.0036
+ - val_f1: 0.9923
+Epoch 38/200
+ - 417s - loss: 0.0023 - val_loss: 0.0025
+ - val_f1: 0.9938
+Epoch 39/200
+ - 417s - loss: 0.0023 - val_loss: 0.0024
+ - val_f1: 0.9949
+Epoch 40/200
+ - 417s - loss: 0.0023 - val_loss: 0.0026
+ - val_f1: 0.9936
+Epoch 41/200
+ - 417s - loss: 0.0023 - val_loss: 0.0024
+2020-01-05 06:31:46,626 [INFO] epoch = 40. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_22/ann_model_epoch_40.pickle
+ - val_f1: 0.9950
+Epoch 42/200
+ - 417s - loss: 0.0023 - val_loss: 0.0091
+ - val_f1: 0.9726
+Epoch 43/200
+ - 417s - loss: 0.0023 - val_loss: 0.0027
+ - val_f1: 0.9937
+Epoch 44/200
+ - 417s - loss: 0.0023 - val_loss: 0.0026
+ - val_f1: 0.9939
+Epoch 45/200
+ - 417s - loss: 0.0022 - val_loss: 0.0039
+ - val_f1: 0.9901
+Epoch 46/200
+ - 417s - loss: 0.0022 - val_loss: 0.0039
+ - val_f1: 0.9909
+Epoch 47/200
+ - 418s - loss: 0.0024 - val_loss: 0.0024
+ - val_f1: 0.9941
+Epoch 48/200
+ - 417s - loss: 0.0023 - val_loss: 0.0027
+ - val_f1: 0.9946
+Epoch 49/200
+ - 417s - loss: 0.0023 - val_loss: 0.0030
+ - val_f1: 0.9929
+Epoch 50/200
+ - 418s - loss: 0.0024 - val_loss: 0.0022
+ - val_f1: 0.9955
+Epoch 51/200
+ - 417s - loss: 0.0023 - val_loss: 0.0025
+ - val_f1: 0.9943
+Epoch 52/200
+ - 418s - loss: 0.0023 - val_loss: 0.0025
+ - val_f1: 0.9941
+Epoch 53/200
+ - 418s - loss: 0.0022 - val_loss: 0.0028
+ - val_f1: 0.9937
+Epoch 54/200
+ - 418s - loss: 0.0023 - val_loss: 0.0026
+ - val_f1: 0.9941
+Epoch 55/200
+ - 417s - loss: 0.0022 - val_loss: 0.0039
+ - val_f1: 0.9902
+Epoch 56/200
+ - 417s - loss: 0.0022 - val_loss: 0.0031
+ - val_f1: 0.9937
+Epoch 57/200
+ - 417s - loss: 0.0022 - val_loss: 0.0030
+ - val_f1: 0.9937
+Epoch 58/200
+ - 417s - loss: 0.0022 - val_loss: 0.0022
+ - val_f1: 0.9946
+Epoch 59/200
+ - 417s - loss: 0.0022 - val_loss: 0.0020
+ - val_f1: 0.9958
+Epoch 60/200
+ - 417s - loss: 0.0022 - val_loss: 0.0026
+ - val_f1: 0.9937
+Epoch 61/200
+ - 417s - loss: 0.0021 - val_loss: 0.0039
+2020-01-05 09:09:33,075 [INFO] epoch = 60. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_22/ann_model_epoch_60.pickle
+ - val_f1: 0.9923
+Epoch 62/200
+ - 417s - loss: 0.0022 - val_loss: 0.0027
+ - val_f1: 0.9938
+Epoch 63/200
+ - 417s - loss: 0.0021 - val_loss: 0.0028
+ - val_f1: 0.9938
+Epoch 64/200
+ - 417s - loss: 0.0021 - val_loss: 0.0031
+ - val_f1: 0.9936
+Epoch 65/200
+ - 417s - loss: 0.0021 - val_loss: 0.0042
+ - val_f1: 0.9892
+Epoch 66/200
+ - 417s - loss: 0.0021 - val_loss: 0.0028
+ - val_f1: 0.9940
+Epoch 67/200
+ - 418s - loss: 0.0022 - val_loss: 0.0024
+ - val_f1: 0.9947
+Epoch 68/200
+ - 417s - loss: 0.0021 - val_loss: 0.0030
+ - val_f1: 0.9938
+Epoch 69/200
+ - 417s - loss: 0.0020 - val_loss: 0.0027
+ - val_f1: 0.9940
+Epoch 70/200
+ - 417s - loss: 0.0020 - val_loss: 0.0020
+ - val_f1: 0.9958
+Epoch 71/200
+ - 417s - loss: 0.0020 - val_loss: 0.0032
+ - val_f1: 0.9928
+Epoch 72/200
+ - 417s - loss: 0.0021 - val_loss: 0.0034
+ - val_f1: 0.9926
+Epoch 73/200
+ - 417s - loss: 0.0020 - val_loss: 0.0260
+ - val_f1: 0.9282
+Epoch 74/200
+ - 417s - loss: 0.0020 - val_loss: 0.0031
+ - val_f1: 0.9940
+Epoch 75/200
+ - 418s - loss: 0.0020 - val_loss: 0.0034
+ - val_f1: 0.9930
+Epoch 76/200
+ - 418s - loss: 0.0020 - val_loss: 0.0036
+ - val_f1: 0.9923
+Epoch 77/200
+ - 418s - loss: 0.0021 - val_loss: 0.0027
+ - val_f1: 0.9938
+Epoch 78/200
+ - 417s - loss: 0.0020 - val_loss: 0.0021
+ - val_f1: 0.9954
+Epoch 79/200
+ - 417s - loss: 0.0020 - val_loss: 0.0019
+ - val_f1: 0.9960
+Epoch 80/200
+ - 418s - loss: 0.0020 - val_loss: 0.0032
+ - val_f1: 0.9931
+Epoch 81/200
+ - 418s - loss: 0.0020 - val_loss: 0.0025
+2020-01-05 11:47:19,173 [INFO] epoch = 80. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_22/ann_model_epoch_80.pickle
+ - val_f1: 0.9943
+Epoch 82/200
+ - 418s - loss: 0.0020 - val_loss: 0.0030
+ - val_f1: 0.9939
+Epoch 83/200
+ - 417s - loss: 0.0020 - val_loss: 0.0024
+ - val_f1: 0.9943
+Epoch 84/200
+ - 417s - loss: 0.0020 - val_loss: 0.0031
+ - val_f1: 0.9939
+Epoch 85/200
+ - 418s - loss: 0.0019 - val_loss: 0.0019
+ - val_f1: 0.9960
+Epoch 86/200
+ - 417s - loss: 0.0019 - val_loss: 0.0028
+ - val_f1: 0.9938
+Epoch 87/200
+ - 418s - loss: 0.0019 - val_loss: 0.0019
+ - val_f1: 0.9960
+Epoch 88/200
+ - 418s - loss: 0.0020 - val_loss: 0.0100
+ - val_f1: 0.9658
+Epoch 89/200
+ - 417s - loss: 0.0021 - val_loss: 0.0025
+ - val_f1: 0.9947
+Epoch 90/200
+ - 418s - loss: 0.0021 - val_loss: 0.0039
+ - val_f1: 0.9902
+Epoch 91/200
+ - 418s - loss: 0.0021 - val_loss: 0.0030
+ - val_f1: 0.9914
+Epoch 92/200
+ - 418s - loss: 0.0021 - val_loss: 0.0043
+ - val_f1: 0.9938
+Epoch 93/200
+ - 418s - loss: 0.0020 - val_loss: 0.0027
+ - val_f1: 0.9936
+Epoch 94/200
+ - 418s - loss: 0.0021 - val_loss: 0.0025
+ - val_f1: 0.9943
+Epoch 95/200
+ - 418s - loss: 0.0021 - val_loss: 0.0026
+ - val_f1: 0.9944
+Epoch 96/200
+ - 418s - loss: 0.0022 - val_loss: 0.0023
+ - val_f1: 0.9945
+Epoch 97/200
+ - 418s - loss: 0.0021 - val_loss: 0.0026
+ - val_f1: 0.9948
+Epoch 98/200
+ - 418s - loss: 0.0020 - val_loss: 0.0027
+ - val_f1: 0.9946
+Epoch 99/200
+ - 418s - loss: 0.0020 - val_loss: 0.0031
+ - val_f1: 0.9929
+Epoch 100/200
+ - 417s - loss: 0.0020 - val_loss: 0.0022
+ - val_f1: 0.9951
+Epoch 101/200
+ - 418s - loss: 0.0021 - val_loss: 0.0024
+2020-01-05 14:25:12,848 [INFO] epoch = 100. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_22/ann_model_epoch_100.pickle
+ - val_f1: 0.9952
+Epoch 102/200
+ - 418s - loss: 0.0022 - val_loss: 0.0021
+ - val_f1: 0.9961
+Epoch 103/200
+ - 418s - loss: 0.0022 - val_loss: 0.0030
+ - val_f1: 0.9929
+Epoch 104/200
+ - 418s - loss: 0.0021 - val_loss: 0.0026
+ - val_f1: 0.9938
+Epoch 105/200
+ - 418s - loss: 0.0021 - val_loss: 0.0031
+ - val_f1: 0.9928
+Epoch 106/200
+ - 418s - loss: 0.0022 - val_loss: 0.0049
+ - val_f1: 0.9857
+Epoch 107/200
+ - 418s - loss: 0.0021 - val_loss: 0.0025
+ - val_f1: 0.9943
+Epoch 108/200
+ - 418s - loss: 0.0021 - val_loss: 0.0022
+ - val_f1: 0.9954
+Epoch 109/200
+ - 418s - loss: 0.0021 - val_loss: 0.0019
+ - val_f1: 0.9960
+Epoch 110/200
+ - 417s - loss: 0.0021 - val_loss: 0.0033
+ - val_f1: 0.9941
+Epoch 111/200
+ - 418s - loss: 0.0021 - val_loss: 0.0025
+ - val_f1: 0.9958
+Epoch 112/200
+ - 418s - loss: 0.0021 - val_loss: 0.0020
+ - val_f1: 0.9960
+Epoch 113/200
+ - 418s - loss: 0.0020 - val_loss: 0.0023
+ - val_f1: 0.9960
+Epoch 114/200
+ - 418s - loss: 0.0020 - val_loss: 0.0023
+ - val_f1: 0.9948
+Epoch 115/200
+ - 418s - loss: 0.0020 - val_loss: 0.0040
+ - val_f1: 0.9899
+Epoch 116/200
+ - 418s - loss: 0.0020 - val_loss: 0.0021
+ - val_f1: 0.9956
+Epoch 117/200
+ - 418s - loss: 0.0020 - val_loss: 0.0021
+ - val_f1: 0.9956
+Epoch 118/200
+ - 418s - loss: 0.0020 - val_loss: 0.0028
+ - val_f1: 0.9949
+Epoch 119/200
+ - 418s - loss: 0.0019 - val_loss: 0.0022
+ - val_f1: 0.9955
+Epoch 120/200
+ - 418s - loss: 0.0019 - val_loss: 0.0027
+ - val_f1: 0.9944
+Epoch 121/200
+ - 418s - loss: 0.0020 - val_loss: 0.0027
+2020-01-05 17:03:09,936 [INFO] epoch = 120. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_22/ann_model_epoch_120.pickle
+ - val_f1: 0.9948
+Epoch 122/200
+ - 418s - loss: 0.0019 - val_loss: 0.0024
+ - val_f1: 0.9950
+Epoch 123/200
+ - 418s - loss: 0.0019 - val_loss: 0.0035
+ - val_f1: 0.9916
+Epoch 124/200
+ - 417s - loss: 0.0020 - val_loss: 0.0040
+ - val_f1: 0.9924
+Epoch 125/200
+ - 418s - loss: 0.0019 - val_loss: 0.0024
+ - val_f1: 0.9958
+Epoch 126/200
+ - 418s - loss: 0.0019 - val_loss: 0.0020
+ - val_f1: 0.9955
+Epoch 127/200
+ - 417s - loss: 0.0019 - val_loss: 0.0019
+ - val_f1: 0.9965
+Epoch 128/200
+ - 418s - loss: 0.0019 - val_loss: 0.0028
+ - val_f1: 0.9935
+Epoch 129/200
+ - 418s - loss: 0.0019 - val_loss: 0.0025
+ - val_f1: 0.9949
+Epoch 130/200
+ - 418s - loss: 0.0019 - val_loss: 0.0024
+ - val_f1: 0.9935
+Epoch 131/200
+ - 418s - loss: 0.0019 - val_loss: 0.0029
+ - val_f1: 0.9918
+Epoch 132/200
+ - 417s - loss: 0.0019 - val_loss: 0.0023
+ - val_f1: 0.9954
+Epoch 133/200
+ - 418s - loss: 0.0019 - val_loss: 0.0027
+ - val_f1: 0.9940
+Epoch 134/200
+ - 418s - loss: 0.0019 - val_loss: 0.0039
+ - val_f1: 0.9920
+Epoch 135/200
+ - 418s - loss: 0.0019 - val_loss: 0.0027
+ - val_f1: 0.9945
+Epoch 136/200
+ - 418s - loss: 0.0019 - val_loss: 0.0034
+ - val_f1: 0.9935
+Epoch 137/200
+ - 418s - loss: 0.0019 - val_loss: 0.0032
+2020-01-05 19:10:23,385 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-05 19:14:12,977 [INFO] Last epoch loss evaluation: train_loss = 0.001800, val_loss = 0.001855
+2020-01-05 19:14:12,977 [INFO] Training complete. time_to_train = 65125.27 sec, 1085.42 min
+2020-01-05 19:14:13,011 [INFO] Model saved to results_additional_exps/ann_depth_ids17_shallow_22/best_model.pickle
+2020-01-05 19:14:13,013 [INFO] Training history saved to: results_additional_exps/ann_depth_ids17_shallow_22/training_error_history.csv
+2020-01-05 19:14:13,192 [INFO] Plot saved to: results_additional_exps/ann_depth_ids17_shallow_22/training_error_history.png
+2020-01-05 19:14:13,367 [INFO] Plot saved to: results_additional_exps/ann_depth_ids17_shallow_22/training_f1_history.png
+2020-01-05 19:14:13,367 [INFO] Making predictions on training, validation, testing data
+2020-01-05 19:18:53,494 [INFO] Evaluating predictions (results)
+2020-01-05 19:19:03,628 [INFO] Dataset: Testing. Classification report below
+2020-01-05 19:19:03,628 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00    454265
+                   Bot       0.99      0.39      0.56       391
+                  DDoS       1.00      1.00      1.00     25605
+         DoS GoldenEye       1.00      0.98      0.99      2058
+              DoS Hulk       0.98      1.00      0.99     46025
+      DoS Slowhttptest       0.89      0.99      0.94      1100
+         DoS slowloris       1.00      0.99      0.99      1159
+           FTP-Patator       1.00      1.00      1.00      1587
+              PortScan       0.99      1.00      1.00     31761
+           SSH-Patator       0.96      0.98      0.97      1179
+Web Attack Brute Force       1.00      0.09      0.17       302
+        Web Attack XSS       0.00      0.00      0.00       130
+
+             micro avg       1.00      1.00      1.00    565562
+             macro avg       0.90      0.78      0.80    565562
+          weighted avg       1.00      1.00      1.00    565562
+
+2020-01-05 19:19:03,628 [INFO] Overall accuracy (micro avg): 0.9964300996177253
+2020-01-05 19:19:15,166 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9964         0.9964                       0.9964                0.0003                   0.0036  0.9964
+1     Macro avg        0.9994         0.9005                       0.7844                0.0008                   0.2156  0.7997
+2  Weighted avg        0.9971         0.9962                       0.9964                0.0059                   0.0036  0.9960
+2020-01-05 19:19:25,461 [INFO] Dataset: Validation. Classification report below
+2020-01-05 19:19:25,461 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00    454264
+                   Bot       0.97      0.36      0.53       391
+                  DDoS       1.00      1.00      1.00     25605
+         DoS GoldenEye       0.99      0.98      0.99      2059
+              DoS Hulk       0.98      1.00      0.99     46025
+      DoS Slowhttptest       0.89      0.99      0.94      1099
+         DoS slowloris       0.99      0.98      0.99      1159
+           FTP-Patator       1.00      1.00      1.00      1587
+              PortScan       0.99      1.00      1.00     31761
+           SSH-Patator       0.97      0.98      0.97      1180
+Web Attack Brute Force       0.95      0.07      0.12       301
+        Web Attack XSS       1.00      0.03      0.06       131
+
+             micro avg       1.00      1.00      1.00    565562
+             macro avg       0.98      0.78      0.80    565562
+          weighted avg       1.00      1.00      1.00    565562
+
+2020-01-05 19:19:25,462 [INFO] Overall accuracy (micro avg): 0.9964300996177253
+2020-01-05 19:19:37,146 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9964         0.9964                       0.9964                0.0003                   0.0036  0.9964
+1     Macro avg        0.9994         0.9774                       0.7813                0.0008                   0.2187  0.7975
+2  Weighted avg        0.9971         0.9964                       0.9964                0.0059                   0.0036  0.9960
+2020-01-05 19:20:11,191 [INFO] Dataset: Training. Classification report below
+2020-01-05 19:20:11,191 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00   1362791
+                   Bot       0.99      0.38      0.55      1174
+                  DDoS       1.00      1.00      1.00     76815
+         DoS GoldenEye       1.00      0.98      0.99      6176
+              DoS Hulk       0.98      1.00      0.99    138074
+      DoS Slowhttptest       0.91      0.99      0.95      3300
+         DoS slowloris       0.99      0.99      0.99      3478
+           FTP-Patator       1.00      1.00      1.00      4761
+              PortScan       0.99      1.00      1.00     95282
+           SSH-Patator       0.97      0.98      0.98      3538
+Web Attack Brute Force       0.99      0.08      0.15       904
+        Web Attack XSS       1.00      0.03      0.06       391
+
+             micro avg       1.00      1.00      1.00   1696684
+             macro avg       0.98      0.79      0.80   1696684
+          weighted avg       1.00      1.00      1.00   1696684
+
+2020-01-05 19:20:11,193 [INFO] Overall accuracy (micro avg): 0.9965096623767301
+2020-01-05 19:20:49,869 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9965         0.9965                       0.9965                0.0003                   0.0035  0.9965
+1     Macro avg        0.9994         0.9842                       0.7857                0.0008                   0.2143  0.8037
+2  Weighted avg        0.9971         0.9965                       0.9965                0.0059                   0.0035  0.9961
+2020-01-05 19:20:49,920 [INFO] Results saved to: results_additional_exps/ann_depth_ids17_shallow_22/ann_depth_ids17_shallow_22_results.xlsx
+2020-01-05 19:20:49,924 [INFO] ================= Finished running experiment no. 12 ================= 
+
+2020-01-05 19:20:49,990 [INFO] Created directory: results_additional_exps/ann_depth_ids17_shallow_23
+2020-01-05 19:20:49,990 [INFO] Initialized logging. log_filename = results_additional_exps/ann_depth_ids17_shallow_23/run_log.log
+2020-01-05 19:20:49,991 [INFO] ================= Running experiment no. 13  ================= 
+
+2020-01-05 19:20:49,991 [INFO] Experiment parameters given below
+2020-01-05 19:20:49,991 [INFO] 
+{'experiment_num': 13, 'results_dir': 'results_additional_exps/ann_depth_ids17_shallow_23', 'model_type': 'classifier', 'model': 'ann', 'normal_label': 'BENIGN', 'training_data_feed': 'preload', 'scaling_type': 'NA', 'ann_layer_units': [3000, 1500, 500], 'ann_layer_activations': ['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu'], 'ann_layer_dropout_rates': [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2], 'epochs': 200, 'early_stop_patience': 50, 'batch_size': 256, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/full_datasets/ids2017', 'description': 'ann_depth_ids17_shallow_23'}
+2020-01-05 19:20:49,991 [INFO] Created tensorboard log directory: results_additional_exps/ann_depth_ids17_shallow_23/tf_logs_run_2020_01_05-19_20_49
+2020-01-05 19:20:49,991 [INFO] Loading datsets from: ../Datasets/full_datasets/ids2017
+2020-01-05 19:20:49,991 [INFO] Reading X, y files
+2020-01-05 19:20:49,991 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_train.h5
+2020-01-05 19:20:54,008 [INFO] Reading complete. time_to_read=4.02 seconds
+2020-01-05 19:20:54,008 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_val.h5
+2020-01-05 19:20:55,387 [INFO] Reading complete. time_to_read=1.38 seconds
+2020-01-05 19:20:55,388 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_test.h5
+2020-01-05 19:20:56,762 [INFO] Reading complete. time_to_read=1.37 seconds
+2020-01-05 19:20:56,762 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_train.h5
+2020-01-05 19:20:56,968 [INFO] Reading complete. time_to_read=0.21 seconds
+2020-01-05 19:20:56,968 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_val.h5
+2020-01-05 19:20:57,035 [INFO] Reading complete. time_to_read=0.07 seconds
+2020-01-05 19:20:57,035 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_test.h5
+2020-01-05 19:20:57,103 [INFO] Reading complete. time_to_read=0.07 seconds
+2020-01-05 19:21:00,256 [INFO] Initializing model
+2020-01-05 19:21:00,511 [INFO] _________________________________________________________________
+2020-01-05 19:21:00,511 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-05 19:21:00,511 [INFO] =================================================================
+2020-01-05 19:21:00,511 [INFO] dense_9 (Dense)              (None, 3000)              237000    
+2020-01-05 19:21:00,511 [INFO] _________________________________________________________________
+2020-01-05 19:21:00,511 [INFO] batch_normalization_7 (Batch (None, 3000)              12000     
+2020-01-05 19:21:00,511 [INFO] _________________________________________________________________
+2020-01-05 19:21:00,512 [INFO] dropout_7 (Dropout)          (None, 3000)              0         
+2020-01-05 19:21:00,512 [INFO] _________________________________________________________________
+2020-01-05 19:21:00,512 [INFO] dense_10 (Dense)             (None, 1500)              4501500   
+2020-01-05 19:21:00,512 [INFO] _________________________________________________________________
+2020-01-05 19:21:00,512 [INFO] batch_normalization_8 (Batch (None, 1500)              6000      
+2020-01-05 19:21:00,512 [INFO] _________________________________________________________________
+2020-01-05 19:21:00,512 [INFO] dropout_8 (Dropout)          (None, 1500)              0         
+2020-01-05 19:21:00,512 [INFO] _________________________________________________________________
+2020-01-05 19:21:00,512 [INFO] dense_11 (Dense)             (None, 500)               750500    
+2020-01-05 19:21:00,512 [INFO] _________________________________________________________________
+2020-01-05 19:21:00,512 [INFO] batch_normalization_9 (Batch (None, 500)               2000      
+2020-01-05 19:21:00,512 [INFO] _________________________________________________________________
+2020-01-05 19:21:00,512 [INFO] dropout_9 (Dropout)          (None, 500)               0         
+2020-01-05 19:21:00,512 [INFO] _________________________________________________________________
+2020-01-05 19:21:00,512 [INFO] dense_12 (Dense)             (None, 12)                6012      
+2020-01-05 19:21:00,512 [INFO] =================================================================
+2020-01-05 19:21:00,513 [INFO] Total params: 5,515,012
+2020-01-05 19:21:00,513 [INFO] Trainable params: 5,505,012
+2020-01-05 19:21:00,513 [INFO] Non-trainable params: 10,000
+2020-01-05 19:21:00,513 [INFO] _________________________________________________________________
+2020-01-05 19:21:00,513 [INFO] Training model
+ - val_f1: 0.9931
+Epoch 00137: early stopping
+Train on 1696684 samples, validate on 565562 samples
+Epoch 1/200
+ - 797s - loss: 0.0112 - val_loss: 0.0134
+ - val_f1: 0.9714
+Epoch 2/200
+ - 796s - loss: 0.0070 - val_loss: 0.0088
+ - val_f1: 0.9780
+Epoch 3/200
+ - 795s - loss: 0.0053 - val_loss: 0.0147
+ - val_f1: 0.9676
+Epoch 4/200
+ - 795s - loss: 0.0046 - val_loss: 0.0094
+ - val_f1: 0.9761
+Epoch 5/200
+ - 795s - loss: 0.0038 - val_loss: 0.0086
+ - val_f1: 0.9803
+Epoch 6/200
+ - 797s - loss: 0.0037 - val_loss: 0.0061
+ - val_f1: 0.9861
+Epoch 7/200
+ - 796s - loss: 0.0036 - val_loss: 0.0055
+ - val_f1: 0.9852
+Epoch 8/200
+ - 797s - loss: 0.0034 - val_loss: 0.0041
+ - val_f1: 0.9901
+Epoch 9/200
+ - 795s - loss: 0.0032 - val_loss: 0.0045
+ - val_f1: 0.9916
+Epoch 10/200
+ - 795s - loss: 0.0031 - val_loss: 0.0042
+ - val_f1: 0.9905
+Epoch 11/200
+ - 795s - loss: 0.0030 - val_loss: 0.0036
+ - val_f1: 0.9912
+Epoch 12/200
+ - 799s - loss: 0.0030 - val_loss: 0.0040
+ - val_f1: 0.9933
+Epoch 13/200
+ - 798s - loss: 0.0031 - val_loss: 0.0051
+ - val_f1: 0.9899
+Epoch 14/200
+ - 797s - loss: 0.0029 - val_loss: 0.0097
+ - val_f1: 0.9696
+Epoch 15/200
+ - 798s - loss: 0.0029 - val_loss: 0.0048
+ - val_f1: 0.9899
+Epoch 16/200
+ - 799s - loss: 0.0029 - val_loss: 0.0035
+ - val_f1: 0.9947
+Epoch 17/200
+ - 796s - loss: 0.0029 - val_loss: 0.0057
+ - val_f1: 0.9858
+Epoch 18/200
+ - 796s - loss: 0.0027 - val_loss: 0.0093
+ - val_f1: 0.9720
+Epoch 19/200
+ - 796s - loss: 0.0029 - val_loss: 0.0025
+ - val_f1: 0.9945
+Epoch 20/200
+ - 802s - loss: 0.0026 - val_loss: 0.0025
+ - val_f1: 0.9954
+Epoch 21/200
+ - 803s - loss: 0.0026 - val_loss: 0.0047
+2020-01-06 00:34:45,301 [INFO] epoch = 20. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_23/ann_model_epoch_20.pickle
+ - val_f1: 0.9913
+Epoch 22/200
+ - 802s - loss: 0.0026 - val_loss: 0.0035
+ - val_f1: 0.9902
+Epoch 23/200
+ - 802s - loss: 0.0027 - val_loss: 0.0031
+ - val_f1: 0.9935
+Epoch 24/200
+ - 802s - loss: 0.0026 - val_loss: 0.0029
+ - val_f1: 0.9937
+Epoch 25/200
+ - 801s - loss: 0.0026 - val_loss: 0.0033
+ - val_f1: 0.9923
+Epoch 26/200
+ - 802s - loss: 0.0025 - val_loss: 0.0031
+ - val_f1: 0.9914
+Epoch 27/200
+ - 802s - loss: 0.0026 - val_loss: 0.0035
+ - val_f1: 0.9920
+Epoch 28/200
+ - 802s - loss: 0.0026 - val_loss: 0.0032
+ - val_f1: 0.9934
+Epoch 29/200
+ - 802s - loss: 0.0025 - val_loss: 0.0082
+ - val_f1: 0.9836
+Epoch 30/200
+ - 802s - loss: 0.0026 - val_loss: 0.0029
+ - val_f1: 0.9949
+Epoch 31/200
+ - 801s - loss: 0.0027 - val_loss: 0.0030
+ - val_f1: 0.9930
+Epoch 32/200
+ - 802s - loss: 0.0027 - val_loss: 0.0035
+ - val_f1: 0.9920
+Epoch 33/200
+ - 801s - loss: 0.0025 - val_loss: 0.0034
+ - val_f1: 0.9942
+Epoch 34/200
+ - 801s - loss: 0.0025 - val_loss: 0.0035
+ - val_f1: 0.9924
+Epoch 35/200
+ - 801s - loss: 0.0025 - val_loss: 0.0026
+ - val_f1: 0.9938
+Epoch 36/200
+ - 801s - loss: 0.0026 - val_loss: 0.0062
+ - val_f1: 0.9811
+Epoch 37/200
+ - 801s - loss: 0.0025 - val_loss: 0.0061
+ - val_f1: 0.9833
+Epoch 38/200
+ - 801s - loss: 0.0026 - val_loss: 0.0033
+ - val_f1: 0.9925
+Epoch 39/200
+ - 801s - loss: 0.0025 - val_loss: 0.0055
+ - val_f1: 0.9865
+Epoch 40/200
+ - 801s - loss: 0.0024 - val_loss: 0.0049
+ - val_f1: 0.9912
+Epoch 41/200
+ - 801s - loss: 0.0024 - val_loss: 0.0032
+2020-01-06 05:36:36,060 [INFO] epoch = 40. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_23/ann_model_epoch_40.pickle
+ - val_f1: 0.9936
+Epoch 42/200
+ - 801s - loss: 0.0024 - val_loss: 0.0033
+ - val_f1: 0.9935
+Epoch 43/200
+ - 801s - loss: 0.0024 - val_loss: 0.0078
+ - val_f1: 0.9732
+Epoch 44/200
+ - 803s - loss: 0.0024 - val_loss: 0.0029
+ - val_f1: 0.9945
+Epoch 45/200
+ - 802s - loss: 0.0023 - val_loss: 0.0024
+ - val_f1: 0.9947
+Epoch 46/200
+ - 799s - loss: 0.0023 - val_loss: 0.0027
+ - val_f1: 0.9944
+Epoch 47/200
+ - 799s - loss: 0.0025 - val_loss: 0.0022
+ - val_f1: 0.9958
+Epoch 48/200
+ - 802s - loss: 0.0024 - val_loss: 0.0033
+ - val_f1: 0.9938
+Epoch 49/200
+ - 801s - loss: 0.0023 - val_loss: 0.0033
+ - val_f1: 0.9944
+Epoch 50/200
+ - 799s - loss: 0.0023 - val_loss: 0.0033
+ - val_f1: 0.9937
+Epoch 51/200
+ - 799s - loss: 0.0023 - val_loss: 0.0036
+ - val_f1: 0.9910
+Epoch 52/200
+ - 799s - loss: 0.0025 - val_loss: 0.0032
+ - val_f1: 0.9939
+Epoch 53/200
+ - 802s - loss: 0.0023 - val_loss: 0.0034
+ - val_f1: 0.9932
+Epoch 54/200
+ - 804s - loss: 0.0023 - val_loss: 0.0034
+ - val_f1: 0.9928
+Epoch 55/200
+ - 804s - loss: 0.0024 - val_loss: 0.0036
+ - val_f1: 0.9925
+Epoch 56/200
+ - 803s - loss: 0.0022 - val_loss: 0.0024
+ - val_f1: 0.9951
+Epoch 57/200
+ - 804s - loss: 0.0024 - val_loss: 0.0031
+ - val_f1: 0.9938
+Epoch 58/200
+ - 804s - loss: 0.0023 - val_loss: 0.0108
+ - val_f1: 0.9621
+Epoch 59/200
+ - 804s - loss: 0.0023 - val_loss: 0.0026
+ - val_f1: 0.9942
+Epoch 60/200
+ - 804s - loss: 0.0021 - val_loss: 0.0033
+ - val_f1: 0.9938
+Epoch 61/200
+ - 804s - loss: 0.0022 - val_loss: 0.0093
+2020-01-06 10:38:33,834 [INFO] epoch = 60. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_23/ann_model_epoch_60.pickle
+ - val_f1: 0.9708
+Epoch 62/200
+ - 803s - loss: 0.0022 - val_loss: 0.0034
+ - val_f1: 0.9930
+Epoch 63/200
+ - 804s - loss: 0.0021 - val_loss: 0.0037
+ - val_f1: 0.9916
+Epoch 64/200
+ - 803s - loss: 0.0021 - val_loss: 0.0044
+ - val_f1: 0.9927
+Epoch 65/200
+ - 804s - loss: 0.0021 - val_loss: 0.0031
+ - val_f1: 0.9935
+Epoch 66/200
+ - 804s - loss: 0.0021 - val_loss: 0.0022
+ - val_f1: 0.9957
+Epoch 67/200
+ - 803s - loss: 0.0021 - val_loss: 0.0030
+ - val_f1: 0.9939
+Epoch 68/200
+ - 803s - loss: 0.0021 - val_loss: 0.0023
+ - val_f1: 0.9951
+Epoch 69/200
+ - 803s - loss: 0.0022 - val_loss: 0.0078
+ - val_f1: 0.9713
+Epoch 70/200
+ - 803s - loss: 0.0022 - val_loss: 0.0025
+ - val_f1: 0.9946
+Epoch 71/200
+ - 803s - loss: 0.0022 - val_loss: 0.0025
+ - val_f1: 0.9948
+Epoch 72/200
+ - 803s - loss: 0.0022 - val_loss: 0.0034
+ - val_f1: 0.9901
+Epoch 73/200
+ - 803s - loss: 0.0023 - val_loss: 0.0022
+ - val_f1: 0.9956
+Epoch 74/200
+ - 803s - loss: 0.0024 - val_loss: 0.0026
+ - val_f1: 0.9956
+Epoch 75/200
+ - 804s - loss: 0.0024 - val_loss: 0.0025
+ - val_f1: 0.9957
+Epoch 76/200
+ - 804s - loss: 0.0022 - val_loss: 0.0022
+ - val_f1: 0.9958
+Epoch 77/200
+ - 804s - loss: 0.0023 - val_loss: 0.0025
+ - val_f1: 0.9945
+Epoch 78/200
+ - 804s - loss: 0.0022 - val_loss: 0.0026
+ - val_f1: 0.9949
+Epoch 79/200
+ - 804s - loss: 0.0022 - val_loss: 0.0025
+ - val_f1: 0.9949
+Epoch 80/200
+ - 804s - loss: 0.0022 - val_loss: 0.0023
+ - val_f1: 0.9951
+Epoch 81/200
+ - 804s - loss: 0.0022 - val_loss: 0.0025
+2020-01-06 15:41:05,049 [INFO] epoch = 80. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_23/ann_model_epoch_80.pickle
+ - val_f1: 0.9950
+Epoch 82/200
+ - 804s - loss: 0.0023 - val_loss: 0.0022
+ - val_f1: 0.9955
+Epoch 83/200
+ - 801s - loss: 0.0022 - val_loss: 0.0025
+ - val_f1: 0.9940
+Epoch 84/200
+ - 801s - loss: 0.0023 - val_loss: 0.0039
+ - val_f1: 0.9918
+Epoch 85/200
+ - 801s - loss: 0.0024 - val_loss: 0.0032
+ - val_f1: 0.9937
+Epoch 86/200
+ - 801s - loss: 0.0023 - val_loss: 0.0023
+ - val_f1: 0.9957
+Epoch 87/200
+ - 801s - loss: 0.0022 - val_loss: 0.0088
+ - val_f1: 0.9838
+Epoch 88/200
+ - 802s - loss: 0.0022 - val_loss: 0.0030
+ - val_f1: 0.9929
+Epoch 89/200
+ - 801s - loss: 0.0021 - val_loss: 0.0033
+ - val_f1: 0.9919
+Epoch 90/200
+ - 801s - loss: 0.0022 - val_loss: 0.0021
+ - val_f1: 0.9958
+Epoch 91/200
+ - 805s - loss: 0.0022 - val_loss: 0.0021
+ - val_f1: 0.9959
+Epoch 92/200
+ - 804s - loss: 0.0021 - val_loss: 0.0025
+ - val_f1: 0.9941
+Epoch 93/200
+ - 804s - loss: 0.0021 - val_loss: 0.0024
+ - val_f1: 0.9949
+Epoch 94/200
+ - 804s - loss: 0.0021 - val_loss: 0.0029
+ - val_f1: 0.9944
+Epoch 95/200
+ - 804s - loss: 0.0023 - val_loss: 0.0083
+ - val_f1: 0.9841
+Epoch 96/200
+ - 804s - loss: 0.0022 - val_loss: 0.0065
+ - val_f1: 0.9774
+Epoch 97/200
+ - 804s - loss: 0.0021 - val_loss: 0.0033
+ - val_f1: 0.9931
+Epoch 98/200
+ - 804s - loss: 0.0021 - val_loss: 0.0032
+ - val_f1: 0.9948
+Epoch 99/200
+ - 804s - loss: 0.0022 - val_loss: 0.0032
+ - val_f1: 0.9949
+Epoch 100/200
+ - 804s - loss: 0.0021 - val_loss: 0.0037
+ - val_f1: 0.9938
+Epoch 101/200
+ - 804s - loss: 0.0021 - val_loss: 0.0031
+2020-01-06 20:43:24,851 [INFO] epoch = 100. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_23/ann_model_epoch_100.pickle
+ - val_f1: 0.9939
+Epoch 102/200
+ - 803s - loss: 0.0021 - val_loss: 0.0026
+ - val_f1: 0.9949
+Epoch 103/200
+ - 804s - loss: 0.0021 - val_loss: 0.0043
+ - val_f1: 0.9862
+Epoch 104/200
+ - 804s - loss: 0.0022 - val_loss: 0.0046
+ - val_f1: 0.9874
+Epoch 105/200
+ - 804s - loss: 0.0021 - val_loss: 0.0030
+ - val_f1: 0.9938
+Epoch 106/200
+ - 804s - loss: 0.0021 - val_loss: 0.0036
+ - val_f1: 0.9930
+Epoch 107/200
+ - 804s - loss: 0.0021 - val_loss: 0.0042
+ - val_f1: 0.9869
+Epoch 108/200
+ - 803s - loss: 0.0021 - val_loss: 0.0081
+ - val_f1: 0.9824
+Epoch 109/200
+ - 803s - loss: 0.0021 - val_loss: 0.0026
+ - val_f1: 0.9949
+Epoch 110/200
+ - 803s - loss: 0.0021 - val_loss: 0.0036
+ - val_f1: 0.9936
+Epoch 111/200
+ - 803s - loss: 0.0021 - val_loss: 0.0023
+ - val_f1: 0.9952
+Epoch 112/200
+ - 803s - loss: 0.0021 - val_loss: 0.0033
+ - val_f1: 0.9935
+Epoch 113/200
+ - 803s - loss: 0.0021 - val_loss: 0.0035
+ - val_f1: 0.9935
+Epoch 114/200
+ - 803s - loss: 0.0022 - val_loss: 0.0064
+ - val_f1: 0.9738
+Epoch 115/200
+ - 803s - loss: 0.0021 - val_loss: 0.0053
+ - val_f1: 0.9913
+Epoch 116/200
+ - 802s - loss: 0.0021 - val_loss: 0.0027
+ - val_f1: 0.9947
+Epoch 117/200
+ - 802s - loss: 0.0020 - val_loss: 0.0082
+ - val_f1: 0.9824
+Epoch 118/200
+ - 802s - loss: 0.0022 - val_loss: 0.0066
+ - val_f1: 0.9854
+Epoch 119/200
+ - 802s - loss: 0.0021 - val_loss: 0.0063
+ - val_f1: 0.9787
+Epoch 120/200
+ - 802s - loss: 0.0020 - val_loss: 0.0032
+ - val_f1: 0.9930
+Epoch 121/200
+ - 802s - loss: 0.0020 - val_loss: 0.0029
+2020-01-07 01:45:45,597 [INFO] epoch = 120. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_23/ann_model_epoch_120.pickle
+ - val_f1: 0.9935
+Epoch 122/200
+ - 802s - loss: 0.0020 - val_loss: 0.0054
+ - val_f1: 0.9871
+Epoch 123/200
+ - 801s - loss: 0.0020 - val_loss: 0.0020
+ - val_f1: 0.9958
+Epoch 124/200
+ - 799s - loss: 0.0020 - val_loss: 0.0028
+ - val_f1: 0.9940
+Epoch 125/200
+ - 800s - loss: 0.0020 - val_loss: 0.0027
+ - val_f1: 0.9945
+Epoch 126/200
+ - 800s - loss: 0.0021 - val_loss: 0.0026
+ - val_f1: 0.9947
+Epoch 127/200
+ - 800s - loss: 0.0021 - val_loss: 0.0023
+ - val_f1: 0.9950
+Epoch 128/200
+ - 799s - loss: 0.0020 - val_loss: 0.0029
+ - val_f1: 0.9937
+Epoch 129/200
+ - 800s - loss: 0.0020 - val_loss: 0.0030
+ - val_f1: 0.9936
+Epoch 130/200
+ - 800s - loss: 0.0019 - val_loss: 0.0019
+ - val_f1: 0.9961
+Epoch 131/200
+ - 801s - loss: 0.0019 - val_loss: 0.0030
+ - val_f1: 0.9938
+Epoch 132/200
+ - 801s - loss: 0.0020 - val_loss: 0.0029
+ - val_f1: 0.9939
+Epoch 133/200
+ - 802s - loss: 0.0020 - val_loss: 0.0028
+ - val_f1: 0.9937
+Epoch 134/200
+ - 802s - loss: 0.0019 - val_loss: 0.0026
+ - val_f1: 0.9942
+Epoch 135/200
+ - 802s - loss: 0.0019 - val_loss: 0.0030
+ - val_f1: 0.9949
+Epoch 136/200
+ - 802s - loss: 0.0019 - val_loss: 0.0026
+ - val_f1: 0.9953
+Epoch 137/200
+ - 801s - loss: 0.0019 - val_loss: 0.0026
+ - val_f1: 0.9940
+Epoch 138/200
+ - 802s - loss: 0.0019 - val_loss: 0.0072
+ - val_f1: 0.9838
+Epoch 139/200
+ - 802s - loss: 0.0019 - val_loss: 0.0058
+ - val_f1: 0.9814
+Epoch 140/200
+ - 802s - loss: 0.0019 - val_loss: 0.0023
+ - val_f1: 0.9951
+Epoch 141/200
+ - 802s - loss: 0.0019 - val_loss: 0.0022
+2020-01-07 06:47:23,961 [INFO] epoch = 140. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_23/ann_model_epoch_140.pickle
+ - val_f1: 0.9961
+Epoch 142/200
+ - 801s - loss: 0.0019 - val_loss: 0.0031
+ - val_f1: 0.9931
+Epoch 143/200
+ - 802s - loss: 0.0022 - val_loss: 0.0045
+ - val_f1: 0.9907
+Epoch 144/200
+ - 801s - loss: 0.0021 - val_loss: 0.0084
+ - val_f1: 0.9787
+Epoch 145/200
+ - 801s - loss: 0.0020 - val_loss: 0.0041
+ - val_f1: 0.9907
+Epoch 146/200
+ - 801s - loss: 0.0020 - val_loss: 0.0038
+ - val_f1: 0.9917
+Epoch 147/200
+ - 801s - loss: 0.0020 - val_loss: 0.0031
+ - val_f1: 0.9942
+Epoch 148/200
+ - 801s - loss: 0.0019 - val_loss: 0.0031
+ - val_f1: 0.9933
+Epoch 149/200
+ - 802s - loss: 0.0019 - val_loss: 0.0034
+ - val_f1: 0.9937
+Epoch 150/200
+ - 802s - loss: 0.0019 - val_loss: 0.0027
+ - val_f1: 0.9954
+Epoch 151/200
+ - 802s - loss: 0.0019 - val_loss: 0.0027
+ - val_f1: 0.9950
+Epoch 152/200
+ - 803s - loss: 0.0018 - val_loss: 0.0040
+ - val_f1: 0.9933
+Epoch 153/200
+ - 802s - loss: 0.0019 - val_loss: 0.0030
+ - val_f1: 0.9935
+Epoch 154/200
+ - 803s - loss: 0.0019 - val_loss: 0.0040
+ - val_f1: 0.9924
+Epoch 155/200
+ - 802s - loss: 0.0019 - val_loss: 0.0036
+ - val_f1: 0.9933
+Epoch 156/200
+ - 802s - loss: 0.0020 - val_loss: 0.0030
+ - val_f1: 0.9942
+Epoch 157/200
+ - 802s - loss: 0.0020 - val_loss: 0.0046
+ - val_f1: 0.9901
+Epoch 158/200
+ - 803s - loss: 0.0020 - val_loss: 0.0036
+ - val_f1: 0.9931
+Epoch 159/200
+ - 804s - loss: 0.0019 - val_loss: 0.0033
+ - val_f1: 0.9933
+Epoch 160/200
+ - 805s - loss: 0.0019 - val_loss: 0.0062
+ - val_f1: 0.9800
+Epoch 161/200
+ - 805s - loss: 0.0019 - val_loss: 0.0082
+2020-01-07 11:49:30,997 [INFO] epoch = 160. Intermediate model saved to results_additional_exps/ann_depth_ids17_shallow_23/ann_model_epoch_160.pickle
+ - val_f1: 0.9737
+Epoch 162/200
+ - 806s - loss: 0.0019 - val_loss: 0.0033
+ - val_f1: 0.9941
+Epoch 163/200
+ - 805s - loss: 0.0019 - val_loss: 0.0041
+ - val_f1: 0.9914
+Epoch 164/200
+ - 805s - loss: 0.0019 - val_loss: 0.0034
+ - val_f1: 0.9923
+Epoch 165/200
+ - 806s - loss: 0.0018 - val_loss: 0.0055
+ - val_f1: 0.9857
+Epoch 166/200
+ - 806s - loss: 0.0019 - val_loss: 0.0031
+ - val_f1: 0.9939
+Epoch 167/200
+ - 806s - loss: 0.0019 - val_loss: 0.0030
+ - val_f1: 0.9945
+Epoch 168/200
+ - 805s - loss: 0.0019 - val_loss: 0.0057
+ - val_f1: 0.9867
+Epoch 169/200
+ - 806s - loss: 0.0020 - val_loss: 0.0047
+ - val_f1: 0.9891
+Epoch 170/200
+ - 806s - loss: 0.0019 - val_loss: 0.0054
+ - val_f1: 0.9886
+Epoch 171/200
+ - 806s - loss: 0.0019 - val_loss: 0.0081
+ - val_f1: 0.9688
+Epoch 172/200
+ - 805s - loss: 0.0020 - val_loss: 0.0066
+ - val_f1: 0.9863
+Epoch 173/200
+ - 804s - loss: 0.0020 - val_loss: 0.0053
+ - val_f1: 0.9827
+Epoch 174/200
+ - 804s - loss: 0.0019 - val_loss: 0.0048
+ - val_f1: 0.9895
+Epoch 175/200
+ - 804s - loss: 0.0019 - val_loss: 0.0039
+ - val_f1: 0.9936
+Epoch 176/200
+ - 804s - loss: 0.0019 - val_loss: 0.0042
+ - val_f1: 0.9895
+Epoch 177/200
+ - 805s - loss: 0.0019 - val_loss: 0.0054
+ - val_f1: 0.9889
+Epoch 178/200
+ - 805s - loss: 0.0019 - val_loss: 0.0042
+ - val_f1: 0.9933
+Epoch 179/200
+ - 804s - loss: 0.0019 - val_loss: 0.0038
+ - val_f1: 0.9930
+Epoch 180/200
+ - 804s - loss: 0.0019 - val_loss: 0.0029
+2020-01-07 16:39:08,139 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-07 16:46:10,259 [INFO] Last epoch loss evaluation: train_loss = 0.001824, val_loss = 0.001909
+2020-01-07 16:46:10,259 [INFO] Training complete. time_to_train = 163509.75 sec, 2725.16 min
+2020-01-07 16:46:10,358 [INFO] Model saved to results_additional_exps/ann_depth_ids17_shallow_23/best_model.pickle
+2020-01-07 16:46:10,360 [INFO] Training history saved to: results_additional_exps/ann_depth_ids17_shallow_23/training_error_history.csv
+2020-01-07 16:46:10,554 [INFO] Plot saved to: results_additional_exps/ann_depth_ids17_shallow_23/training_error_history.png
+2020-01-07 16:46:10,740 [INFO] Plot saved to: results_additional_exps/ann_depth_ids17_shallow_23/training_f1_history.png
+2020-01-07 16:46:10,740 [INFO] Making predictions on training, validation, testing data
+2020-01-07 16:54:52,110 [INFO] Evaluating predictions (results)
+2020-01-07 16:55:02,254 [INFO] Dataset: Testing. Classification report below
+2020-01-07 16:55:02,254 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00    454265
+                   Bot       0.99      0.39      0.56       391
+                  DDoS       1.00      1.00      1.00     25605
+         DoS GoldenEye       1.00      0.98      0.99      2058
+              DoS Hulk       0.98      1.00      0.99     46025
+      DoS Slowhttptest       0.89      0.99      0.94      1100
+         DoS slowloris       0.99      0.99      0.99      1159
+           FTP-Patator       1.00      1.00      1.00      1587
+              PortScan       0.99      1.00      1.00     31761
+           SSH-Patator       0.94      0.99      0.96      1179
+Web Attack Brute Force       0.82      0.15      0.26       302
+        Web Attack XSS       0.00      0.00      0.00       130
+
+             micro avg       1.00      1.00      1.00    565562
+             macro avg       0.88      0.79      0.81    565562
+          weighted avg       1.00      1.00      1.00    565562
+
+2020-01-07 16:55:02,254 [INFO] Overall accuracy (micro avg): 0.9962939518567372
+2020-01-07 16:55:13,784 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9963         0.9963                       0.9963                0.0003                   0.0037  0.9963
+1     Macro avg        0.9994         0.8838                       0.7905                0.0008                   0.2095  0.8068
+2  Weighted avg        0.9970         0.9960                       0.9963                0.0062                   0.0037  0.9959
+2020-01-07 16:55:24,104 [INFO] Dataset: Validation. Classification report below
+2020-01-07 16:55:24,104 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00    454264
+                   Bot       1.00      0.37      0.54       391
+                  DDoS       1.00      1.00      1.00     25605
+         DoS GoldenEye       0.99      0.98      0.99      2059
+              DoS Hulk       0.98      1.00      0.99     46025
+      DoS Slowhttptest       0.89      0.99      0.94      1099
+         DoS slowloris       0.99      0.98      0.99      1159
+           FTP-Patator       1.00      1.00      1.00      1587
+              PortScan       0.99      1.00      1.00     31761
+           SSH-Patator       0.95      0.98      0.97      1180
+Web Attack Brute Force       0.72      0.14      0.24       301
+        Web Attack XSS       1.00      0.03      0.06       131
+
+             micro avg       1.00      1.00      1.00    565562
+             macro avg       0.96      0.79      0.81    565562
+          weighted avg       1.00      1.00      1.00    565562
+
+2020-01-07 16:55:24,106 [INFO] Overall accuracy (micro avg): 0.9964460129923863
+2020-01-07 16:55:35,816 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9964         0.9964                       0.9964                0.0003                   0.0036  0.9964
+1     Macro avg        0.9994         0.9599                       0.7897                0.0008                   0.2103  0.8086
+2  Weighted avg        0.9971         0.9964                       0.9964                0.0060                   0.0036  0.9961
+2020-01-07 16:56:09,877 [INFO] Dataset: Training. Classification report below
+2020-01-07 16:56:09,877 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00   1362791
+                   Bot       1.00      0.39      0.56      1174
+                  DDoS       1.00      1.00      1.00     76815
+         DoS GoldenEye       1.00      0.98      0.99      6176
+              DoS Hulk       0.98      1.00      0.99    138074
+      DoS Slowhttptest       0.91      0.99      0.95      3300
+         DoS slowloris       0.99      0.99      0.99      3478
+           FTP-Patator       1.00      1.00      1.00      4761
+              PortScan       0.99      1.00      1.00     95282
+           SSH-Patator       0.96      0.99      0.97      3538
+Web Attack Brute Force       0.83      0.14      0.24       904
+        Web Attack XSS       1.00      0.04      0.07       391
+
+             micro avg       1.00      1.00      1.00   1696684
+             macro avg       0.97      0.79      0.81   1696684
+          weighted avg       1.00      1.00      1.00   1696684
+
+2020-01-07 16:56:09,877 [INFO] Overall accuracy (micro avg): 0.9965332377743882
+2020-01-07 16:56:48,526 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9965         0.9965                       0.9965                0.0003                   0.0035  0.9965
+1     Macro avg        0.9994         0.9711                       0.7925                0.0008                   0.2075  0.8124
+2  Weighted avg        0.9971         0.9965                       0.9965                0.0060                   0.0035  0.9962
+2020-01-07 16:56:48,578 [INFO] Results saved to: results_additional_exps/ann_depth_ids17_shallow_23/ann_depth_ids17_shallow_23_results.xlsx
+2020-01-07 16:56:48,585 [INFO] ================= Finished running experiment no. 13 ================= 
+
+2020-01-07 16:56:48,649 [INFO] ================= Finished running 3 experiments ================= 
+
+ - val_f1: 0.9931
+Epoch 00180: early stopping

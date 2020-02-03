@@ -1,0 +1,91 @@
+2019-12-20 17:18:13,031 [INFO] Initialized logging. log_filename = results_selected_models/selected_nsl_rf_5/run_log.log
+2019-12-20 17:18:13,031 [INFO] ================= Running experiment no. 5  ================= 
+
+2019-12-20 17:18:13,031 [INFO] Experiment parameters given below
+2019-12-20 17:18:13,031 [INFO] 
+{'experiment_num': 5, 'results_dir': 'results_selected_models/selected_nsl_rf_5', 'model_type': 'classifier', 'model': 'rf', 'normal_label': 'normal', 'training_data_feed': 'preload', 'scaling_type': 'NA', 'num_trees': 100, 'min_samples_for_split': 2, 'randomize_state': 1, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/small_datasets/nsl_kdd_five_classes', 'description': 'selected_nsl_rf_5'}
+2019-12-20 17:18:13,031 [INFO] Created tensorboard log directory: results_selected_models/selected_nsl_rf_5/tf_logs_run_2019_12_20-17_18_13
+2019-12-20 17:18:13,031 [INFO] Loading datsets from: ../Datasets/small_datasets/nsl_kdd_five_classes
+2019-12-20 17:18:13,032 [INFO] Reading X, y files
+2019-12-20 17:18:13,032 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_train.h5
+2019-12-20 17:18:13,275 [INFO] Reading complete. time_to_read=0.24 seconds
+2019-12-20 17:18:13,276 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_val.h5
+2019-12-20 17:18:13,341 [INFO] Reading complete. time_to_read=0.06 seconds
+2019-12-20 17:18:13,341 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_test.h5
+2019-12-20 17:18:13,399 [INFO] Reading complete. time_to_read=0.06 seconds
+2019-12-20 17:18:13,399 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_train.h5
+2019-12-20 17:18:13,406 [INFO] Reading complete. time_to_read=0.01 seconds
+2019-12-20 17:18:13,406 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_val.h5
+2019-12-20 17:18:13,410 [INFO] Reading complete. time_to_read=0.00 seconds
+2019-12-20 17:18:13,410 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_test.h5
+2019-12-20 17:18:13,414 [INFO] Reading complete. time_to_read=0.00 seconds
+2019-12-20 17:18:13,601 [INFO] Initializing model
+2019-12-20 17:18:13,601 [INFO] Training model
+2019-12-20 17:18:18,783 [INFO] Training complete. time_to_train = 5.18 sec, 0.09 min
+2019-12-20 17:18:18,797 [INFO] Model saved to results_selected_models/selected_nsl_rf_5/best_model.pickle
+2019-12-20 17:18:18,797 [INFO] Making predictions on training, validation, testing data
+2019-12-20 17:18:20,762 [INFO] Evaluating predictions (results)
+2019-12-20 17:18:21,023 [INFO] Dataset: Testing. Classification report below
+2019-12-20 17:18:21,023 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       0.92      0.83      0.87      7458
+      normal       0.67      0.97      0.79      9711
+       probe       0.88      0.60      0.71      2421
+         r2l       0.99      0.04      0.07      2421
+         u2r       0.33      0.00      0.00       533
+
+   micro avg       0.76      0.76      0.76     22544
+   macro avg       0.76      0.49      0.49     22544
+weighted avg       0.80      0.76      0.72     22544
+
+2019-12-20 17:18:21,023 [INFO] Overall accuracy (micro avg): 0.7622427253371186
+2019-12-20 17:18:21,321 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.7622         0.7622                       0.7622                0.0594                   0.2378  0.7622
+1     Macro avg        0.9049         0.7585                       0.4878                0.0811                   0.5122  0.4903
+2  Weighted avg        0.8631         0.8023                       0.7622                0.1680                   0.2378  0.7152
+2019-12-20 17:18:21,654 [INFO] Dataset: Validation. Classification report below
+2019-12-20 17:18:21,655 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00      9186
+      normal       1.00      1.00      1.00     13469
+       probe       1.00      1.00      1.00      2331
+         r2l       0.99      0.93      0.96       199
+         u2r       0.75      0.30      0.43        10
+
+   micro avg       1.00      1.00      1.00     25195
+   macro avg       0.95      0.84      0.88     25195
+weighted avg       1.00      1.00      1.00     25195
+
+2019-12-20 17:18:21,657 [INFO] Overall accuracy (micro avg): 0.998333002579877
+2019-12-20 17:18:22,015 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9983         0.9983                       0.9983                0.0004                   0.0017  0.9983
+1     Macro avg        0.9993         0.9481                       0.8450                0.0006                   0.1550  0.8770
+2  Weighted avg        0.9990         0.9983                       0.9983                0.0014                   0.0017  0.9983
+2019-12-20 17:18:23,461 [INFO] Dataset: Training. Classification report below
+2019-12-20 17:18:23,462 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00     36741
+      normal       1.00      1.00      1.00     53874
+       probe       1.00      1.00      1.00      9325
+         r2l       1.00      1.00      1.00       796
+         u2r       0.98      1.00      0.99        42
+
+   micro avg       1.00      1.00      1.00    100778
+   macro avg       1.00      1.00      1.00    100778
+weighted avg       1.00      1.00      1.00    100778
+
+2019-12-20 17:18:23,462 [INFO] Overall accuracy (micro avg): 0.999960308797555
+2019-12-20 17:18:25,089 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        1.0000         1.0000                       1.0000                0.0000                   0.0000  1.0000
+1     Macro avg        1.0000         0.9953                       1.0000                0.0000                   0.0000  0.9976
+2  Weighted avg        1.0000         1.0000                       1.0000                0.0000                   0.0000  1.0000
+2019-12-20 17:18:25,127 [INFO] Results saved to: results_selected_models/selected_nsl_rf_5/selected_nsl_rf_5_results.xlsx
+2019-12-20 17:18:25,128 [INFO] ================= Finished running experiment no. 5 ================= 
+
+2019-12-20 17:18:25,133 [INFO] Created directory: results_selected_models/selected_ids17_rf_1

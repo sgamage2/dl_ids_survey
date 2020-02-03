@@ -1,0 +1,105 @@
+2020-01-02 19:30:09,417 [INFO] Initialized logging. log_filename = results_additional_exps/ann_depth_ids18_subset_layers_11/run_log.log
+2020-01-02 19:30:09,417 [INFO] ================= Running experiment no. 11  ================= 
+
+2020-01-02 19:30:09,417 [INFO] Experiment parameters given below
+2020-01-02 19:30:09,417 [INFO] 
+{'experiment_num': 11, 'results_dir': 'results_additional_exps/ann_depth_ids18_subset_layers_11', 'model_type': 'classifier', 'model': 'ann', 'normal_label': 'BENIGN', 'training_data_feed': 'preload', 'scaling_type': 'NA', 'ann_layer_units': [900, 800, 700, 600, 500, 400, 256, 128, 64, 32, 16], 'ann_layer_activations': ['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu'], 'ann_layer_dropout_rates': [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2], 'epochs': 200, 'early_stop_patience': 50, 'batch_size': 256, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/small_datasets/ids2018', 'description': 'ann_depth_ids18_subset_layers_11'}
+2020-01-02 19:30:09,418 [INFO] Created tensorboard log directory: results_additional_exps/ann_depth_ids18_subset_layers_11/tf_logs_run_2020_01_02-19_30_09
+2020-01-02 19:30:09,418 [INFO] Loading datsets from: ../Datasets/small_datasets/ids2018
+2020-01-02 19:30:09,418 [INFO] Reading X, y files
+2020-01-02 19:30:09,418 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_train.h5
+2020-01-02 19:30:13,959 [INFO] Reading complete. time_to_read=4.54 seconds
+2020-01-02 19:30:13,959 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_val.h5
+2020-01-02 19:30:15,535 [INFO] Reading complete. time_to_read=1.58 seconds
+2020-01-02 19:30:15,535 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_test.h5
+2020-01-02 19:30:17,109 [INFO] Reading complete. time_to_read=1.57 seconds
+2020-01-02 19:30:17,109 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_train.h5
+2020-01-02 19:30:17,359 [INFO] Reading complete. time_to_read=0.25 seconds
+2020-01-02 19:30:17,359 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_val.h5
+2020-01-02 19:30:17,446 [INFO] Reading complete. time_to_read=0.09 seconds
+2020-01-02 19:30:17,446 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_test.h5
+2020-01-02 19:30:17,532 [INFO] Reading complete. time_to_read=0.09 seconds
+2020-01-02 19:30:21,435 [INFO] Initializing model
+2020-01-02 19:30:22,611 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,611 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-02 19:30:22,611 [INFO] =================================================================
+2020-01-02 19:30:22,611 [INFO] dense_66 (Dense)             (None, 900)               70200     
+2020-01-02 19:30:22,611 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,611 [INFO] batch_normalization_56 (Batc (None, 900)               3600      
+2020-01-02 19:30:22,612 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,612 [INFO] dropout_56 (Dropout)         (None, 900)               0         
+2020-01-02 19:30:22,612 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,612 [INFO] dense_67 (Dense)             (None, 800)               720800    
+2020-01-02 19:30:22,612 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,612 [INFO] batch_normalization_57 (Batc (None, 800)               3200      
+2020-01-02 19:30:22,612 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,612 [INFO] dropout_57 (Dropout)         (None, 800)               0         
+2020-01-02 19:30:22,612 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,612 [INFO] dense_68 (Dense)             (None, 700)               560700    
+2020-01-02 19:30:22,612 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,612 [INFO] batch_normalization_58 (Batc (None, 700)               2800      
+2020-01-02 19:30:22,612 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,612 [INFO] dropout_58 (Dropout)         (None, 700)               0         
+2020-01-02 19:30:22,612 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,612 [INFO] dense_69 (Dense)             (None, 600)               420600    
+2020-01-02 19:30:22,612 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,613 [INFO] batch_normalization_59 (Batc (None, 600)               2400      
+2020-01-02 19:30:22,613 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,613 [INFO] dropout_59 (Dropout)         (None, 600)               0         
+2020-01-02 19:30:22,613 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,613 [INFO] dense_70 (Dense)             (None, 500)               300500    
+2020-01-02 19:30:22,613 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,613 [INFO] batch_normalization_60 (Batc (None, 500)               2000      
+2020-01-02 19:30:22,613 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,613 [INFO] dropout_60 (Dropout)         (None, 500)               0         
+2020-01-02 19:30:22,613 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,613 [INFO] dense_71 (Dense)             (None, 400)               200400    
+2020-01-02 19:30:22,613 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,613 [INFO] batch_normalization_61 (Batc (None, 400)               1600      
+2020-01-02 19:30:22,613 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,613 [INFO] dropout_61 (Dropout)         (None, 400)               0         
+2020-01-02 19:30:22,613 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,613 [INFO] dense_72 (Dense)             (None, 256)               102656    
+2020-01-02 19:30:22,613 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,614 [INFO] batch_normalization_62 (Batc (None, 256)               1024      
+2020-01-02 19:30:22,614 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,614 [INFO] dropout_62 (Dropout)         (None, 256)               0         
+2020-01-02 19:30:22,614 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,614 [INFO] dense_73 (Dense)             (None, 128)               32896     
+2020-01-02 19:30:22,614 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,614 [INFO] batch_normalization_63 (Batc (None, 128)               512       
+2020-01-02 19:30:22,614 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,614 [INFO] dropout_63 (Dropout)         (None, 128)               0         
+2020-01-02 19:30:22,614 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,614 [INFO] dense_74 (Dense)             (None, 64)                8256      
+2020-01-02 19:30:22,614 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,614 [INFO] batch_normalization_64 (Batc (None, 64)                256       
+2020-01-02 19:30:22,614 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,614 [INFO] dropout_64 (Dropout)         (None, 64)                0         
+2020-01-02 19:30:22,614 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,614 [INFO] dense_75 (Dense)             (None, 32)                2080      
+2020-01-02 19:30:22,614 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,615 [INFO] batch_normalization_65 (Batc (None, 32)                128       
+2020-01-02 19:30:22,615 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,615 [INFO] dropout_65 (Dropout)         (None, 32)                0         
+2020-01-02 19:30:22,615 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,615 [INFO] dense_76 (Dense)             (None, 16)                528       
+2020-01-02 19:30:22,615 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,615 [INFO] batch_normalization_66 (Batc (None, 16)                64        
+2020-01-02 19:30:22,615 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,615 [INFO] dropout_66 (Dropout)         (None, 16)                0         
+2020-01-02 19:30:22,615 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,615 [INFO] dense_77 (Dense)             (None, 15)                255       
+2020-01-02 19:30:22,615 [INFO] =================================================================
+2020-01-02 19:30:22,616 [INFO] Total params: 2,437,455
+2020-01-02 19:30:22,616 [INFO] Trainable params: 2,428,663
+2020-01-02 19:30:22,616 [INFO] Non-trainable params: 8,792
+2020-01-02 19:30:22,616 [INFO] _________________________________________________________________
+2020-01-02 19:30:22,616 [INFO] Training model
+2020-01-02 22:31:33,357 [INFO] epoch = 20. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_11/ann_model_epoch_20.pickle
+2020-01-03 01:25:15,533 [INFO] epoch = 40. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_11/ann_model_epoch_40.pickle
+2020-01-03 04:18:55,347 [INFO] epoch = 60. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_11/ann_model_epoch_60.pickle
+2020-01-03 07:12:36,369 [INFO] epoch = 80. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_11/ann_model_epoch_80.pickle
+2020-01-03 10:06:15,071 [INFO] epoch = 100. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_11/ann_model_epoch_100.pickle
+2020-01-03 12:59:56,017 [INFO] epoch = 120. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_11/ann_model_epoch_120.pickle
+2020-01-03 15:53:45,431 [INFO] epoch = 140. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_11/ann_model_epoch_140.pickle

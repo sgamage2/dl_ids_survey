@@ -1,0 +1,121 @@
+2019-12-20 18:27:49,707 [INFO] Initialized logging. log_filename = results_selected_models/selected_ids18_subset_rf_1/run_log.log
+2019-12-20 18:27:49,707 [INFO] ================= Running experiment no. 1  ================= 
+
+2019-12-20 18:27:49,708 [INFO] Experiment parameters given below
+2019-12-20 18:27:49,708 [INFO] 
+{'experiment_num': 1, 'results_dir': 'results_selected_models/selected_ids18_subset_rf_1', 'model_type': 'classifier', 'model': 'rf', 'normal_label': 'BENIGN', 'training_data_feed': 'preload', 'scaling_type': 'NA', 'num_trees': 100, 'min_samples_for_split': 2, 'randomize_state': 1, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/small_datasets/ids2018', 'description': 'selected_ids18_subset_rf_1'}
+2019-12-20 18:27:49,708 [INFO] Created tensorboard log directory: results_selected_models/selected_ids18_subset_rf_1/tf_logs_run_2019_12_20-18_27_49
+2019-12-20 18:27:49,708 [INFO] Loading datsets from: ../Datasets/small_datasets/ids2018
+2019-12-20 18:27:49,710 [INFO] Reading X, y files
+2019-12-20 18:27:49,710 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_train.h5
+2019-12-20 18:27:54,859 [INFO] Reading complete. time_to_read=5.15 seconds
+2019-12-20 18:27:54,859 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_val.h5
+2019-12-20 18:27:56,384 [INFO] Reading complete. time_to_read=1.52 seconds
+2019-12-20 18:27:56,384 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_test.h5
+2019-12-20 18:27:57,906 [INFO] Reading complete. time_to_read=1.52 seconds
+2019-12-20 18:27:57,907 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_train.h5
+2019-12-20 18:27:58,205 [INFO] Reading complete. time_to_read=0.30 seconds
+2019-12-20 18:27:58,205 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_val.h5
+2019-12-20 18:27:58,299 [INFO] Reading complete. time_to_read=0.09 seconds
+2019-12-20 18:27:58,299 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_test.h5
+2019-12-20 18:27:58,393 [INFO] Reading complete. time_to_read=0.09 seconds
+2019-12-20 18:28:02,053 [INFO] Initializing model
+2019-12-20 18:28:02,053 [INFO] Training model
+2019-12-20 18:40:53,216 [INFO] Training complete. time_to_train = 771.16 sec, 12.85 min
+2019-12-20 18:40:55,713 [INFO] Model saved to results_selected_models/selected_ids18_subset_rf_1/best_model.pickle
+2019-12-20 18:40:55,713 [INFO] Making predictions on training, validation, testing data
+2019-12-20 18:43:50,476 [INFO] Evaluating predictions (results)
+2019-12-20 18:44:02,536 [INFO] Dataset: Testing. Classification report below
+2019-12-20 18:44:02,536 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99    535650
+                     Bot       1.00      1.00      1.00     11465
+        Brute Force -Web       1.00      0.33      0.50        24
+        Brute Force -XSS       1.00      0.33      0.50         9
+        DDOS attack-HOIC       1.00      1.00      1.00     27447
+    DDOS attack-LOIC-UDP       0.81      0.91      0.86        67
+  DDoS attacks-LOIC-HTTP       1.00      1.00      1.00     23010
+   DoS attacks-GoldenEye       1.00      1.00      1.00      1651
+        DoS attacks-Hulk       1.00      1.00      1.00     18478
+DoS attacks-SlowHTTPTest       0.76      0.51      0.61      5596
+   DoS attacks-Slowloris       1.00      0.98      0.99       440
+          FTP-BruteForce       0.72      0.88      0.79      7718
+           Infilteration       0.34      0.05      0.09      6404
+           SQL Injection       1.00      0.25      0.40         4
+          SSH-Bruteforce       1.00      1.00      1.00      7525
+
+               micro avg       0.98      0.98      0.98    645488
+               macro avg       0.91      0.75      0.78    645488
+            weighted avg       0.98      0.98      0.98    645488
+
+2019-12-20 18:44:02,537 [INFO] Overall accuracy (micro avg): 0.9836325384825124
+2019-12-20 18:44:16,255 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9836         0.9836                       0.9836                0.0012                   0.0164  0.9836
+1     Macro avg        0.9978         0.9071                       0.7499                0.0042                   0.2501  0.7818
+2  Weighted avg        0.9909         0.9782                       0.9836                0.0470                   0.0164  0.9795
+2019-12-20 18:44:28,267 [INFO] Dataset: Validation. Classification report below
+2019-12-20 18:44:28,267 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99    535650
+                     Bot       1.00      1.00      1.00     11465
+        Brute Force -Web       1.00      0.48      0.65        25
+        Brute Force -XSS       1.00      0.67      0.80         9
+        DDOS attack-HOIC       1.00      1.00      1.00     27447
+    DDOS attack-LOIC-UDP       0.87      0.87      0.87        68
+  DDoS attacks-LOIC-HTTP       1.00      1.00      1.00     23009
+   DoS attacks-GoldenEye       1.00      1.00      1.00      1651
+        DoS attacks-Hulk       1.00      1.00      1.00     18478
+DoS attacks-SlowHTTPTest       0.78      0.51      0.62      5596
+   DoS attacks-Slowloris       1.00      0.98      0.99       439
+          FTP-BruteForce       0.72      0.89      0.80      7718
+           Infilteration       0.34      0.05      0.09      6403
+           SQL Injection       1.00      0.25      0.40         4
+          SSH-Bruteforce       1.00      1.00      1.00      7525
+
+               micro avg       0.98      0.98      0.98    645487
+               macro avg       0.91      0.78      0.81    645487
+            weighted avg       0.98      0.98      0.98    645487
+
+2019-12-20 18:44:28,267 [INFO] Overall accuracy (micro avg): 0.9837812380419745
+2019-12-20 18:44:41,910 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9838         0.9838                       0.9838                0.0012                   0.0162  0.9838
+1     Macro avg        0.9978         0.9124                       0.7799                0.0042                   0.2201  0.8135
+2  Weighted avg        0.9909         0.9785                       0.9838                0.0466                   0.0162  0.9798
+2019-12-20 18:45:21,177 [INFO] Dataset: Training. Classification report below
+2019-12-20 18:45:21,177 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      1.00   1606949
+                     Bot       1.00      1.00      1.00     34396
+        Brute Force -Web       1.00      0.41      0.58        73
+        Brute Force -XSS       1.00      0.58      0.73        26
+        DDOS attack-HOIC       1.00      1.00      1.00     82341
+    DDOS attack-LOIC-UDP       1.00      1.00      1.00       203
+  DDoS attacks-LOIC-HTTP       1.00      1.00      1.00     69029
+   DoS attacks-GoldenEye       1.00      1.00      1.00      4954
+        DoS attacks-Hulk       1.00      1.00      1.00     55435
+DoS attacks-SlowHTTPTest       0.77      0.51      0.61     16787
+   DoS attacks-Slowloris       1.00      1.00      1.00      1318
+          FTP-BruteForce       0.72      0.89      0.79     23153
+           Infilteration       0.99      0.44      0.61     19210
+           SQL Injection       1.00      0.67      0.80        12
+          SSH-Bruteforce       1.00      1.00      1.00     22576
+
+               micro avg       0.99      0.99      0.99   1936462
+               macro avg       0.96      0.83      0.88   1936462
+            weighted avg       0.99      0.99      0.99   1936462
+
+2019-12-20 18:45:21,177 [INFO] Overall accuracy (micro avg): 0.9886545669370222
+2019-12-20 18:46:05,805 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9887         0.9887                       0.9887                0.0008                   0.0113  0.9887
+1     Macro avg        0.9985         0.9644                       0.8328                0.0026                   0.1672  0.8751
+2  Weighted avg        0.9950         0.9888                       0.9887                0.0275                   0.0113  0.9873
+2019-12-20 18:46:05,913 [INFO] Results saved to: results_selected_models/selected_ids18_subset_rf_1/selected_ids18_subset_rf_1_results.xlsx
+2019-12-20 18:46:05,959 [INFO] ================= Finished running experiment no. 1 ================= 
+
+2019-12-20 18:46:06,061 [INFO] Created directory: results_selected_models/selected_ids18_subset_rf_2

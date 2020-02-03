@@ -1,0 +1,118 @@
+2019-12-24 02:09:32,172 [INFO] Initialized logging. log_filename = results_additional_exps/ann_data_efficiency_nsl_p80/run_log.log
+2019-12-24 02:09:32,172 [INFO] ================= Running experiment no. 8  ================= 
+
+2019-12-24 02:09:32,172 [INFO] Experiment parameters given below
+2019-12-24 02:09:32,172 [INFO] 
+{'experiment_num': 8, 'results_dir': 'results_additional_exps/ann_data_efficiency_nsl_p80', 'model_type': 'classifier', 'model': 'ann', 'normal_label': 'normal', 'training_data_feed': 'preload', 'split_random_seed': 42, 'dataset_split_ratio': 0.2, 'ann_layer_units': [64], 'ann_layer_activations': ['relu'], 'ann_layer_dropout_rates': [0.2], 'epochs': 100, 'early_stop_patience': 20, 'batch_size': 256, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/small_datasets/nsl_kdd_five_classes', 'description': 'ann_data_efficiency_nsl_p80'}
+2019-12-24 02:09:32,173 [INFO] Created tensorboard log directory: results_additional_exps/ann_data_efficiency_nsl_p80/tf_logs_run_2019_12_24-02_09_32
+2019-12-24 02:09:32,173 [INFO] Loading datsets from: ../Datasets/small_datasets/nsl_kdd_five_classes
+2019-12-24 02:09:32,173 [INFO] Reading X, y files
+2019-12-24 02:09:32,173 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_train.h5
+2019-12-24 02:09:32,424 [INFO] Reading complete. time_to_read=0.25 seconds
+2019-12-24 02:09:32,424 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_val.h5
+2019-12-24 02:09:32,487 [INFO] Reading complete. time_to_read=0.06 seconds
+2019-12-24 02:09:32,487 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_test.h5
+2019-12-24 02:09:32,544 [INFO] Reading complete. time_to_read=0.06 seconds
+2019-12-24 02:09:32,544 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_train.h5
+2019-12-24 02:09:32,552 [INFO] Reading complete. time_to_read=0.01 seconds
+2019-12-24 02:09:32,552 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_val.h5
+2019-12-24 02:09:32,556 [INFO] Reading complete. time_to_read=0.00 seconds
+2019-12-24 02:09:32,556 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_test.h5
+2019-12-24 02:09:32,559 [INFO] Reading complete. time_to_read=0.00 seconds
+2019-12-24 02:09:32,739 [INFO] Initializing model
+2019-12-24 02:09:32,843 [INFO] _________________________________________________________________
+2019-12-24 02:09:32,843 [INFO] Layer (type)                 Output Shape              Param #   
+2019-12-24 02:09:32,843 [INFO] =================================================================
+2019-12-24 02:09:32,843 [INFO] dense_15 (Dense)             (None, 64)                7872      
+2019-12-24 02:09:32,843 [INFO] _________________________________________________________________
+2019-12-24 02:09:32,844 [INFO] batch_normalization_8 (Batch (None, 64)                256       
+2019-12-24 02:09:32,844 [INFO] _________________________________________________________________
+2019-12-24 02:09:32,844 [INFO] dropout_8 (Dropout)          (None, 64)                0         
+2019-12-24 02:09:32,844 [INFO] _________________________________________________________________
+2019-12-24 02:09:32,844 [INFO] dense_16 (Dense)             (None, 5)                 325       
+2019-12-24 02:09:32,844 [INFO] =================================================================
+2019-12-24 02:09:32,844 [INFO] Total params: 8,453
+2019-12-24 02:09:32,844 [INFO] Trainable params: 8,325
+2019-12-24 02:09:32,844 [INFO] Non-trainable params: 128
+2019-12-24 02:09:32,844 [INFO] _________________________________________________________________
+2019-12-24 02:09:32,844 [INFO] Training model
+2019-12-24 02:09:32,844 [INFO] Splitting train set into 2 sets (set1, set2), random_seed = 42
+2019-12-24 02:09:33,546 [INFO] Split sizes (instances). total = 100778, set1 = 20155, set2 = 80623, set1 dataset hash = 8b3871424c4262fd443fec179988445ec9c2875d
+2019-12-24 02:09:47,349 [INFO] epoch = 10. Intermediate model saved to results_additional_exps/ann_data_efficiency_nsl_p80/ann_model_epoch_10.pickle
+2019-12-24 02:09:57,918 [INFO] epoch = 20. Intermediate model saved to results_additional_exps/ann_data_efficiency_nsl_p80/ann_model_epoch_20.pickle
+2019-12-24 02:10:08,336 [INFO] epoch = 30. Intermediate model saved to results_additional_exps/ann_data_efficiency_nsl_p80/ann_model_epoch_30.pickle
+2019-12-24 02:10:18,861 [INFO] epoch = 40. Intermediate model saved to results_additional_exps/ann_data_efficiency_nsl_p80/ann_model_epoch_40.pickle
+2019-12-24 02:10:29,407 [INFO] epoch = 50. Intermediate model saved to results_additional_exps/ann_data_efficiency_nsl_p80/ann_model_epoch_50.pickle
+2019-12-24 02:10:33,933 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2019-12-24 02:10:35,674 [INFO] Last epoch loss evaluation: train_loss = 0.004978, val_loss = 0.006830
+2019-12-24 02:10:35,677 [INFO] Training complete. time_to_train = 62.83 sec, 1.05 min
+2019-12-24 02:10:35,702 [INFO] Model saved to results_additional_exps/ann_data_efficiency_nsl_p80/best_model.pickle
+2019-12-24 02:10:35,704 [INFO] Training history saved to: results_additional_exps/ann_data_efficiency_nsl_p80/training_error_history.csv
+2019-12-24 02:10:35,868 [INFO] Plot saved to: results_additional_exps/ann_data_efficiency_nsl_p80/training_error_history.png
+2019-12-24 02:10:36,027 [INFO] Plot saved to: results_additional_exps/ann_data_efficiency_nsl_p80/training_f1_history.png
+2019-12-24 02:10:36,027 [INFO] Making predictions on training, validation, testing data
+2019-12-24 02:10:37,960 [INFO] Evaluating predictions (results)
+2019-12-24 02:10:38,219 [INFO] Dataset: Testing. Classification report below
+2019-12-24 02:10:38,219 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       0.96      0.85      0.90      7458
+      normal       0.69      0.97      0.81      9711
+       probe       0.87      0.68      0.76      2421
+         r2l       0.97      0.12      0.22      2421
+         u2r       0.75      0.05      0.09       533
+
+   micro avg       0.79      0.79      0.79     22544
+   macro avg       0.85      0.53      0.56     22544
+weighted avg       0.83      0.79      0.75     22544
+
+2019-12-24 02:10:38,219 [INFO] Overall accuracy (micro avg): 0.7871717530163236
+2019-12-24 02:10:38,515 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.7872         0.7872                       0.7872                0.0532                   0.2128  0.7872
+1     Macro avg        0.9149         0.8486                       0.5347                0.0727                   0.4653  0.5565
+2  Weighted avg        0.8774         0.8293                       0.7872                0.1504                   0.2128  0.7528
+2019-12-24 02:10:38,848 [INFO] Dataset: Validation. Classification report below
+2019-12-24 02:10:38,848 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00      9186
+      normal       1.00      1.00      1.00     13469
+       probe       0.99      0.99      0.99      2331
+         r2l       0.93      0.84      0.88       199
+         u2r       0.44      0.40      0.42        10
+
+   micro avg       1.00      1.00      1.00     25195
+   macro avg       0.87      0.84      0.86     25195
+weighted avg       1.00      1.00      1.00     25195
+
+2019-12-24 02:10:38,848 [INFO] Overall accuracy (micro avg): 0.9954356023020441
+2019-12-24 02:10:39,204 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9954         0.9954                       0.9954                0.0011                   0.0046  0.9954
+1     Macro avg        0.9982         0.8713                       0.8448                0.0015                   0.1552  0.8573
+2  Weighted avg        0.9973         0.9954                       0.9954                0.0032                   0.0046  0.9954
+2019-12-24 02:10:40,642 [INFO] Dataset: Training. Classification report below
+2019-12-24 02:10:40,642 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00     36741
+      normal       1.00      1.00      1.00     53874
+       probe       1.00      0.99      0.99      9325
+         r2l       0.90      0.86      0.88       796
+         u2r       0.79      0.64      0.71        42
+
+   micro avg       1.00      1.00      1.00    100778
+   macro avg       0.94      0.90      0.92    100778
+weighted avg       1.00      1.00      1.00    100778
+
+2019-12-24 02:10:40,642 [INFO] Overall accuracy (micro avg): 0.9958522693444998
+2019-12-24 02:10:42,260 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9959         0.9959                       0.9959                0.0010                   0.0041  0.9959
+1     Macro avg        0.9983         0.9376                       0.8968                0.0015                   0.1032  0.9155
+2  Weighted avg        0.9974         0.9958                       0.9959                0.0032                   0.0041  0.9958
+2019-12-24 02:10:42,298 [INFO] Results saved to: results_additional_exps/ann_data_efficiency_nsl_p80/ann_data_efficiency_nsl_p80_results.xlsx
+2019-12-24 02:10:42,298 [INFO] ================= Finished running experiment no. 8 ================= 
+
+2019-12-24 02:10:42,301 [INFO] Created directory: results_additional_exps/ann_data_efficiency_nsl_p90

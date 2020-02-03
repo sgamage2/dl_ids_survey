@@ -1,0 +1,175 @@
+2020-01-09 02:46:04,113 [INFO] Initialized logging. log_filename = results_additional_exps/ann_depth_ids18_subset_layers_5/run_log.log
+2020-01-09 02:46:04,113 [INFO] ================= Running experiment no. 5  ================= 
+
+2020-01-09 02:46:04,113 [INFO] Experiment parameters given below
+2020-01-09 02:46:04,113 [INFO] 
+{'experiment_num': 5, 'results_dir': 'results_additional_exps/ann_depth_ids18_subset_layers_5', 'model_type': 'classifier', 'model': 'ann', 'normal_label': 'BENIGN', 'training_data_feed': 'preload', 'scaling_type': 'NA', 'ann_layer_units': [64, 64, 64, 64, 64], 'ann_layer_activations': ['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu'], 'ann_layer_dropout_rates': [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2], 'epochs': 200, 'early_stop_patience': 50, 'batch_size': 256, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/small_datasets/ids2018', 'description': 'ann_depth_ids18_subset_layers_5'}
+2020-01-09 02:46:04,113 [INFO] Created tensorboard log directory: results_additional_exps/ann_depth_ids18_subset_layers_5/tf_logs_run_2020_01_09-02_46_04
+2020-01-09 02:46:04,113 [INFO] Loading datsets from: ../Datasets/small_datasets/ids2018
+2020-01-09 02:46:04,113 [INFO] Reading X, y files
+2020-01-09 02:46:04,114 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_train.h5
+2020-01-09 02:46:08,126 [INFO] Reading complete. time_to_read=4.01 seconds
+2020-01-09 02:46:08,126 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_val.h5
+2020-01-09 02:46:09,509 [INFO] Reading complete. time_to_read=1.38 seconds
+2020-01-09 02:46:09,512 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_test.h5
+2020-01-09 02:46:10,896 [INFO] Reading complete. time_to_read=1.38 seconds
+2020-01-09 02:46:10,896 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_train.h5
+2020-01-09 02:46:11,216 [INFO] Reading complete. time_to_read=0.32 seconds
+2020-01-09 02:46:11,216 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_val.h5
+2020-01-09 02:46:11,315 [INFO] Reading complete. time_to_read=0.10 seconds
+2020-01-09 02:46:11,316 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_test.h5
+2020-01-09 02:46:11,419 [INFO] Reading complete. time_to_read=0.10 seconds
+2020-01-09 02:46:14,794 [INFO] Initializing model
+2020-01-09 02:46:15,269 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,270 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-09 02:46:15,270 [INFO] =================================================================
+2020-01-09 02:46:15,270 [INFO] dense_15 (Dense)             (None, 64)                4992      
+2020-01-09 02:46:15,270 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,270 [INFO] batch_normalization_11 (Batc (None, 64)                256       
+2020-01-09 02:46:15,270 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,270 [INFO] dropout_11 (Dropout)         (None, 64)                0         
+2020-01-09 02:46:15,270 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,270 [INFO] dense_16 (Dense)             (None, 64)                4160      
+2020-01-09 02:46:15,270 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,271 [INFO] batch_normalization_12 (Batc (None, 64)                256       
+2020-01-09 02:46:15,271 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,271 [INFO] dropout_12 (Dropout)         (None, 64)                0         
+2020-01-09 02:46:15,271 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,271 [INFO] dense_17 (Dense)             (None, 64)                4160      
+2020-01-09 02:46:15,271 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,271 [INFO] batch_normalization_13 (Batc (None, 64)                256       
+2020-01-09 02:46:15,271 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,271 [INFO] dropout_13 (Dropout)         (None, 64)                0         
+2020-01-09 02:46:15,271 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,271 [INFO] dense_18 (Dense)             (None, 64)                4160      
+2020-01-09 02:46:15,271 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,272 [INFO] batch_normalization_14 (Batc (None, 64)                256       
+2020-01-09 02:46:15,272 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,272 [INFO] dropout_14 (Dropout)         (None, 64)                0         
+2020-01-09 02:46:15,272 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,272 [INFO] dense_19 (Dense)             (None, 64)                4160      
+2020-01-09 02:46:15,272 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,272 [INFO] batch_normalization_15 (Batc (None, 64)                256       
+2020-01-09 02:46:15,272 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,272 [INFO] dropout_15 (Dropout)         (None, 64)                0         
+2020-01-09 02:46:15,272 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,272 [INFO] dense_20 (Dense)             (None, 15)                975       
+2020-01-09 02:46:15,272 [INFO] =================================================================
+2020-01-09 02:46:15,273 [INFO] Total params: 23,887
+2020-01-09 02:46:15,273 [INFO] Trainable params: 23,247
+2020-01-09 02:46:15,273 [INFO] Non-trainable params: 640
+2020-01-09 02:46:15,273 [INFO] _________________________________________________________________
+2020-01-09 02:46:15,273 [INFO] Training model
+2020-01-09 03:11:55,928 [INFO] epoch = 20. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_5/ann_model_epoch_20.pickle
+2020-01-09 03:36:37,684 [INFO] epoch = 40. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_5/ann_model_epoch_40.pickle
+2020-01-09 04:01:20,193 [INFO] epoch = 60. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_5/ann_model_epoch_60.pickle
+2020-01-09 04:26:08,259 [INFO] epoch = 80. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_5/ann_model_epoch_80.pickle
+2020-01-09 04:50:51,896 [INFO] epoch = 100. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_5/ann_model_epoch_100.pickle
+2020-01-09 05:15:36,075 [INFO] epoch = 120. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_5/ann_model_epoch_120.pickle
+2020-01-09 05:40:19,743 [INFO] epoch = 140. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_5/ann_model_epoch_140.pickle
+2020-01-09 06:05:02,887 [INFO] epoch = 160. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_5/ann_model_epoch_160.pickle
+2020-01-09 06:29:53,357 [INFO] epoch = 180. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_5/ann_model_epoch_180.pickle
+2020-01-09 06:53:47,572 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-09 06:55:21,618 [INFO] Last epoch loss evaluation: train_loss = 0.007564, val_loss = 0.007583
+2020-01-09 06:55:21,618 [INFO] Training complete. time_to_train = 14946.34 sec, 249.11 min
+2020-01-09 06:55:21,629 [INFO] Model saved to results_additional_exps/ann_depth_ids18_subset_layers_5/best_model.pickle
+2020-01-09 06:55:21,632 [INFO] Training history saved to: results_additional_exps/ann_depth_ids18_subset_layers_5/training_error_history.csv
+2020-01-09 06:55:21,822 [INFO] Plot saved to: results_additional_exps/ann_depth_ids18_subset_layers_5/training_error_history.png
+2020-01-09 06:55:22,004 [INFO] Plot saved to: results_additional_exps/ann_depth_ids18_subset_layers_5/training_f1_history.png
+2020-01-09 06:55:22,004 [INFO] Making predictions on training, validation, testing data
+2020-01-09 06:57:09,265 [INFO] Evaluating predictions (results)
+2020-01-09 06:57:32,451 [INFO] Dataset: Testing. Classification report below
+2020-01-09 06:57:32,451 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99    535650
+                     Bot       1.00      1.00      1.00     11465
+        Brute Force -Web       0.83      0.21      0.33        24
+        Brute Force -XSS       1.00      0.33      0.50         9
+        DDOS attack-HOIC       1.00      1.00      1.00     27447
+    DDOS attack-LOIC-UDP       0.68      1.00      0.81        67
+  DDoS attacks-LOIC-HTTP       0.99      0.99      0.99     23010
+   DoS attacks-GoldenEye       0.99      1.00      1.00      1651
+        DoS attacks-Hulk       1.00      1.00      1.00     18478
+DoS attacks-SlowHTTPTest       0.75      0.51      0.61      5596
+   DoS attacks-Slowloris       0.94      0.97      0.96       440
+          FTP-BruteForce       0.71      0.88      0.79      7718
+           Infilteration       0.43      0.01      0.02      6404
+           SQL Injection       0.00      0.00      0.00         4
+          SSH-Bruteforce       1.00      1.00      1.00      7525
+
+                accuracy                           0.98    645488
+               macro avg       0.82      0.73      0.73    645488
+            weighted avg       0.98      0.98      0.98    645488
+
+2020-01-09 06:57:32,451 [INFO] Overall accuracy (micro avg): 0.9837208437647176
+2020-01-09 06:57:57,388 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9837         0.9837                       0.9837                0.0012                   0.0163  0.9837
+1     Macro avg        0.9978         0.8215                       0.7273                0.0044                   0.2727  0.7333
+2  Weighted avg        0.9910         0.9784                       0.9837                0.0492                   0.0163  0.9788
+2020-01-09 06:58:20,381 [INFO] Dataset: Validation. Classification report below
+2020-01-09 06:58:20,381 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99    535650
+                     Bot       1.00      1.00      1.00     11465
+        Brute Force -Web       1.00      0.28      0.44        25
+        Brute Force -XSS       1.00      0.67      0.80         9
+        DDOS attack-HOIC       1.00      1.00      1.00     27447
+    DDOS attack-LOIC-UDP       0.72      1.00      0.84        68
+  DDoS attacks-LOIC-HTTP       0.99      0.99      0.99     23009
+   DoS attacks-GoldenEye       0.99      1.00      1.00      1651
+        DoS attacks-Hulk       1.00      1.00      1.00     18478
+DoS attacks-SlowHTTPTest       0.76      0.51      0.61      5596
+   DoS attacks-Slowloris       0.94      0.98      0.96       439
+          FTP-BruteForce       0.71      0.89      0.79      7718
+           Infilteration       0.54      0.01      0.03      6403
+           SQL Injection       0.00      0.00      0.00         4
+          SSH-Bruteforce       1.00      1.00      1.00      7525
+
+                accuracy                           0.98    645487
+               macro avg       0.84      0.76      0.76    645487
+            weighted avg       0.98      0.98      0.98    645487
+
+2020-01-09 06:58:20,381 [INFO] Overall accuracy (micro avg): 0.9838525020643328
+2020-01-09 06:58:45,155 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9839         0.9839                       0.9839                0.0012                   0.0161  0.9839
+1     Macro avg        0.9978         0.8435                       0.7552                0.0043                   0.2448  0.7632
+2  Weighted avg        0.9911         0.9797                       0.9839                0.0489                   0.0161  0.9789
+2020-01-09 07:00:00,907 [INFO] Dataset: Training. Classification report below
+2020-01-09 07:00:00,907 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99   1606949
+                     Bot       1.00      1.00      1.00     34396
+        Brute Force -Web       1.00      0.26      0.41        73
+        Brute Force -XSS       1.00      0.50      0.67        26
+        DDOS attack-HOIC       1.00      1.00      1.00     82341
+    DDOS attack-LOIC-UDP       0.70      0.99      0.82       203
+  DDoS attacks-LOIC-HTTP       0.99      0.99      0.99     69029
+   DoS attacks-GoldenEye       1.00      1.00      1.00      4954
+        DoS attacks-Hulk       1.00      1.00      1.00     55435
+DoS attacks-SlowHTTPTest       0.76      0.51      0.61     16787
+   DoS attacks-Slowloris       0.95      0.99      0.97      1318
+          FTP-BruteForce       0.71      0.88      0.79     23153
+           Infilteration       0.54      0.01      0.03     19210
+           SQL Injection       0.00      0.00      0.00        12
+          SSH-Bruteforce       1.00      1.00      1.00     22576
+
+                accuracy                           0.98   1936462
+               macro avg       0.84      0.74      0.75   1936462
+            weighted avg       0.98      0.98      0.98   1936462
+
+2020-01-09 07:00:00,907 [INFO] Overall accuracy (micro avg): 0.9838199768443687
+2020-01-09 07:01:22,547 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9838         0.9838                       0.9838                0.0012                   0.0162  0.9838
+1     Macro avg        0.9978         0.8427                       0.7421                0.0043                   0.2579  0.7520
+2  Weighted avg        0.9911         0.9796                       0.9838                0.0489                   0.0162  0.9789
+2020-01-09 07:01:22,621 [INFO] Results saved to: results_additional_exps/ann_depth_ids18_subset_layers_5/ann_depth_ids18_subset_layers_5_results.xlsx
+2020-01-09 07:01:22,625 [INFO] ================= Finished running experiment no. 5 ================= 
+
+2020-01-09 07:01:22,682 [INFO] ================= Finished running 5 experiments ================= 
+

@@ -1,0 +1,138 @@
+2020-01-14 21:35:15,830 [INFO] Initialized logging. log_filename = results_additional_exps/train_time_kdd99_ae_ann_shallow_rep3/run_log.log
+2020-01-14 21:35:15,830 [INFO] ================= Running experiment no. 3  ================= 
+
+2020-01-14 21:35:15,830 [INFO] Experiment parameters given below
+2020-01-14 21:35:15,830 [INFO] 
+{'experiment_num': 3, 'results_dir': 'results_additional_exps/train_time_kdd99_ae_ann_shallow_rep3', 'model_type': 'classifier', 'model': 'ae_ann', 'normal_label': 'normal', 'scaling_type': 'NA', 'unsupervised_ratio': 0.5, 'ae_encoder_units': [32], 'ae_encoder_activations': ['relu'], 'ae_encoder_dropout_rates': [0.2], 'ae_encoder_l1_param': -1, 'ae_decoder_units': '', 'ae_decoder_activations': '', 'ae_decoder_dropout_rates': '', 'output_activation': 'relu', 'loss_function': 'mean_squared_error', 'ae_epochs': 10, 'ann_layer_units': [32], 'ann_layer_activations': ['relu'], 'ann_layer_dropout_rates': [0.2], 'ann_epochs': 100, 'early_stop_patience': 100, 'batch_size': 256, 'goal_metric': 0.920689445, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/full_datasets/kdd99_five_classes', 'description': 'train_time_kdd99_ae_ann_shallow_rep3'}
+2020-01-14 21:35:15,840 [INFO] Created tensorboard log directory: results_additional_exps/train_time_kdd99_ae_ann_shallow_rep3/tf_logs_run_2020_01_14-21_35_15
+2020-01-14 21:35:15,851 [INFO] Loading datsets from: ../Datasets/full_datasets/kdd99_five_classes
+2020-01-14 21:35:15,959 [INFO] Reading X, y files
+2020-01-14 21:35:15,983 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_train.h5
+2020-01-14 21:35:32,810 [INFO] Reading complete. time_to_read=16.83 seconds
+2020-01-14 21:35:32,810 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_val.h5
+2020-01-14 21:35:35,454 [INFO] Reading complete. time_to_read=2.64 seconds
+2020-01-14 21:35:35,454 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_test.h5
+2020-01-14 21:35:37,276 [INFO] Reading complete. time_to_read=1.82 seconds
+2020-01-14 21:35:37,277 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_train.h5
+2020-01-14 21:35:45,366 [INFO] Reading complete. time_to_read=8.09 seconds
+2020-01-14 21:35:45,366 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_val.h5
+2020-01-14 21:35:45,735 [INFO] Reading complete. time_to_read=0.37 seconds
+2020-01-14 21:35:45,736 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_test.h5
+2020-01-14 21:35:45,875 [INFO] Reading complete. time_to_read=0.14 seconds
+2020-01-14 21:39:08,228 [INFO] Initializing model
+2020-01-14 21:40:05,052 [INFO] _________________________________________________________________
+2020-01-14 21:40:05,145 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-14 21:40:05,145 [INFO] =================================================================
+2020-01-14 21:40:05,188 [INFO] dense_45 (Dense)             (None, 32)                3968      
+2020-01-14 21:40:05,188 [INFO] _________________________________________________________________
+2020-01-14 21:40:05,189 [INFO] batch_normalization_23 (Batc (None, 32)                128       
+2020-01-14 21:40:05,189 [INFO] _________________________________________________________________
+2020-01-14 21:40:05,189 [INFO] dropout_23 (Dropout)         (None, 32)                0         
+2020-01-14 21:40:05,189 [INFO] _________________________________________________________________
+2020-01-14 21:40:05,189 [INFO] dense_46 (Dense)             (None, 123)               4059      
+2020-01-14 21:40:05,189 [INFO] =================================================================
+2020-01-14 21:40:05,213 [INFO] Total params: 8,155
+2020-01-14 21:40:05,213 [INFO] Trainable params: 8,091
+2020-01-14 21:40:05,213 [INFO] Non-trainable params: 64
+2020-01-14 21:40:05,213 [INFO] _________________________________________________________________
+2020-01-14 21:40:11,718 [INFO] _________________________________________________________________
+2020-01-14 21:40:11,718 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-14 21:40:11,718 [INFO] =================================================================
+2020-01-14 21:40:11,719 [INFO] dense_47 (Dense)             (None, 32)                1056      
+2020-01-14 21:40:11,719 [INFO] _________________________________________________________________
+2020-01-14 21:40:11,719 [INFO] batch_normalization_24 (Batc (None, 32)                128       
+2020-01-14 21:40:11,720 [INFO] _________________________________________________________________
+2020-01-14 21:40:11,720 [INFO] dropout_24 (Dropout)         (None, 32)                0         
+2020-01-14 21:40:11,720 [INFO] _________________________________________________________________
+2020-01-14 21:40:11,720 [INFO] dense_48 (Dense)             (None, 5)                 165       
+2020-01-14 21:40:11,721 [INFO] =================================================================
+2020-01-14 21:40:11,721 [INFO] Total params: 1,349
+2020-01-14 21:40:11,721 [INFO] Trainable params: 1,285
+2020-01-14 21:40:11,721 [INFO] Non-trainable params: 64
+2020-01-14 21:40:11,722 [INFO] _________________________________________________________________
+2020-01-14 21:40:11,722 [INFO] Training model
+2020-01-14 21:40:11,743 [INFO] Splitting train set into 2 sets (unsupervised, supervised), random_seed = None
+2020-01-14 22:28:08,594 [INFO] Split sizes (instances). total = 3918744, unsupervised = 1959372, supervised = 1959372, unsupervised dataset hash = a635b3327b738d8029434bc3e0f74797c1fa64ad
+2020-01-14 22:28:08,828 [INFO] Training autoencoder
+2020-01-14 23:02:16,981 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-14 23:03:48,928 [INFO] Last epoch loss evaluation: train_loss = 0.401391, val_loss = 0.491752
+2020-01-14 23:03:48,940 [INFO] Training autoencoder complete
+2020-01-14 23:03:48,940 [INFO] Encoding data for supervised training
+2020-01-14 23:05:23,896 [INFO] Encoding complete
+2020-01-14 23:05:23,998 [INFO] Training neural network layers (after autoencoder)
+2020-01-14 23:09:36,672 [INFO] StopperOnGoal: reached goal_metric (accuracy). Stopping training. goal_metric = 0.9207, current_metric = 0.9213, num_epochs = 1
+2020-01-14 23:09:36,953 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-14 23:10:59,291 [INFO] Last epoch loss evaluation: train_loss = 0.002685, val_loss = 0.002539
+2020-01-14 23:10:59,452 [INFO] Training complete. time_to_train = 5447.72 sec, 90.80 min
+2020-01-14 23:11:03,843 [INFO] Model saved to results_additional_exps/train_time_kdd99_ae_ann_shallow_rep3/best_model.pickle
+2020-01-14 23:11:05,072 [INFO] Training history saved to: results_additional_exps/train_time_kdd99_ae_ann_shallow_rep3/training_error_history.csv
+2020-01-14 23:11:11,373 [INFO] Plot saved to: results_additional_exps/train_time_kdd99_ae_ann_shallow_rep3/training_error_history.png
+2020-01-14 23:11:11,547 [INFO] Plot saved to: results_additional_exps/train_time_kdd99_ae_ann_shallow_rep3/training_f1_history.png
+2020-01-14 23:11:11,576 [INFO] Making predictions on training, validation, testing data
+2020-01-14 23:37:19,802 [INFO] Making predictions complete. time_to_predict = 1568.23 sec, 26.14 min
+2020-01-14 23:37:20,707 [INFO] Evaluating predictions (results)
+2020-01-14 23:37:30,736 [INFO] Dataset: Testing. Classification report below
+2020-01-14 23:37:30,736 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       0.99      0.97      0.98    229853
+     normal.       0.73      0.98      0.84     60593
+       probe       0.90      0.69      0.78      4166
+         r2l       0.85      0.05      0.09     13781
+         u2r       0.01      0.00      0.00      2636
+
+    accuracy                           0.92    311029
+   macro avg       0.70      0.54      0.54    311029
+weighted avg       0.93      0.92      0.90    311029
+
+2020-01-14 23:37:30,736 [INFO] Overall accuracy (micro avg): 0.921483205746088
+2020-01-14 23:37:39,797 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9215         0.9215                       0.9215                0.0196                   0.0785  0.9215
+1     Macro avg        0.9686         0.6965                       0.5390                0.0219                   0.4610  0.5385
+2  Weighted avg        0.9644         0.9256                       0.9215                0.0312                   0.0785  0.9036
+2020-01-14 23:38:09,644 [INFO] Dataset: Validation. Classification report below
+2020-01-14 23:38:09,644 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00    776675
+     normal.       1.00      1.00      1.00    194556
+       probe       0.98      0.96      0.97      8221
+         r2l       0.11      0.12      0.11       225
+         u2r       0.00      0.00      0.00        10
+
+    accuracy                           1.00    979687
+   macro avg       0.62      0.62      0.62    979687
+weighted avg       1.00      1.00      1.00    979687
+
+2020-01-14 23:38:09,644 [INFO] Overall accuracy (micro avg): 0.9985842417016864
+2020-01-14 23:38:40,248 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9986         0.9986                       0.9986                0.0004                   0.0014  0.9986
+1     Macro avg        0.9994         0.6172                       0.6164                0.0005                   0.3836  0.6166
+2  Weighted avg        0.9991         0.9986                       0.9986                0.0012                   0.0014  0.9986
+2020-01-14 23:40:47,566 [INFO] Dataset: Training. Classification report below
+2020-01-14 23:40:47,566 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00   3106695
+     normal.       1.00      1.00      1.00    778225
+       probe       0.98      0.96      0.97     32881
+         r2l       0.08      0.11      0.09       901
+         u2r       0.00      0.00      0.00        42
+
+    accuracy                           1.00   3918744
+   macro avg       0.61      0.61      0.61   3918744
+weighted avg       1.00      1.00      1.00   3918744
+
+2020-01-14 23:40:47,566 [INFO] Overall accuracy (micro avg): 0.9985518319134906
+2020-01-14 23:43:02,637 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9986         0.9986                       0.9986                0.0004                   0.0014  0.9986
+1     Macro avg        0.9994         0.6122                       0.6130                0.0005                   0.3870  0.6122
+2  Weighted avg        0.9991         0.9987                       0.9986                0.0012                   0.0014  0.9986
+2020-01-14 23:43:03,880 [INFO] Results saved to: results_additional_exps/train_time_kdd99_ae_ann_shallow_rep3/train_time_kdd99_ae_ann_shallow_rep3_results.xlsx
+2020-01-14 23:43:03,889 [INFO] ================= Finished running experiment no. 3 ================= 
+
+2020-01-14 23:43:04,299 [INFO] ================= Finished running 12 experiments ================= 
+

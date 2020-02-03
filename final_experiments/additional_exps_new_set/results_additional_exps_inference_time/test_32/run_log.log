@@ -1,0 +1,40 @@
+2020-01-13 20:30:40,689 [INFO] Initialized logging. log_filename = results_additional_exps/test_32/run_log.log
+2020-01-13 20:30:40,689 [INFO] ================= Running experiment no. 32  ================= 
+
+2020-01-13 20:30:40,689 [INFO] Experiment parameters given below
+2020-01-13 20:30:40,690 [INFO] 
+{'experiment_num': 32, 'results_dir': 'results_additional_exps/test_32', 'model': 'lstm', 'model_origin': 'loaded', 'model_type': 'classifier', 'action': 'compute_prediction_time', 'model_location': '../experiment_results_do_not_delete/set_3_dec_2019/selected_rep1_models/results_selected_models_lstm_shallow/selected_ids18_subset_lstm_shallow_rep1/best_model.pickle', 'lstm_time_steps': 32, 'repetitions': 6, 'num_samples': 100000, 'dataset_dir': '../Datasets/small_datasets/ids2018', 'description': 'xx'}
+2020-01-13 20:30:40,690 [INFO] Created tensorboard log directory: results_additional_exps/test_32/tf_logs_run_2020_01_13-20_30_40
+2020-01-13 20:30:40,690 [INFO] Loading datsets from: ../Datasets/small_datasets/ids2018
+2020-01-13 20:30:40,690 [INFO] Reading X, y files
+2020-01-13 20:30:40,690 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_train.h5
+2020-01-13 20:30:46,724 [INFO] Reading complete. time_to_read=6.03 seconds
+2020-01-13 20:30:46,724 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_val.h5
+2020-01-13 20:30:48,390 [INFO] Reading complete. time_to_read=1.67 seconds
+2020-01-13 20:30:48,390 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_test.h5
+2020-01-13 20:30:50,048 [INFO] Reading complete. time_to_read=1.66 seconds
+2020-01-13 20:30:50,048 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_train.h5
+2020-01-13 20:30:50,529 [INFO] Reading complete. time_to_read=0.48 seconds
+2020-01-13 20:30:50,529 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_val.h5
+2020-01-13 20:30:50,719 [INFO] Reading complete. time_to_read=0.19 seconds
+2020-01-13 20:30:50,719 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_test.h5
+2020-01-13 20:30:50,895 [INFO] Reading complete. time_to_read=0.18 seconds
+2020-01-13 20:30:53,636 [INFO] Preparing flow sequences
+2020-01-13 20:31:18,861 [INFO] Extracting flows complete. time_taken = 25.22 sec
+2020-01-13 20:31:20,162 [INFO] Loading model from file: ../experiment_results_do_not_delete/set_3_dec_2019/selected_rep1_models/results_selected_models_lstm_shallow/selected_ids18_subset_lstm_shallow_rep1/best_model.pickle
+2020-01-13 20:31:22,364 [INFO] Making predictions: iteration 1
+2020-01-13 20:31:31,033 [INFO] Making predictions complete. time_to_predict = 8.004910 sec
+2020-01-13 20:31:31,033 [INFO] Making predictions: iteration 2
+2020-01-13 20:31:39,542 [INFO] Making predictions complete. time_to_predict = 7.782047 sec
+2020-01-13 20:31:39,542 [INFO] Making predictions: iteration 3
+2020-01-13 20:31:48,043 [INFO] Making predictions complete. time_to_predict = 7.773452 sec
+2020-01-13 20:31:48,043 [INFO] Making predictions: iteration 4
+2020-01-13 20:31:56,538 [INFO] Making predictions complete. time_to_predict = 7.776608 sec
+2020-01-13 20:31:56,538 [INFO] Making predictions: iteration 5
+2020-01-13 20:32:05,065 [INFO] Making predictions complete. time_to_predict = 7.799810 sec
+2020-01-13 20:32:05,066 [INFO] Making predictions: iteration 6
+2020-01-13 20:32:13,570 [INFO] Making predictions complete. time_to_predict = 7.790026 sec
+2020-01-13 20:32:13,570 [INFO] Total no. of predictions = 600000
+2020-01-13 20:32:13,622 [INFO] ================= Finished running experiment no. 32 ================= 
+
+2020-01-13 20:32:13,718 [INFO] Created directory: results_additional_exps/test_33

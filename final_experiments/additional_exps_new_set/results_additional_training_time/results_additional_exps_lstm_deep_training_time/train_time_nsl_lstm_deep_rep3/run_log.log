@@ -1,0 +1,123 @@
+2020-01-13 20:48:01,413 [INFO] Initialized logging. log_filename = results_additional_exps/train_time_nsl_lstm_deep_rep3/run_log.log
+2020-01-13 20:48:01,413 [INFO] ================= Running experiment no. 3  ================= 
+
+2020-01-13 20:48:01,413 [INFO] Experiment parameters given below
+2020-01-13 20:48:01,413 [INFO] 
+{'experiment_num': 3, 'results_dir': 'results_additional_exps/train_time_nsl_lstm_deep_rep3', 'model': 'lstm', 'model_type': 'classifier', 'normal_label': 'normal', 'lstm_time_steps': 18, 'lstm_layer_units': [64, 34], 'lstm_layer_activations': ['relu', 'relu'], 'lstm_layer_dropout_rates': [0.2, 0.4], 'batch_size': 256, 'epochs': 100, 'early_stop_patience': 100, 'goal_metric': 0.755064154, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/small_datasets/nsl_kdd_five_classes', 'description': 'train_time_nsl_lstm_deep_rep3'}
+2020-01-13 20:48:01,413 [INFO] Created tensorboard log directory: results_additional_exps/train_time_nsl_lstm_deep_rep3/tf_logs_run_2020_01_13-20_48_01
+2020-01-13 20:48:01,413 [INFO] Loading datsets from: ../Datasets/small_datasets/nsl_kdd_five_classes
+2020-01-13 20:48:01,413 [INFO] Reading X, y files
+2020-01-13 20:48:01,414 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_train.h5
+2020-01-13 20:48:01,671 [INFO] Reading complete. time_to_read=0.26 seconds
+2020-01-13 20:48:01,671 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_val.h5
+2020-01-13 20:48:01,735 [INFO] Reading complete. time_to_read=0.06 seconds
+2020-01-13 20:48:01,735 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_test.h5
+2020-01-13 20:48:01,793 [INFO] Reading complete. time_to_read=0.06 seconds
+2020-01-13 20:48:01,793 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_train.h5
+2020-01-13 20:48:01,801 [INFO] Reading complete. time_to_read=0.01 seconds
+2020-01-13 20:48:01,801 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_val.h5
+2020-01-13 20:48:01,805 [INFO] Reading complete. time_to_read=0.00 seconds
+2020-01-13 20:48:01,805 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_test.h5
+2020-01-13 20:48:01,809 [INFO] Reading complete. time_to_read=0.00 seconds
+2020-01-13 20:48:01,963 [INFO] Preparing flow sequences
+2020-01-13 20:48:03,973 [INFO] Extracting flows complete. time_taken = 2.01 sec
+2020-01-13 20:48:04,025 [INFO] Initializing model
+2020-01-13 20:48:04,467 [INFO] _________________________________________________________________
+2020-01-13 20:48:04,467 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-13 20:48:04,467 [INFO] =================================================================
+2020-01-13 20:48:04,467 [INFO] lstm_5 (LSTM)                (None, 18, 64)            47872     
+2020-01-13 20:48:04,467 [INFO] _________________________________________________________________
+2020-01-13 20:48:04,467 [INFO] batch_normalization_5 (Batch (None, 18, 64)            256       
+2020-01-13 20:48:04,467 [INFO] _________________________________________________________________
+2020-01-13 20:48:04,467 [INFO] dropout_5 (Dropout)          (None, 18, 64)            0         
+2020-01-13 20:48:04,467 [INFO] _________________________________________________________________
+2020-01-13 20:48:04,467 [INFO] lstm_6 (LSTM)                (None, 18, 34)            13464     
+2020-01-13 20:48:04,467 [INFO] _________________________________________________________________
+2020-01-13 20:48:04,468 [INFO] batch_normalization_6 (Batch (None, 18, 34)            136       
+2020-01-13 20:48:04,468 [INFO] _________________________________________________________________
+2020-01-13 20:48:04,468 [INFO] dropout_6 (Dropout)          (None, 18, 34)            0         
+2020-01-13 20:48:04,468 [INFO] _________________________________________________________________
+2020-01-13 20:48:04,468 [INFO] time_distributed_3 (TimeDist (None, 18, 5)             175       
+2020-01-13 20:48:04,468 [INFO] =================================================================
+2020-01-13 20:48:04,468 [INFO] Total params: 61,903
+2020-01-13 20:48:04,468 [INFO] Trainable params: 61,707
+2020-01-13 20:48:04,468 [INFO] Non-trainable params: 196
+2020-01-13 20:48:04,468 [INFO] _________________________________________________________________
+2020-01-13 20:48:04,468 [INFO] Training model
+2020-01-13 20:48:21,594 [INFO] epoch = 10. Intermediate model saved to results_additional_exps/train_time_nsl_lstm_deep_rep3/_model_epoch_10.pickle
+2020-01-13 20:48:32,364 [INFO] epoch = 20. Intermediate model saved to results_additional_exps/train_time_nsl_lstm_deep_rep3/_model_epoch_20.pickle
+2020-01-13 20:48:37,963 [INFO] StopperOnGoal: reached goal_metric (accuracy). Stopping training. goal_metric = 0.7551, current_metric = 0.7551, num_epochs = 26
+2020-01-13 20:48:37,964 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-13 20:48:38,871 [INFO] Last epoch loss evaluation: train_loss = 0.008716, val_loss = 0.010996
+2020-01-13 20:48:38,871 [INFO] Training complete. time_to_train = 34.40 sec, 0.57 min
+2020-01-13 20:48:38,877 [INFO] Model saved to results_additional_exps/train_time_nsl_lstm_deep_rep3/best_model.pickle
+2020-01-13 20:48:38,878 [INFO] Training history saved to: results_additional_exps/train_time_nsl_lstm_deep_rep3/training_error_history.csv
+2020-01-13 20:48:39,005 [INFO] Plot saved to: results_additional_exps/train_time_nsl_lstm_deep_rep3/training_error_history.png
+2020-01-13 20:48:39,122 [INFO] Plot saved to: results_additional_exps/train_time_nsl_lstm_deep_rep3/training_f1_history.png
+2020-01-13 20:48:39,122 [INFO] Making predictions on training, validation, testing data
+2020-01-13 20:48:39,800 [INFO] Making predictions complete. time_to_predict = 0.68 sec, 0.01 min
+2020-01-13 20:48:39,803 [INFO] Evaluating predictions (results)
+2020-01-13 20:48:40,095 [INFO] Dataset: Testing. Classification report below
+2020-01-13 20:48:40,095 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       0.96      0.84      0.89      7454
+      normal       0.67      0.93      0.78      9708
+       probe       0.73      0.73      0.73      2420
+         r2l       0.91      0.05      0.10      2421
+         u2r       0.00      0.00      0.00       533
+
+   micro avg       0.76      0.76      0.76     22536
+   macro avg       0.65      0.51      0.50     22536
+weighted avg       0.78      0.76      0.72     22536
+
+2020-01-13 20:48:40,095 [INFO] Overall accuracy (micro avg): 0.7620695775647852
+2020-01-13 20:48:40,421 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.7621         0.7621                       0.7621                0.0595                   0.2379  0.7621
+1     Macro avg        0.9048         0.6536                       0.5100                0.0791                   0.4900  0.4999
+2  Weighted avg        0.8634         0.7823                       0.7621                0.1577                   0.2379  0.7205
+2020-01-13 20:48:40,763 [INFO] Dataset: Validation. Classification report below
+2020-01-13 20:48:40,763 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       0.99      1.00      1.00      9183
+      normal       0.99      0.99      0.99     13460
+       probe       0.99      0.98      0.98      2330
+         r2l       0.93      0.68      0.79       199
+         u2r       0.00      0.00      0.00        10
+
+   micro avg       0.99      0.99      0.99     25182
+   macro avg       0.78      0.73      0.75     25182
+weighted avg       0.99      0.99      0.99     25182
+
+2020-01-13 20:48:40,763 [INFO] Overall accuracy (micro avg): 0.991700420935589
+2020-01-13 20:48:41,143 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9917         0.9917                       0.9917                0.0021                   0.0083  0.9917
+1     Macro avg        0.9967         0.7795                       0.7306                0.0030                   0.2694  0.7514
+2  Weighted avg        0.9948         0.9912                       0.9917                0.0066                   0.0083  0.9913
+2020-01-13 20:48:42,648 [INFO] Dataset: Training. Classification report below
+2020-01-13 20:48:42,648 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00     36734
+      normal       0.99      1.00      0.99     53871
+       probe       0.99      0.98      0.98      9321
+         r2l       0.92      0.73      0.82       796
+         u2r       0.00      0.00      0.00        42
+
+   micro avg       0.99      0.99      0.99    100764
+   macro avg       0.78      0.74      0.76    100764
+weighted avg       0.99      0.99      0.99    100764
+
+2020-01-13 20:48:42,648 [INFO] Overall accuracy (micro avg): 0.9928248183875193
+2020-01-13 20:48:44,351 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9928         0.9928                       0.9928                0.0018                   0.0072  0.9928
+1     Macro avg        0.9971         0.7799                       0.7408                0.0026                   0.2592  0.7582
+2  Weighted avg        0.9956         0.9923                       0.9928                0.0059                   0.0072  0.9925
+2020-01-13 20:48:44,371 [INFO] Results saved to: results_additional_exps/train_time_nsl_lstm_deep_rep3/train_time_nsl_lstm_deep_rep3_results.xlsx
+2020-01-13 20:48:44,371 [INFO] ================= Finished running experiment no. 3 ================= 
+
+2020-01-13 20:48:44,374 [INFO] Created directory: results_additional_exps/train_time_ids17_lstm_deep_rep1

@@ -1,0 +1,125 @@
+2019-12-27 20:07:42,364 [INFO] Initialized logging. log_filename = results_selected_models/selected_kdd99_lstm_shallow_rep1/run_log.log
+2019-12-27 20:07:42,364 [INFO] ================= Running experiment no. 1  ================= 
+
+2019-12-27 20:07:42,364 [INFO] Experiment parameters given below
+2019-12-27 20:07:42,365 [INFO] 
+{'experiment_num': 1, 'results_dir': 'results_selected_models/selected_kdd99_lstm_shallow_rep1', 'model': 'lstm', 'model_type': 'classifier', 'normal_label': 'normal', 'lstm_time_steps': 32, 'lstm_layer_units': [32], 'lstm_layer_activations': ['relu'], 'lstm_layer_dropout_rates': [0.2], 'batch_size': 256, 'epochs': 300, 'early_stop_patience': 50, 'dataset_dir': '../Datasets/full_datasets/kdd99_five_classes', 'description': 'selected_kdd99_lstm_shallow_rep1'}
+2019-12-27 20:07:42,365 [INFO] Created tensorboard log directory: results_selected_models/selected_kdd99_lstm_shallow_rep1/tf_logs_run_2019_12_27-20_07_42
+2019-12-27 20:07:42,365 [INFO] Loading datsets from: ../Datasets/full_datasets/kdd99_five_classes
+2019-12-27 20:07:42,366 [INFO] Reading X, y files
+2019-12-27 20:07:42,366 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_train.h5
+2019-12-27 20:07:42,374 [INFO] NumExpr defaulting to 8 threads.
+2019-12-27 20:07:48,789 [INFO] Reading complete. time_to_read=6.42 seconds
+2019-12-27 20:07:48,790 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_val.h5
+2019-12-27 20:07:50,422 [INFO] Reading complete. time_to_read=1.63 seconds
+2019-12-27 20:07:50,422 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_test.h5
+2019-12-27 20:07:50,880 [INFO] Reading complete. time_to_read=0.46 seconds
+2019-12-27 20:07:50,880 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_train.h5
+2019-12-27 20:07:51,100 [INFO] Reading complete. time_to_read=0.22 seconds
+2019-12-27 20:07:51,101 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_val.h5
+2019-12-27 20:07:51,156 [INFO] Reading complete. time_to_read=0.06 seconds
+2019-12-27 20:07:51,156 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_test.h5
+2019-12-27 20:07:51,176 [INFO] Reading complete. time_to_read=0.02 seconds
+2019-12-27 20:07:56,960 [INFO] Preparing flow sequences
+2019-12-27 20:08:44,387 [INFO] Extracting flows complete. time_taken = 47.43 sec
+2019-12-27 20:08:46,047 [INFO] Initializing model
+2019-12-27 20:08:46,061 [WARNING] From /home/sunanda/anaconda3/envs/ml_env_cpu/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-12-27 20:08:46,283 [WARNING] From /home/sunanda/anaconda3/envs/ml_env_cpu/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2019-12-27 20:08:46,327 [INFO] _________________________________________________________________
+2019-12-27 20:08:46,327 [INFO] Layer (type)                 Output Shape              Param #   
+2019-12-27 20:08:46,327 [INFO] =================================================================
+2019-12-27 20:08:46,327 [INFO] lstm_1 (LSTM)                (None, 32, 32)            19968     
+2019-12-27 20:08:46,327 [INFO] _________________________________________________________________
+2019-12-27 20:08:46,327 [INFO] batch_normalization_1 (Batch (None, 32, 32)            128       
+2019-12-27 20:08:46,328 [INFO] _________________________________________________________________
+2019-12-27 20:08:46,328 [INFO] dropout_1 (Dropout)          (None, 32, 32)            0         
+2019-12-27 20:08:46,328 [INFO] _________________________________________________________________
+2019-12-27 20:08:46,328 [INFO] time_distributed_1 (TimeDist (None, 32, 5)             165       
+2019-12-27 20:08:46,328 [INFO] =================================================================
+2019-12-27 20:08:46,328 [INFO] Total params: 20,261
+2019-12-27 20:08:46,328 [INFO] Trainable params: 20,197
+2019-12-27 20:08:46,328 [INFO] Non-trainable params: 64
+2019-12-27 20:08:46,328 [INFO] _________________________________________________________________
+2019-12-27 20:08:46,328 [INFO] Training model
+2019-12-27 20:08:46,744 [WARNING] From /home/sunanda/anaconda3/envs/ml_env_cpu/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+2019-12-27 20:27:00,999 [INFO] epoch = 30. Intermediate model saved to results_selected_models/selected_kdd99_lstm_shallow_rep1/_model_epoch_30.pickle
+2019-12-27 20:44:45,741 [INFO] epoch = 60. Intermediate model saved to results_selected_models/selected_kdd99_lstm_shallow_rep1/_model_epoch_60.pickle
+2019-12-27 20:57:18,959 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2019-12-27 20:57:51,890 [INFO] Last epoch loss evaluation: train_loss = 0.000189, val_loss = 0.000336
+2019-12-27 20:57:51,890 [INFO] Training complete. time_to_train = 2945.56 sec, 49.09 min
+2019-12-27 20:57:51,894 [INFO] Model saved to results_selected_models/selected_kdd99_lstm_shallow_rep1/best_model.pickle
+2019-12-27 20:57:51,900 [INFO] Training history saved to: results_selected_models/selected_kdd99_lstm_shallow_rep1/training_error_history.csv
+2019-12-27 20:57:52,098 [INFO] Plot saved to: results_selected_models/selected_kdd99_lstm_shallow_rep1/training_error_history.png
+2019-12-27 20:57:52,284 [INFO] Plot saved to: results_selected_models/selected_kdd99_lstm_shallow_rep1/training_f1_history.png
+2019-12-27 20:57:52,284 [INFO] Making predictions on training, validation, testing data
+2019-12-27 20:58:27,653 [INFO] Evaluating predictions (results)
+2019-12-27 20:58:36,424 [INFO] Dataset: Testing. Classification report below
+2019-12-27 20:58:36,424 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      0.97      0.99    229853
+     normal.       0.73      0.98      0.84     60580
+       probe       0.76      0.78      0.77      4166
+         r2l       0.92      0.03      0.06     13773
+         u2r       0.27      0.00      0.01      2636
+
+    accuracy                           0.92    311008
+   macro avg       0.73      0.56      0.53    311008
+weighted avg       0.93      0.92      0.90    311008
+
+2019-12-27 20:58:36,424 [INFO] Overall accuracy (micro avg): 0.9235807439036938
+2019-12-27 20:58:45,747 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9236         0.9236                       0.9236                0.0191                   0.0764  0.9236
+1     Macro avg        0.9694         0.7344                       0.5552                0.0197                   0.4448  0.5320
+2  Weighted avg        0.9682         0.9324                       0.9236                0.0221                   0.0764  0.9047
+2019-12-27 20:59:16,336 [INFO] Dataset: Validation. Classification report below
+2019-12-27 20:59:16,336 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00    776671
+     normal.       1.00      1.00      1.00    194553
+       probe       1.00      0.99      1.00      8221
+         r2l       0.82      0.87      0.85       225
+         u2r       0.29      0.20      0.24        10
+
+    accuracy                           1.00    979680
+   macro avg       0.82      0.81      0.82    979680
+weighted avg       1.00      1.00      1.00    979680
+
+2019-12-27 20:59:16,336 [INFO] Overall accuracy (micro avg): 0.9998091213457455
+2019-12-27 20:59:49,338 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9998         0.9998                       0.9998                0.0000                   0.0002  0.9998
+1     Macro avg        0.9999         0.8211                       0.8128                0.0001                   0.1872  0.8153
+2  Weighted avg        0.9999         0.9998                       0.9998                0.0001                   0.0002  0.9998
+2019-12-27 21:02:02,591 [INFO] Dataset: Training. Classification report below
+2019-12-27 21:02:02,591 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00   3106675
+     normal.       1.00      1.00      1.00    778221
+       probe       1.00      1.00      1.00     32881
+         r2l       0.83      0.92      0.87       901
+         u2r       0.77      0.48      0.59        42
+
+    accuracy                           1.00   3918720
+   macro avg       0.92      0.88      0.89   3918720
+weighted avg       1.00      1.00      1.00   3918720
+
+2019-12-27 21:02:02,591 [INFO] Overall accuracy (micro avg): 0.9998586273068757
+2019-12-27 21:04:26,441 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9999         0.9999                       0.9999                0.0000                   0.0001  0.9999
+1     Macro avg        0.9999         0.9195                       0.8780                0.0000                   0.1220  0.8914
+2  Weighted avg        1.0000         0.9999                       0.9999                0.0001                   0.0001  0.9999
+2019-12-27 21:04:26,488 [INFO] Results saved to: results_selected_models/selected_kdd99_lstm_shallow_rep1/selected_kdd99_lstm_shallow_rep1_results.xlsx
+2019-12-27 21:04:26,495 [INFO] ================= Finished running experiment no. 1 ================= 
+
+2019-12-27 21:04:26,610 [INFO] Created directory: results_selected_models/selected_kdd99_lstm_shallow_rep2

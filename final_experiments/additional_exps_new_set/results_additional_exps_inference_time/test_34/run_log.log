@@ -1,0 +1,40 @@
+2020-01-13 20:34:21,192 [INFO] Initialized logging. log_filename = results_additional_exps/test_34/run_log.log
+2020-01-13 20:34:21,192 [INFO] ================= Running experiment no. 34  ================= 
+
+2020-01-13 20:34:21,192 [INFO] Experiment parameters given below
+2020-01-13 20:34:21,192 [INFO] 
+{'experiment_num': 34, 'results_dir': 'results_additional_exps/test_34', 'model': 'lstm', 'model_origin': 'loaded', 'model_type': 'classifier', 'action': 'compute_prediction_time', 'model_location': '../experiment_results_do_not_delete/set_3_dec_2019/selected_rep1_models/results_selected_models_lstm_deep/selected_nsl_lstm_deep_rep1/best_model.pickle', 'lstm_time_steps': 16, 'repetitions': 6, 'num_samples': 100000, 'dataset_dir': '../Datasets/small_datasets/nsl_kdd_five_classes', 'description': 'xx'}
+2020-01-13 20:34:21,192 [INFO] Created tensorboard log directory: results_additional_exps/test_34/tf_logs_run_2020_01_13-20_34_21
+2020-01-13 20:34:21,192 [INFO] Loading datsets from: ../Datasets/small_datasets/nsl_kdd_five_classes
+2020-01-13 20:34:21,193 [INFO] Reading X, y files
+2020-01-13 20:34:21,193 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_train.h5
+2020-01-13 20:34:21,457 [INFO] Reading complete. time_to_read=0.26 seconds
+2020-01-13 20:34:21,457 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_val.h5
+2020-01-13 20:34:21,522 [INFO] Reading complete. time_to_read=0.06 seconds
+2020-01-13 20:34:21,522 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_test.h5
+2020-01-13 20:34:21,580 [INFO] Reading complete. time_to_read=0.06 seconds
+2020-01-13 20:34:21,580 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_train.h5
+2020-01-13 20:34:21,588 [INFO] Reading complete. time_to_read=0.01 seconds
+2020-01-13 20:34:21,588 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_val.h5
+2020-01-13 20:34:21,592 [INFO] Reading complete. time_to_read=0.00 seconds
+2020-01-13 20:34:21,592 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_test.h5
+2020-01-13 20:34:21,600 [INFO] Reading complete. time_to_read=0.01 seconds
+2020-01-13 20:34:21,757 [INFO] Preparing flow sequences
+2020-01-13 20:34:24,056 [INFO] Extracting flows complete. time_taken = 2.30 sec
+2020-01-13 20:34:24,106 [INFO] Loading model from file: ../experiment_results_do_not_delete/set_3_dec_2019/selected_rep1_models/results_selected_models_lstm_deep/selected_nsl_lstm_deep_rep1/best_model.pickle
+2020-01-13 20:34:28,192 [INFO] Making predictions: iteration 1
+2020-01-13 20:34:36,762 [INFO] Making predictions complete. time_to_predict = 8.038244 sec
+2020-01-13 20:34:36,762 [INFO] Making predictions: iteration 2
+2020-01-13 20:34:44,882 [INFO] Making predictions complete. time_to_predict = 7.537127 sec
+2020-01-13 20:34:44,882 [INFO] Making predictions: iteration 3
+2020-01-13 20:34:52,968 [INFO] Making predictions complete. time_to_predict = 7.512768 sec
+2020-01-13 20:34:52,968 [INFO] Making predictions: iteration 4
+2020-01-13 20:35:01,070 [INFO] Making predictions complete. time_to_predict = 7.513369 sec
+2020-01-13 20:35:01,071 [INFO] Making predictions: iteration 5
+2020-01-13 20:35:09,160 [INFO] Making predictions complete. time_to_predict = 7.516846 sec
+2020-01-13 20:35:09,160 [INFO] Making predictions: iteration 6
+2020-01-13 20:35:17,262 [INFO] Making predictions complete. time_to_predict = 7.523133 sec
+2020-01-13 20:35:17,262 [INFO] Total no. of predictions = 600000
+2020-01-13 20:35:17,305 [INFO] ================= Finished running experiment no. 34 ================= 
+
+2020-01-13 20:35:17,310 [INFO] Created directory: results_additional_exps/test_35

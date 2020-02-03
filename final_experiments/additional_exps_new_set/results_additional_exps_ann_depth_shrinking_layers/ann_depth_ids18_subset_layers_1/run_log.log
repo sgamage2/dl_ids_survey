@@ -1,0 +1,172 @@
+2019-12-30 16:33:52,881 [INFO] Initialized logging. log_filename = results_additional_exps/ann_depth_ids18_subset_layers_1/run_log.log
+2019-12-30 16:33:52,881 [INFO] ================= Running experiment no. 1  ================= 
+
+2019-12-30 16:33:52,881 [INFO] Experiment parameters given below
+2019-12-30 16:33:52,881 [INFO] 
+{'experiment_num': 1, 'results_dir': 'results_additional_exps/ann_depth_ids18_subset_layers_1', 'model_type': 'classifier', 'model': 'ann', 'normal_label': 'BENIGN', 'training_data_feed': 'preload', 'scaling_type': 'NA', 'ann_layer_units': [16], 'ann_layer_activations': ['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu'], 'ann_layer_dropout_rates': [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2], 'epochs': 200, 'early_stop_patience': 50, 'batch_size': 256, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/small_datasets/ids2018', 'description': 'ann_depth_ids18_subset_layers_1'}
+2019-12-30 16:33:52,882 [INFO] Created tensorboard log directory: results_additional_exps/ann_depth_ids18_subset_layers_1/tf_logs_run_2019_12_30-16_33_52
+2019-12-30 16:33:52,882 [INFO] Loading datsets from: ../Datasets/small_datasets/ids2018
+2019-12-30 16:33:52,882 [INFO] Reading X, y files
+2019-12-30 16:33:52,883 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_train.h5
+2019-12-30 16:33:57,900 [INFO] Reading complete. time_to_read=5.02 seconds
+2019-12-30 16:33:57,900 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_val.h5
+2019-12-30 16:33:59,436 [INFO] Reading complete. time_to_read=1.54 seconds
+2019-12-30 16:33:59,436 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_test.h5
+2019-12-30 16:34:01,040 [INFO] Reading complete. time_to_read=1.60 seconds
+2019-12-30 16:34:01,040 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_train.h5
+2019-12-30 16:34:01,529 [INFO] Reading complete. time_to_read=0.49 seconds
+2019-12-30 16:34:01,530 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_val.h5
+2019-12-30 16:34:01,711 [INFO] Reading complete. time_to_read=0.18 seconds
+2019-12-30 16:34:01,712 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_test.h5
+2019-12-30 16:34:01,888 [INFO] Reading complete. time_to_read=0.18 seconds
+2019-12-30 16:34:05,825 [INFO] Initializing model
+2019-12-30 16:34:05,826 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:74: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+2019-12-30 16:34:05,872 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:517: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2019-12-30 16:34:05,874 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:4138: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+2019-12-30 16:34:05,932 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:133: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+2019-12-30 16:34:05,947 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2019-12-30 16:34:05,966 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/optimizers.py:790: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+2019-12-30 16:34:05,980 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3376: The name tf.log is deprecated. Please use tf.math.log instead.
+
+2019-12-30 16:34:05,982 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/tensorflow/python/ops/nn_impl.py:180: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-12-30 16:34:05,993 [INFO] _________________________________________________________________
+2019-12-30 16:34:05,993 [INFO] Layer (type)                 Output Shape              Param #   
+2019-12-30 16:34:05,993 [INFO] =================================================================
+2019-12-30 16:34:05,993 [INFO] dense_1 (Dense)              (None, 16)                1248      
+2019-12-30 16:34:05,993 [INFO] _________________________________________________________________
+2019-12-30 16:34:05,993 [INFO] batch_normalization_1 (Batch (None, 16)                64        
+2019-12-30 16:34:05,993 [INFO] _________________________________________________________________
+2019-12-30 16:34:05,993 [INFO] dropout_1 (Dropout)          (None, 16)                0         
+2019-12-30 16:34:05,993 [INFO] _________________________________________________________________
+2019-12-30 16:34:05,993 [INFO] dense_2 (Dense)              (None, 15)                255       
+2019-12-30 16:34:05,994 [INFO] =================================================================
+2019-12-30 16:34:05,994 [INFO] Total params: 1,567
+2019-12-30 16:34:05,994 [INFO] Trainable params: 1,535
+2019-12-30 16:34:05,994 [INFO] Non-trainable params: 32
+2019-12-30 16:34:05,994 [INFO] _________________________________________________________________
+2019-12-30 16:34:05,994 [INFO] Training model
+2019-12-30 16:34:08,880 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/callbacks.py:850: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+2019-12-30 16:34:08,880 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/callbacks.py:853: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2019-12-30 16:43:20,781 [INFO] epoch = 20. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_1/ann_model_epoch_20.pickle
+2019-12-30 16:52:12,743 [INFO] epoch = 40. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_1/ann_model_epoch_40.pickle
+2019-12-30 17:01:05,768 [INFO] epoch = 60. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_1/ann_model_epoch_60.pickle
+2019-12-30 17:09:58,249 [INFO] epoch = 80. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_1/ann_model_epoch_80.pickle
+2019-12-30 17:18:51,421 [INFO] epoch = 100. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_1/ann_model_epoch_100.pickle
+2019-12-30 17:27:42,953 [INFO] epoch = 120. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_1/ann_model_epoch_120.pickle
+2019-12-30 17:36:37,581 [INFO] epoch = 140. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_1/ann_model_epoch_140.pickle
+2019-12-30 17:45:28,995 [INFO] epoch = 160. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_1/ann_model_epoch_160.pickle
+2019-12-30 17:54:17,983 [INFO] epoch = 180. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_layers_1/ann_model_epoch_180.pickle
+2019-12-30 18:02:42,698 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2019-12-30 18:03:20,089 [INFO] Last epoch loss evaluation: train_loss = 0.008121, val_loss = 0.008117
+2019-12-30 18:03:20,089 [INFO] Training complete. time_to_train = 5354.10 sec, 89.23 min
+2019-12-30 18:03:20,093 [INFO] Model saved to results_additional_exps/ann_depth_ids18_subset_layers_1/best_model.pickle
+2019-12-30 18:03:20,107 [INFO] Training history saved to: results_additional_exps/ann_depth_ids18_subset_layers_1/training_error_history.csv
+2019-12-30 18:03:20,311 [INFO] Plot saved to: results_additional_exps/ann_depth_ids18_subset_layers_1/training_error_history.png
+2019-12-30 18:03:20,443 [INFO] Plot saved to: results_additional_exps/ann_depth_ids18_subset_layers_1/training_f1_history.png
+2019-12-30 18:03:20,443 [INFO] Making predictions on training, validation, testing data
+2019-12-30 18:03:49,389 [INFO] Evaluating predictions (results)
+2019-12-30 18:04:01,577 [INFO] Dataset: Testing. Classification report below
+2019-12-30 18:04:01,577 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99    535650
+                     Bot       1.00      1.00      1.00     11465
+        Brute Force -Web       0.00      0.00      0.00        24
+        Brute Force -XSS       1.00      0.33      0.50         9
+        DDOS attack-HOIC       1.00      1.00      1.00     27447
+    DDOS attack-LOIC-UDP       0.00      0.00      0.00        67
+  DDoS attacks-LOIC-HTTP       0.99      0.99      0.99     23010
+   DoS attacks-GoldenEye       0.98      1.00      0.99      1651
+        DoS attacks-Hulk       1.00      1.00      1.00     18478
+DoS attacks-SlowHTTPTest       0.64      0.55      0.59      5596
+   DoS attacks-Slowloris       0.99      0.72      0.84       440
+          FTP-BruteForce       0.70      0.78      0.74      7718
+           Infilteration       0.51      0.01      0.01      6404
+           SQL Injection       1.00      0.25      0.40         4
+          SSH-Bruteforce       1.00      1.00      1.00      7525
+
+               micro avg       0.98      0.98      0.98    645488
+               macro avg       0.79      0.64      0.67    645488
+            weighted avg       0.98      0.98      0.98    645488
+
+2019-12-30 18:04:01,577 [INFO] Overall accuracy (micro avg): 0.9825837196043923
+2019-12-30 18:04:15,377 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9826         0.9826                       0.9826                0.0012                   0.0174  0.9826
+1     Macro avg        0.9977         0.7875                       0.6422                0.0046                   0.3578  0.6705
+2  Weighted avg        0.9907         0.9777                       0.9826                0.0510                   0.0174  0.9776
+2019-12-30 18:04:27,511 [INFO] Dataset: Validation. Classification report below
+2019-12-30 18:04:27,511 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99    535650
+                     Bot       1.00      1.00      1.00     11465
+        Brute Force -Web       0.00      0.00      0.00        25
+        Brute Force -XSS       1.00      0.67      0.80         9
+        DDOS attack-HOIC       1.00      1.00      1.00     27447
+    DDOS attack-LOIC-UDP       0.00      0.00      0.00        68
+  DDoS attacks-LOIC-HTTP       0.99      0.99      0.99     23009
+   DoS attacks-GoldenEye       0.99      1.00      0.99      1651
+        DoS attacks-Hulk       1.00      1.00      1.00     18478
+DoS attacks-SlowHTTPTest       0.65      0.54      0.59      5596
+   DoS attacks-Slowloris       0.99      0.77      0.86       439
+          FTP-BruteForce       0.70      0.79      0.74      7718
+           Infilteration       0.36      0.00      0.01      6403
+           SQL Injection       0.00      0.00      0.00         4
+          SSH-Bruteforce       1.00      1.00      1.00      7525
+
+               micro avg       0.98      0.98      0.98    645487
+               macro avg       0.71      0.65      0.67    645487
+            weighted avg       0.98      0.98      0.98    645487
+
+2019-12-30 18:04:27,511 [INFO] Overall accuracy (micro avg): 0.9826410136842415
+2019-12-30 18:04:41,293 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9826         0.9826                       0.9826                0.0012                   0.0174  0.9826
+1     Macro avg        0.9977         0.7109                       0.6504                0.0045                   0.3496  0.6655
+2  Weighted avg        0.9908         0.9763                       0.9826                0.0507                   0.0174  0.9776
+2019-12-30 18:05:20,817 [INFO] Dataset: Training. Classification report below
+2019-12-30 18:05:20,817 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99   1606949
+                     Bot       1.00      1.00      1.00     34396
+        Brute Force -Web       0.00      0.00      0.00        73
+        Brute Force -XSS       1.00      0.46      0.63        26
+        DDOS attack-HOIC       1.00      1.00      1.00     82341
+    DDOS attack-LOIC-UDP       1.00      0.01      0.02       203
+  DDoS attacks-LOIC-HTTP       0.99      0.99      0.99     69029
+   DoS attacks-GoldenEye       0.99      1.00      0.99      4954
+        DoS attacks-Hulk       1.00      1.00      1.00     55435
+DoS attacks-SlowHTTPTest       0.64      0.54      0.59     16787
+   DoS attacks-Slowloris       1.00      0.76      0.86      1318
+          FTP-BruteForce       0.70      0.78      0.74     23153
+           Infilteration       0.46      0.01      0.01     19210
+           SQL Injection       0.00      0.00      0.00        12
+          SSH-Bruteforce       1.00      1.00      1.00     22576
+
+               micro avg       0.98      0.98      0.98   1936462
+               macro avg       0.78      0.64      0.66   1936462
+            weighted avg       0.98      0.98      0.98   1936462
+
+2019-12-30 18:05:20,817 [INFO] Overall accuracy (micro avg): 0.9825831852109672
+2019-12-30 18:06:05,722 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9826         0.9826                       0.9826                0.0012                   0.0174  0.9826
+1     Macro avg        0.9977         0.7840                       0.6367                0.0046                   0.3633  0.6552
+2  Weighted avg        0.9908         0.9773                       0.9826                0.0509                   0.0174  0.9776
+2019-12-30 18:06:05,767 [INFO] Results saved to: results_additional_exps/ann_depth_ids18_subset_layers_1/ann_depth_ids18_subset_layers_1_results.xlsx
+2019-12-30 18:06:05,774 [INFO] ================= Finished running experiment no. 1 ================= 
+
+2019-12-30 18:06:05,856 [INFO] Created directory: results_additional_exps/ann_depth_ids18_subset_layers_2

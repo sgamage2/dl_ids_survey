@@ -1,0 +1,58 @@
+2020-01-13 20:22:45,167 [INFO] Initialized logging. log_filename = results_additional_exps/test_29/run_log.log
+2020-01-13 20:22:45,167 [INFO] ================= Running experiment no. 29  ================= 
+
+2020-01-13 20:22:45,167 [INFO] Experiment parameters given below
+2020-01-13 20:22:45,168 [INFO] 
+{'experiment_num': 29, 'results_dir': 'results_additional_exps/test_29', 'model': 'lstm', 'model_origin': 'loaded', 'model_type': 'classifier', 'action': 'compute_prediction_time', 'model_location': '../experiment_results_do_not_delete/set_3_dec_2019/selected_rep1_models/results_selected_models_lstm_shallow/selected_kdd99_lstm_shallow_rep1/best_model.pickle', 'lstm_time_steps': 32, 'repetitions': 6, 'num_samples': 100000, 'dataset_dir': '../Datasets/full_datasets/kdd99_five_classes', 'description': 'xx'}
+2020-01-13 20:22:45,178 [INFO] Created tensorboard log directory: results_additional_exps/test_29/tf_logs_run_2020_01_13-20_22_45
+2020-01-13 20:22:45,178 [INFO] Loading datsets from: ../Datasets/full_datasets/kdd99_five_classes
+2020-01-13 20:22:45,192 [INFO] Reading X, y files
+2020-01-13 20:22:45,192 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_train.h5
+2020-01-13 20:22:54,065 [INFO] Reading complete. time_to_read=8.87 seconds
+2020-01-13 20:22:54,065 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_val.h5
+2020-01-13 20:22:56,181 [INFO] Reading complete. time_to_read=2.12 seconds
+2020-01-13 20:22:56,181 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/X_test.h5
+2020-01-13 20:22:56,816 [INFO] Reading complete. time_to_read=0.63 seconds
+2020-01-13 20:22:56,816 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_train.h5
+2020-01-13 20:22:57,238 [INFO] Reading complete. time_to_read=0.42 seconds
+2020-01-13 20:22:57,238 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_val.h5
+2020-01-13 20:22:57,362 [INFO] Reading complete. time_to_read=0.12 seconds
+2020-01-13 20:22:57,362 [INFO] Reading HDF dataset ../Datasets/full_datasets/kdd99_five_classes/y_test.h5
+2020-01-13 20:22:57,400 [INFO] Reading complete. time_to_read=0.04 seconds
+2020-01-13 20:23:25,093 [INFO] Preparing flow sequences
+2020-01-13 20:25:06,482 [INFO] Extracting flows complete. time_taken = 101.31 sec
+2020-01-13 20:25:09,132 [INFO] Loading model from file: ../experiment_results_do_not_delete/set_3_dec_2019/selected_rep1_models/results_selected_models_lstm_shallow/selected_kdd99_lstm_shallow_rep1/best_model.pickle
+2020-01-13 20:25:09,282 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:74: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+2020-01-13 20:25:09,797 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:517: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-01-13 20:25:09,976 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:4138: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+2020-01-13 20:25:11,329 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:133: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+2020-01-13 20:25:11,354 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-01-13 20:25:11,397 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:174: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+2020-01-13 20:25:12,587 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/optimizers.py:790: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+2020-01-13 20:25:12,599 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/tensorflow/python/ops/nn_impl.py:180: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-01-13 20:25:15,571 [INFO] Making predictions: iteration 1
+2020-01-13 20:25:33,682 [INFO] Making predictions complete. time_to_predict = 8.892392 sec
+2020-01-13 20:25:33,692 [INFO] Making predictions: iteration 2
+2020-01-13 20:26:15,600 [INFO] Making predictions complete. time_to_predict = 8.203414 sec
+2020-01-13 20:26:15,645 [INFO] Making predictions: iteration 3
+2020-01-13 20:26:44,421 [INFO] Making predictions complete. time_to_predict = 8.100505 sec
+2020-01-13 20:26:44,453 [INFO] Making predictions: iteration 4
+2020-01-13 20:27:13,771 [INFO] Making predictions complete. time_to_predict = 8.066000 sec
+2020-01-13 20:27:13,779 [INFO] Making predictions: iteration 5
+2020-01-13 20:27:44,937 [INFO] Making predictions complete. time_to_predict = 8.081527 sec
+2020-01-13 20:27:44,976 [INFO] Making predictions: iteration 6
+2020-01-13 20:28:16,243 [INFO] Making predictions complete. time_to_predict = 7.998199 sec
+2020-01-13 20:28:16,276 [INFO] Total no. of predictions = 600000
+2020-01-13 20:28:16,526 [INFO] ================= Finished running experiment no. 29 ================= 
+
+2020-01-13 20:28:17,070 [INFO] Created directory: results_additional_exps/test_30

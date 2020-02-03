@@ -1,0 +1,140 @@
+2019-12-26 12:37:46,976 [INFO] Initialized logging. log_filename = results_selected_models/selected_nsl_lstm_shallow_rep1/run_log.log
+2019-12-26 12:37:46,977 [INFO] ================= Running experiment no. 1  ================= 
+
+2019-12-26 12:37:46,977 [INFO] Experiment parameters given below
+2019-12-26 12:37:46,977 [INFO] 
+{'experiment_num': 1, 'results_dir': 'results_selected_models/selected_nsl_lstm_shallow_rep1', 'model': 'lstm', 'model_type': 'classifier', 'normal_label': 'normal', 'lstm_time_steps': 32, 'lstm_layer_units': [32], 'lstm_layer_activations': ['relu'], 'lstm_layer_dropout_rates': [0.2], 'batch_size': 256, 'epochs': 300, 'early_stop_patience': 50, 'dataset_dir': '../Datasets/small_datasets/nsl_kdd_five_classes', 'description': 'selected_nsl_lstm_shallow_rep1'}
+2019-12-26 12:37:46,977 [INFO] Created tensorboard log directory: results_selected_models/selected_nsl_lstm_shallow_rep1/tf_logs_run_2019_12_26-12_37_46
+2019-12-26 12:37:46,977 [INFO] Loading datsets from: ../Datasets/small_datasets/nsl_kdd_five_classes
+2019-12-26 12:37:46,984 [INFO] Reading X, y files
+2019-12-26 12:37:46,984 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_train.h5
+2019-12-26 12:37:47,543 [INFO] Reading complete. time_to_read=0.56 seconds
+2019-12-26 12:37:47,543 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_val.h5
+2019-12-26 12:37:47,679 [INFO] Reading complete. time_to_read=0.14 seconds
+2019-12-26 12:37:47,680 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_test.h5
+2019-12-26 12:37:47,805 [INFO] Reading complete. time_to_read=0.13 seconds
+2019-12-26 12:37:47,805 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_train.h5
+2019-12-26 12:37:47,830 [INFO] Reading complete. time_to_read=0.03 seconds
+2019-12-26 12:37:47,830 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_val.h5
+2019-12-26 12:37:47,849 [INFO] Reading complete. time_to_read=0.02 seconds
+2019-12-26 12:37:47,849 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_test.h5
+2019-12-26 12:37:47,866 [INFO] Reading complete. time_to_read=0.02 seconds
+2019-12-26 12:37:48,023 [INFO] Preparing flow sequences
+2019-12-26 12:37:49,178 [INFO] Extracting flows complete. time_taken = 1.15 sec
+2019-12-26 12:37:49,228 [INFO] Initializing model
+2019-12-26 12:37:49,228 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:74: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+2019-12-26 12:37:49,237 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:517: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2019-12-26 12:37:49,238 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:4138: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+2019-12-26 12:37:49,607 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:133: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+2019-12-26 12:37:49,621 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2019-12-26 12:37:49,640 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/optimizers.py:790: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+2019-12-26 12:37:49,652 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3376: The name tf.log is deprecated. Please use tf.math.log instead.
+
+2019-12-26 12:37:49,655 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/tensorflow/python/ops/nn_impl.py:180: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-12-26 12:37:49,664 [INFO] _________________________________________________________________
+2019-12-26 12:37:49,664 [INFO] Layer (type)                 Output Shape              Param #   
+2019-12-26 12:37:49,664 [INFO] =================================================================
+2019-12-26 12:37:49,664 [INFO] lstm_1 (LSTM)                (None, 32, 32)            19840     
+2019-12-26 12:37:49,664 [INFO] _________________________________________________________________
+2019-12-26 12:37:49,664 [INFO] batch_normalization_1 (Batch (None, 32, 32)            128       
+2019-12-26 12:37:49,664 [INFO] _________________________________________________________________
+2019-12-26 12:37:49,665 [INFO] dropout_1 (Dropout)          (None, 32, 32)            0         
+2019-12-26 12:37:49,665 [INFO] _________________________________________________________________
+2019-12-26 12:37:49,665 [INFO] time_distributed_1 (TimeDist (None, 32, 5)             165       
+2019-12-26 12:37:49,665 [INFO] =================================================================
+2019-12-26 12:37:49,665 [INFO] Total params: 20,133
+2019-12-26 12:37:49,665 [INFO] Trainable params: 20,069
+2019-12-26 12:37:49,665 [INFO] Non-trainable params: 64
+2019-12-26 12:37:49,665 [INFO] _________________________________________________________________
+2019-12-26 12:37:49,665 [INFO] Training model
+2019-12-26 12:37:52,942 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/callbacks.py:850: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+2019-12-26 12:37:52,942 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/callbacks.py:853: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2019-12-26 12:38:06,300 [INFO] epoch = 30. Intermediate model saved to results_selected_models/selected_nsl_lstm_shallow_rep1/_model_epoch_30.pickle
+2019-12-26 12:38:18,092 [INFO] epoch = 60. Intermediate model saved to results_selected_models/selected_nsl_lstm_shallow_rep1/_model_epoch_60.pickle
+2019-12-26 12:38:29,859 [INFO] epoch = 90. Intermediate model saved to results_selected_models/selected_nsl_lstm_shallow_rep1/_model_epoch_90.pickle
+2019-12-26 12:38:41,611 [INFO] epoch = 120. Intermediate model saved to results_selected_models/selected_nsl_lstm_shallow_rep1/_model_epoch_120.pickle
+2019-12-26 12:38:53,393 [INFO] epoch = 150. Intermediate model saved to results_selected_models/selected_nsl_lstm_shallow_rep1/_model_epoch_150.pickle
+2019-12-26 12:39:04,420 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2019-12-26 12:39:04,775 [INFO] Last epoch loss evaluation: train_loss = 0.003416, val_loss = 0.009014
+2019-12-26 12:39:04,775 [INFO] Training complete. time_to_train = 75.11 sec, 1.25 min
+2019-12-26 12:39:04,779 [INFO] Model saved to results_selected_models/selected_nsl_lstm_shallow_rep1/best_model.pickle
+2019-12-26 12:39:04,796 [INFO] Training history saved to: results_selected_models/selected_nsl_lstm_shallow_rep1/training_error_history.csv
+2019-12-26 12:39:04,960 [INFO] Plot saved to: results_selected_models/selected_nsl_lstm_shallow_rep1/training_error_history.png
+2019-12-26 12:39:05,081 [INFO] Plot saved to: results_selected_models/selected_nsl_lstm_shallow_rep1/training_f1_history.png
+2019-12-26 12:39:05,081 [INFO] Making predictions on training, validation, testing data
+2019-12-26 12:39:05,421 [INFO] Evaluating predictions (results)
+2019-12-26 12:39:05,751 [INFO] Dataset: Testing. Classification report below
+2019-12-26 12:39:05,751 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       0.96      0.84      0.89      7450
+      normal       0.68      0.93      0.79      9704
+       probe       0.73      0.73      0.73      2420
+         r2l       0.94      0.12      0.21      2421
+         u2r       0.84      0.03      0.06       533
+
+   micro avg       0.77      0.77      0.77     22528
+   macro avg       0.83      0.53      0.53     22528
+weighted avg       0.81      0.77      0.74     22528
+
+2019-12-26 12:39:05,752 [INFO] Overall accuracy (micro avg): 0.7696644176136364
+2019-12-26 12:39:06,085 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.7697         0.7697                       0.7697                0.0576                   0.2303  0.7697
+1     Macro avg        0.9079         0.8297                       0.5293                0.0764                   0.4707  0.5350
+2  Weighted avg        0.8673         0.8094                       0.7697                0.1518                   0.2303  0.7364
+2019-12-26 12:39:06,439 [INFO] Dataset: Validation. Classification report below
+2019-12-26 12:39:06,439 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00      9183
+      normal       0.99      0.99      0.99     13462
+       probe       0.98      0.99      0.98      2330
+         r2l       0.90      0.83      0.86       199
+         u2r       0.60      0.30      0.40        10
+
+   micro avg       0.99      0.99      0.99     25184
+   macro avg       0.90      0.82      0.85     25184
+weighted avg       0.99      0.99      0.99     25184
+
+2019-12-26 12:39:06,439 [INFO] Overall accuracy (micro avg): 0.9935276365946633
+2019-12-26 12:39:06,828 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9935         0.9935                       0.9935                0.0016                   0.0065  0.9935
+1     Macro avg        0.9974         0.8954                       0.8215                0.0022                   0.1785  0.8482
+2  Weighted avg        0.9959         0.9934                       0.9935                0.0045                   0.0065  0.9934
+2019-12-26 12:39:08,337 [INFO] Dataset: Training. Classification report below
+2019-12-26 12:39:08,337 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00     36738
+      normal       1.00      1.00      1.00     53871
+       probe       1.00      0.99      0.99      9321
+         r2l       0.96      0.90      0.93       796
+         u2r       1.00      0.64      0.78        42
+
+   micro avg       1.00      1.00      1.00    100768
+   macro avg       0.99      0.91      0.94    100768
+weighted avg       1.00      1.00      1.00    100768
+
+2019-12-26 12:39:08,337 [INFO] Overall accuracy (micro avg): 0.9975289774531597
+2019-12-26 12:39:10,041 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9975         0.9975                       0.9975                0.0006                   0.0025  0.9975
+1     Macro avg        0.9990         0.9911                       0.9068                0.0009                   0.0932  0.9410
+2  Weighted avg        0.9985         0.9975                       0.9975                0.0021                   0.0025  0.9975
+2019-12-26 12:39:10,061 [INFO] Results saved to: results_selected_models/selected_nsl_lstm_shallow_rep1/selected_nsl_lstm_shallow_rep1_results.xlsx
+2019-12-26 12:39:10,061 [INFO] ================= Finished running experiment no. 1 ================= 
+
+2019-12-26 12:39:10,064 [INFO] Created directory: results_selected_models/selected_nsl_lstm_shallow_rep2

@@ -1,0 +1,144 @@
+2020-01-13 20:46:59,089 [INFO] Initialized logging. log_filename = results_additional_exps/train_time_nsl_lstm_deep_rep1/run_log.log
+2020-01-13 20:46:59,089 [INFO] ================= Running experiment no. 1  ================= 
+
+2020-01-13 20:46:59,089 [INFO] Experiment parameters given below
+2020-01-13 20:46:59,089 [INFO] 
+{'experiment_num': 1, 'results_dir': 'results_additional_exps/train_time_nsl_lstm_deep_rep1', 'model': 'lstm', 'model_type': 'classifier', 'normal_label': 'normal', 'lstm_time_steps': 16, 'lstm_layer_units': [64, 32], 'lstm_layer_activations': ['relu', 'relu'], 'lstm_layer_dropout_rates': [0.2, 0.2], 'batch_size': 256, 'epochs': 100, 'early_stop_patience': 100, 'goal_metric': 0.755064154, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/small_datasets/nsl_kdd_five_classes', 'description': 'train_time_nsl_lstm_deep_rep1'}
+2020-01-13 20:46:59,090 [INFO] Created tensorboard log directory: results_additional_exps/train_time_nsl_lstm_deep_rep1/tf_logs_run_2020_01_13-20_46_59
+2020-01-13 20:46:59,090 [INFO] Loading datsets from: ../Datasets/small_datasets/nsl_kdd_five_classes
+2020-01-13 20:46:59,098 [INFO] Reading X, y files
+2020-01-13 20:46:59,098 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_train.h5
+2020-01-13 20:46:59,591 [INFO] Reading complete. time_to_read=0.49 seconds
+2020-01-13 20:46:59,592 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_val.h5
+2020-01-13 20:46:59,726 [INFO] Reading complete. time_to_read=0.13 seconds
+2020-01-13 20:46:59,726 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_test.h5
+2020-01-13 20:46:59,843 [INFO] Reading complete. time_to_read=0.12 seconds
+2020-01-13 20:46:59,843 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_train.h5
+2020-01-13 20:46:59,868 [INFO] Reading complete. time_to_read=0.03 seconds
+2020-01-13 20:46:59,868 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_val.h5
+2020-01-13 20:46:59,888 [INFO] Reading complete. time_to_read=0.02 seconds
+2020-01-13 20:46:59,888 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_test.h5
+2020-01-13 20:46:59,904 [INFO] Reading complete. time_to_read=0.02 seconds
+2020-01-13 20:47:00,063 [INFO] Preparing flow sequences
+2020-01-13 20:47:02,293 [INFO] Extracting flows complete. time_taken = 2.23 sec
+2020-01-13 20:47:02,344 [INFO] Initializing model
+2020-01-13 20:47:02,344 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:74: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+2020-01-13 20:47:02,353 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:517: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-01-13 20:47:02,354 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:4138: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+2020-01-13 20:47:02,575 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:133: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+2020-01-13 20:47:02,589 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-01-13 20:47:02,812 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/optimizers.py:790: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+2020-01-13 20:47:02,825 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3376: The name tf.log is deprecated. Please use tf.math.log instead.
+
+2020-01-13 20:47:02,828 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/tensorflow/python/ops/nn_impl.py:180: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-01-13 20:47:02,837 [INFO] _________________________________________________________________
+2020-01-13 20:47:02,837 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-13 20:47:02,837 [INFO] =================================================================
+2020-01-13 20:47:02,837 [INFO] lstm_1 (LSTM)                (None, 16, 64)            47872     
+2020-01-13 20:47:02,837 [INFO] _________________________________________________________________
+2020-01-13 20:47:02,837 [INFO] batch_normalization_1 (Batch (None, 16, 64)            256       
+2020-01-13 20:47:02,837 [INFO] _________________________________________________________________
+2020-01-13 20:47:02,837 [INFO] dropout_1 (Dropout)          (None, 16, 64)            0         
+2020-01-13 20:47:02,837 [INFO] _________________________________________________________________
+2020-01-13 20:47:02,837 [INFO] lstm_2 (LSTM)                (None, 16, 32)            12416     
+2020-01-13 20:47:02,837 [INFO] _________________________________________________________________
+2020-01-13 20:47:02,838 [INFO] batch_normalization_2 (Batch (None, 16, 32)            128       
+2020-01-13 20:47:02,838 [INFO] _________________________________________________________________
+2020-01-13 20:47:02,838 [INFO] dropout_2 (Dropout)          (None, 16, 32)            0         
+2020-01-13 20:47:02,838 [INFO] _________________________________________________________________
+2020-01-13 20:47:02,838 [INFO] time_distributed_1 (TimeDist (None, 16, 5)             165       
+2020-01-13 20:47:02,838 [INFO] =================================================================
+2020-01-13 20:47:02,838 [INFO] Total params: 60,837
+2020-01-13 20:47:02,838 [INFO] Trainable params: 60,645
+2020-01-13 20:47:02,838 [INFO] Non-trainable params: 192
+2020-01-13 20:47:02,838 [INFO] _________________________________________________________________
+2020-01-13 20:47:02,838 [INFO] Training model
+2020-01-13 20:47:06,950 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/callbacks.py:850: The name tf.summary.merge_all is deprecated. Please use tf.compat.v1.summary.merge_all instead.
+
+2020-01-13 20:47:06,951 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/callbacks.py:853: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2020-01-13 20:47:20,989 [INFO] epoch = 10. Intermediate model saved to results_additional_exps/train_time_nsl_lstm_deep_rep1/_model_epoch_10.pickle
+2020-01-13 20:47:23,398 [INFO] StopperOnGoal: reached goal_metric (accuracy). Stopping training. goal_metric = 0.7551, current_metric = 0.7564, num_epochs = 13
+2020-01-13 20:47:23,399 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-13 20:47:24,110 [INFO] Last epoch loss evaluation: train_loss = 0.014795, val_loss = 0.015755
+2020-01-13 20:47:24,110 [INFO] Training complete. time_to_train = 21.27 sec, 0.35 min
+2020-01-13 20:47:24,115 [INFO] Model saved to results_additional_exps/train_time_nsl_lstm_deep_rep1/best_model.pickle
+2020-01-13 20:47:24,127 [INFO] Training history saved to: results_additional_exps/train_time_nsl_lstm_deep_rep1/training_error_history.csv
+2020-01-13 20:47:24,314 [INFO] Plot saved to: results_additional_exps/train_time_nsl_lstm_deep_rep1/training_error_history.png
+2020-01-13 20:47:24,445 [INFO] Plot saved to: results_additional_exps/train_time_nsl_lstm_deep_rep1/training_f1_history.png
+2020-01-13 20:47:24,445 [INFO] Making predictions on training, validation, testing data
+2020-01-13 20:47:25,186 [INFO] Making predictions complete. time_to_predict = 0.74 sec, 0.01 min
+2020-01-13 20:47:25,189 [INFO] Evaluating predictions (results)
+2020-01-13 20:47:25,517 [INFO] Dataset: Testing. Classification report below
+2020-01-13 20:47:25,517 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       0.93      0.85      0.89      7458
+      normal       0.68      0.93      0.78      9711
+       probe       0.75      0.70      0.73      2421
+         r2l       0.98      0.05      0.09      2421
+         u2r       0.90      0.02      0.03       533
+
+   micro avg       0.76      0.76      0.76     22544
+   macro avg       0.85      0.51      0.51     22544
+weighted avg       0.81      0.76      0.72     22544
+
+2020-01-13 20:47:25,517 [INFO] Overall accuracy (micro avg): 0.7624201561391057
+2020-01-13 20:47:25,850 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.7624         0.7624                       0.7624                0.0594                   0.2376  0.7624
+1     Macro avg        0.9050         0.8470                       0.5099                0.0792                   0.4901  0.5052
+2  Weighted avg        0.8631         0.8061                       0.7624                0.1584                   0.2376  0.7201
+2020-01-13 20:47:26,259 [INFO] Dataset: Validation. Classification report below
+2020-01-13 20:47:26,259 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       0.99      1.00      0.99      9183
+      normal       0.99      0.99      0.99     13462
+       probe       0.98      0.97      0.98      2330
+         r2l       0.80      0.47      0.59       199
+         u2r       1.00      0.20      0.33        10
+
+   micro avg       0.99      0.99      0.99     25184
+   macro avg       0.95      0.73      0.78     25184
+weighted avg       0.99      0.99      0.99     25184
+
+2020-01-13 20:47:26,259 [INFO] Overall accuracy (micro avg): 0.9872141041931385
+2020-01-13 20:47:26,638 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9872         0.9872                       0.9872                0.0032                   0.0128  0.9872
+1     Macro avg        0.9949         0.9514                       0.7260                0.0044                   0.2740  0.7765
+2  Weighted avg        0.9919         0.9866                       0.9872                0.0094                   0.0128  0.9864
+2020-01-13 20:47:28,146 [INFO] Dataset: Training. Classification report below
+2020-01-13 20:47:28,146 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       0.99      1.00      1.00     36738
+      normal       0.99      0.99      0.99     53871
+       probe       0.98      0.97      0.98      9321
+         r2l       0.87      0.52      0.65       796
+         u2r       0.50      0.10      0.16        42
+
+   micro avg       0.99      0.99      0.99    100768
+   macro avg       0.87      0.72      0.75    100768
+weighted avg       0.99      0.99      0.99    100768
+
+2020-01-13 20:47:28,146 [INFO] Overall accuracy (micro avg): 0.9887761987932677
+2020-01-13 20:47:29,854 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9888         0.9888                       0.9888                0.0028                   0.0112  0.9888
+1     Macro avg        0.9955         0.8667                       0.7161                0.0040                   0.2839  0.7550
+2  Weighted avg        0.9929         0.9882                       0.9888                0.0086                   0.0112  0.9881
+2020-01-13 20:47:29,880 [INFO] Results saved to: results_additional_exps/train_time_nsl_lstm_deep_rep1/train_time_nsl_lstm_deep_rep1_results.xlsx
+2020-01-13 20:47:29,881 [INFO] ================= Finished running experiment no. 1 ================= 
+
+2020-01-13 20:47:29,884 [INFO] Created directory: results_additional_exps/train_time_nsl_lstm_deep_rep2

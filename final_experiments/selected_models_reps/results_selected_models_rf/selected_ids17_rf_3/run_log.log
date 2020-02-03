@@ -1,0 +1,112 @@
+2019-12-20 17:46:05,428 [INFO] Initialized logging. log_filename = results_selected_models/selected_ids17_rf_3/run_log.log
+2019-12-20 17:46:05,428 [INFO] ================= Running experiment no. 3  ================= 
+
+2019-12-20 17:46:05,428 [INFO] Experiment parameters given below
+2019-12-20 17:46:05,428 [INFO] 
+{'experiment_num': 3, 'results_dir': 'results_selected_models/selected_ids17_rf_3', 'model_type': 'classifier', 'model': 'rf', 'normal_label': 'BENIGN', 'training_data_feed': 'preload', 'scaling_type': 'NA', 'num_trees': 100, 'min_samples_for_split': 2, 'randomize_state': 1, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/full_datasets/ids2017', 'description': 'selected_ids17_rf_3'}
+2019-12-20 17:46:05,428 [INFO] Created tensorboard log directory: results_selected_models/selected_ids17_rf_3/tf_logs_run_2019_12_20-17_46_05
+2019-12-20 17:46:05,428 [INFO] Loading datsets from: ../Datasets/full_datasets/ids2017
+2019-12-20 17:46:05,429 [INFO] Reading X, y files
+2019-12-20 17:46:05,429 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_train.h5
+2019-12-20 17:46:09,456 [INFO] Reading complete. time_to_read=4.03 seconds
+2019-12-20 17:46:09,456 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_val.h5
+2019-12-20 17:46:10,837 [INFO] Reading complete. time_to_read=1.38 seconds
+2019-12-20 17:46:10,837 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_test.h5
+2019-12-20 17:46:12,220 [INFO] Reading complete. time_to_read=1.38 seconds
+2019-12-20 17:46:12,220 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_train.h5
+2019-12-20 17:46:12,441 [INFO] Reading complete. time_to_read=0.22 seconds
+2019-12-20 17:46:12,441 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_val.h5
+2019-12-20 17:46:12,507 [INFO] Reading complete. time_to_read=0.07 seconds
+2019-12-20 17:46:12,507 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_test.h5
+2019-12-20 17:46:12,573 [INFO] Reading complete. time_to_read=0.07 seconds
+2019-12-20 17:46:15,757 [INFO] Initializing model
+2019-12-20 17:46:15,757 [INFO] Training model
+2019-12-20 17:56:18,964 [INFO] Training complete. time_to_train = 603.21 sec, 10.05 min
+2019-12-20 17:56:19,077 [INFO] Model saved to results_selected_models/selected_ids17_rf_3/best_model.pickle
+2019-12-20 17:56:19,077 [INFO] Making predictions on training, validation, testing data
+2019-12-20 17:58:13,105 [INFO] Evaluating predictions (results)
+2019-12-20 17:58:23,336 [INFO] Dataset: Testing. Classification report below
+2019-12-20 17:58:23,336 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00    454265
+                   Bot       0.87      0.67      0.76       391
+                  DDoS       1.00      1.00      1.00     25605
+         DoS GoldenEye       1.00      1.00      1.00      2058
+              DoS Hulk       1.00      1.00      1.00     46025
+      DoS Slowhttptest       0.99      0.99      0.99      1100
+         DoS slowloris       0.99      0.99      0.99      1159
+           FTP-Patator       1.00      1.00      1.00      1587
+              PortScan       0.99      1.00      1.00     31761
+           SSH-Patator       1.00      1.00      1.00      1179
+Web Attack Brute Force       0.75      0.90      0.82       302
+        Web Attack XSS       0.71      0.04      0.07       130
+
+             micro avg       1.00      1.00      1.00    565562
+             macro avg       0.94      0.88      0.89    565562
+          weighted avg       1.00      1.00      1.00    565562
+
+2019-12-20 17:58:23,337 [INFO] Overall accuracy (micro avg): 0.9986827262086208
+2019-12-20 17:58:34,969 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9987         0.9987                       0.9987                0.0001                   0.0013  0.9987
+1     Macro avg        0.9998         0.9422                       0.8823                0.0003                   0.1177  0.8853
+2  Weighted avg        0.9991         0.9986                       0.9987                0.0021                   0.0013  0.9986
+2019-12-20 17:58:45,349 [INFO] Dataset: Validation. Classification report below
+2019-12-20 17:58:45,349 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00    454264
+                   Bot       0.86      0.65      0.74       391
+                  DDoS       1.00      1.00      1.00     25605
+         DoS GoldenEye       1.00      1.00      1.00      2059
+              DoS Hulk       1.00      1.00      1.00     46025
+      DoS Slowhttptest       0.99      0.99      0.99      1099
+         DoS slowloris       1.00      0.99      0.99      1159
+           FTP-Patator       1.00      1.00      1.00      1587
+              PortScan       0.99      1.00      1.00     31761
+           SSH-Patator       1.00      0.99      1.00      1180
+Web Attack Brute Force       0.72      0.84      0.77       301
+        Web Attack XSS       0.37      0.05      0.09       131
+
+             micro avg       1.00      1.00      1.00    565562
+             macro avg       0.91      0.88      0.88    565562
+          weighted avg       1.00      1.00      1.00    565562
+
+2019-12-20 17:58:45,349 [INFO] Overall accuracy (micro avg): 0.9986544357647791
+2019-12-20 17:58:57,132 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9987         0.9987                       0.9987                0.0001                   0.0013  0.9987
+1     Macro avg        0.9998         0.9098                       0.8762                0.0003                   0.1238  0.8816
+2  Weighted avg        0.9991         0.9985                       0.9987                0.0022                   0.0013  0.9986
+2019-12-20 17:59:31,257 [INFO] Dataset: Training. Classification report below
+2019-12-20 17:59:31,257 [INFO] 
+                        precision    recall  f1-score   support
+
+                BENIGN       1.00      1.00      1.00   1362791
+                   Bot       1.00      0.93      0.96      1174
+                  DDoS       1.00      1.00      1.00     76815
+         DoS GoldenEye       1.00      1.00      1.00      6176
+              DoS Hulk       1.00      1.00      1.00    138074
+      DoS Slowhttptest       1.00      1.00      1.00      3300
+         DoS slowloris       1.00      1.00      1.00      3478
+           FTP-Patator       1.00      1.00      1.00      4761
+              PortScan       0.99      1.00      1.00     95282
+           SSH-Patator       1.00      1.00      1.00      3538
+Web Attack Brute Force       0.97      1.00      0.98       904
+        Web Attack XSS       1.00      0.41      0.58       391
+
+             micro avg       1.00      1.00      1.00   1696684
+             macro avg       1.00      0.94      0.96   1696684
+          weighted avg       1.00      1.00      1.00   1696684
+
+2019-12-20 17:59:31,257 [INFO] Overall accuracy (micro avg): 0.9993369419408682
+2019-12-20 18:00:10,051 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9993         0.9993                       0.9993                0.0001                   0.0007  0.9993
+1     Macro avg        0.9999         0.9967                       0.9446                0.0001                   0.0554  0.9603
+2  Weighted avg        0.9995         0.9993                       0.9993                0.0009                   0.0007  0.9993
+2019-12-20 18:00:10,103 [INFO] Results saved to: results_selected_models/selected_ids17_rf_3/selected_ids17_rf_3_results.xlsx
+2019-12-20 18:00:10,115 [INFO] ================= Finished running experiment no. 3 ================= 
+
+2019-12-20 18:00:10,198 [INFO] Created directory: results_selected_models/selected_ids17_rf_4

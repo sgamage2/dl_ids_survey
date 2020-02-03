@@ -1,0 +1,56 @@
+2020-01-13 18:41:22,263 [INFO] Initialized logging. log_filename = results_additional_exps/test_18/run_log.log
+2020-01-13 18:41:22,263 [INFO] ================= Running experiment no. 18  ================= 
+
+2020-01-13 18:41:22,263 [INFO] Experiment parameters given below
+2020-01-13 18:41:22,263 [INFO] 
+{'experiment_num': 18, 'results_dir': 'results_additional_exps/test_18', 'model': 'non-lstm', 'model_origin': 'loaded', 'model_type': 'classifier', 'action': 'compute_prediction_time', 'model_location': '../experiment_results_do_not_delete/set_3_dec_2019/selected_rep1_models/results_selected_models_ae_deep/selected_ids17_ae_ann_deep_rep1/best_model.pickle', 'repetitions': 6, 'num_samples': 100000, 'dataset_dir': '../Datasets/full_datasets/ids2017', 'description': 'xx'}
+2020-01-13 18:41:22,263 [INFO] Created tensorboard log directory: results_additional_exps/test_18/tf_logs_run_2020_01_13-18_41_22
+2020-01-13 18:41:22,263 [INFO] Loading datsets from: ../Datasets/full_datasets/ids2017
+2020-01-13 18:41:22,275 [INFO] Reading X, y files
+2020-01-13 18:41:22,275 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_train.h5
+2020-01-13 18:41:28,131 [INFO] Reading complete. time_to_read=5.86 seconds
+2020-01-13 18:41:28,131 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_val.h5
+2020-01-13 18:41:29,677 [INFO] Reading complete. time_to_read=1.55 seconds
+2020-01-13 18:41:29,677 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/X_test.h5
+2020-01-13 18:41:31,211 [INFO] Reading complete. time_to_read=1.53 seconds
+2020-01-13 18:41:31,211 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_train.h5
+2020-01-13 18:41:31,663 [INFO] Reading complete. time_to_read=0.45 seconds
+2020-01-13 18:41:31,663 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_val.h5
+2020-01-13 18:41:31,827 [INFO] Reading complete. time_to_read=0.16 seconds
+2020-01-13 18:41:31,827 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2017/y_test.h5
+2020-01-13 18:41:31,998 [INFO] Reading complete. time_to_read=0.17 seconds
+2020-01-13 18:41:35,448 [INFO] Loading model from file: ../experiment_results_do_not_delete/set_3_dec_2019/selected_rep1_models/results_selected_models_ae_deep/selected_ids17_ae_ann_deep_rep1/best_model.pickle
+2020-01-13 18:41:35,468 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:517: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2020-01-13 18:41:35,479 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:4138: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+2020-01-13 18:41:35,537 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:131: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+2020-01-13 18:41:35,537 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:133: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+2020-01-13 18:41:35,552 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:3445: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2020-01-13 18:41:35,950 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:174: The name tf.get_default_session is deprecated. Please use tf.compat.v1.get_default_session instead.
+
+2020-01-13 18:41:36,294 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/keras/optimizers.py:790: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+2020-01-13 18:41:36,300 [WARNING] From /home/hasitha/anaconda3/lib/python3.7/site-packages/tensorflow/python/ops/nn_impl.py:180: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2020-01-13 18:41:39,533 [INFO] Making predictions: iteration 1
+2020-01-13 18:41:42,800 [INFO] Making predictions complete. time_to_predict = 3.124638 sec
+2020-01-13 18:41:42,800 [INFO] Making predictions: iteration 2
+2020-01-13 18:41:45,838 [INFO] Making predictions complete. time_to_predict = 2.891129 sec
+2020-01-13 18:41:45,838 [INFO] Making predictions: iteration 3
+2020-01-13 18:41:48,870 [INFO] Making predictions complete. time_to_predict = 2.887635 sec
+2020-01-13 18:41:48,871 [INFO] Making predictions: iteration 4
+2020-01-13 18:41:51,913 [INFO] Making predictions complete. time_to_predict = 2.894258 sec
+2020-01-13 18:41:51,913 [INFO] Making predictions: iteration 5
+2020-01-13 18:41:54,959 [INFO] Making predictions complete. time_to_predict = 2.901266 sec
+2020-01-13 18:41:54,959 [INFO] Making predictions: iteration 6
+2020-01-13 18:41:58,045 [INFO] Making predictions complete. time_to_predict = 2.940287 sec
+2020-01-13 18:41:58,046 [INFO] Total no. of predictions = 600000
+2020-01-13 18:41:58,049 [INFO] ================= Finished running experiment no. 18 ================= 
+
+2020-01-13 18:41:58,127 [INFO] Created directory: results_additional_exps/test_19

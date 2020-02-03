@@ -1,0 +1,148 @@
+2020-01-07 11:19:42,173 [INFO] Initialized logging. log_filename = results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/run_log.log
+2020-01-07 11:19:42,173 [INFO] ================= Running experiment no. 2  ================= 
+
+2020-01-07 11:19:42,173 [INFO] Experiment parameters given below
+2020-01-07 11:19:42,173 [INFO] 
+{'experiment_num': 2, 'results_dir': 'results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2', 'model_type': 'classifier', 'model': 'ae_ann', 'normal_label': 'normal', 'split_random_seed': 42, 'unsupervised_ratio': 0.75, 'ae_encoder_units': [64], 'ae_encoder_activations': ['relu'], 'ae_encoder_dropout_rates': [0.2], 'ae_encoder_l1_param': -1, 'ae_decoder_units': '', 'ae_decoder_activations': '', 'ae_decoder_dropout_rates': '', 'output_activation': 'sigmoid', 'loss_function': 'binary_crossentropy', 'ae_epochs': 200, 'ann_layer_units': [64], 'ann_layer_activations': ['relu'], 'ann_layer_dropout_rates': [0.2], 'ann_epochs': 200, 'early_stop_patience': 50, 'batch_size': 256, 'dataset_dir': '../Datasets/small_datasets/nsl_kdd_five_classes', 'description': 'semi_sup_perf_nsl_ae_ann_rep2'}
+2020-01-07 11:19:42,173 [INFO] Created tensorboard log directory: results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/tf_logs_run_2020_01_07-11_19_42
+2020-01-07 11:19:42,173 [INFO] Loading datsets from: ../Datasets/small_datasets/nsl_kdd_five_classes
+2020-01-07 11:19:42,173 [INFO] Reading X, y files
+2020-01-07 11:19:42,173 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_train.h5
+2020-01-07 11:19:42,401 [INFO] Reading complete. time_to_read=0.23 seconds
+2020-01-07 11:19:42,402 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_val.h5
+2020-01-07 11:19:42,464 [INFO] Reading complete. time_to_read=0.06 seconds
+2020-01-07 11:19:42,464 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/X_test.h5
+2020-01-07 11:19:42,519 [INFO] Reading complete. time_to_read=0.06 seconds
+2020-01-07 11:19:42,519 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_train.h5
+2020-01-07 11:19:42,528 [INFO] Reading complete. time_to_read=0.01 seconds
+2020-01-07 11:19:42,528 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_val.h5
+2020-01-07 11:19:42,532 [INFO] Reading complete. time_to_read=0.00 seconds
+2020-01-07 11:19:42,532 [INFO] Reading HDF dataset ../Datasets/small_datasets/nsl_kdd_five_classes/y_test.h5
+2020-01-07 11:19:42,536 [INFO] Reading complete. time_to_read=0.00 seconds
+2020-01-07 11:19:42,651 [INFO] Initializing model
+2020-01-07 11:19:42,772 [INFO] _________________________________________________________________
+2020-01-07 11:19:42,772 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-07 11:19:42,772 [INFO] =================================================================
+2020-01-07 11:19:42,772 [INFO] dense_5 (Dense)              (None, 64)                7872      
+2020-01-07 11:19:42,773 [INFO] _________________________________________________________________
+2020-01-07 11:19:42,773 [INFO] batch_normalization_3 (Batch (None, 64)                256       
+2020-01-07 11:19:42,773 [INFO] _________________________________________________________________
+2020-01-07 11:19:42,773 [INFO] dropout_3 (Dropout)          (None, 64)                0         
+2020-01-07 11:19:42,773 [INFO] _________________________________________________________________
+2020-01-07 11:19:42,773 [INFO] dense_6 (Dense)              (None, 122)               7930      
+2020-01-07 11:19:42,773 [INFO] =================================================================
+2020-01-07 11:19:42,773 [INFO] Total params: 16,058
+2020-01-07 11:19:42,773 [INFO] Trainable params: 15,930
+2020-01-07 11:19:42,773 [INFO] Non-trainable params: 128
+2020-01-07 11:19:42,773 [INFO] _________________________________________________________________
+2020-01-07 11:19:42,891 [INFO] _________________________________________________________________
+2020-01-07 11:19:42,892 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-07 11:19:42,892 [INFO] =================================================================
+2020-01-07 11:19:42,892 [INFO] dense_7 (Dense)              (None, 64)                4160      
+2020-01-07 11:19:42,892 [INFO] _________________________________________________________________
+2020-01-07 11:19:42,892 [INFO] batch_normalization_4 (Batch (None, 64)                256       
+2020-01-07 11:19:42,892 [INFO] _________________________________________________________________
+2020-01-07 11:19:42,892 [INFO] dropout_4 (Dropout)          (None, 64)                0         
+2020-01-07 11:19:42,892 [INFO] _________________________________________________________________
+2020-01-07 11:19:42,892 [INFO] dense_8 (Dense)              (None, 5)                 325       
+2020-01-07 11:19:42,892 [INFO] =================================================================
+2020-01-07 11:19:42,893 [INFO] Total params: 4,741
+2020-01-07 11:19:42,893 [INFO] Trainable params: 4,613
+2020-01-07 11:19:42,893 [INFO] Non-trainable params: 128
+2020-01-07 11:19:42,893 [INFO] _________________________________________________________________
+2020-01-07 11:19:42,893 [INFO] Training model
+2020-01-07 11:19:42,893 [INFO] Splitting train set into 2 sets (unsupervised, supervised), random_seed = 42
+2020-01-07 11:19:43,911 [INFO] Split sizes (instances). total = 100778, unsupervised = 75583, supervised = 25195, unsupervised dataset hash = 40fcc5b399aca9d2e6f9581990505c20b3f01fda
+2020-01-07 11:19:43,912 [INFO] Training autoencoder
+2020-01-07 11:20:14,912 [INFO] epoch = 20. Intermediate model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/ae_model_epoch_20.pickle
+2020-01-07 11:20:42,741 [INFO] epoch = 40. Intermediate model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/ae_model_epoch_40.pickle
+2020-01-07 11:21:10,476 [INFO] epoch = 60. Intermediate model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/ae_model_epoch_60.pickle
+2020-01-07 11:21:38,186 [INFO] epoch = 80. Intermediate model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/ae_model_epoch_80.pickle
+2020-01-07 11:22:05,944 [INFO] epoch = 100. Intermediate model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/ae_model_epoch_100.pickle
+2020-01-07 11:22:33,617 [INFO] epoch = 120. Intermediate model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/ae_model_epoch_120.pickle
+2020-01-07 11:23:01,359 [INFO] epoch = 140. Intermediate model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/ae_model_epoch_140.pickle
+2020-01-07 11:23:29,142 [INFO] epoch = 160. Intermediate model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/ae_model_epoch_160.pickle
+2020-01-07 11:23:56,869 [INFO] epoch = 180. Intermediate model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/ae_model_epoch_180.pickle
+2020-01-07 11:24:23,299 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-07 11:24:25,472 [INFO] Last epoch loss evaluation: train_loss = -3.267713, val_loss = -3.247325
+2020-01-07 11:24:25,473 [INFO] Training autoencoder complete
+2020-01-07 11:24:25,473 [INFO] Encoding data for supervised training
+2020-01-07 11:24:26,432 [INFO] Encoding complete
+2020-01-07 11:24:26,433 [INFO] Training neural network layers (after autoencoder)
+2020-01-07 11:24:43,063 [INFO] epoch = 20. Intermediate model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/ann_model_epoch_20.pickle
+2020-01-07 11:24:57,417 [INFO] epoch = 40. Intermediate model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/ann_model_epoch_40.pickle
+2020-01-07 11:25:11,825 [INFO] epoch = 60. Intermediate model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/ann_model_epoch_60.pickle
+2020-01-07 11:25:26,200 [INFO] epoch = 80. Intermediate model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/ann_model_epoch_80.pickle
+2020-01-07 11:25:38,882 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-07 11:25:39,951 [INFO] Last epoch loss evaluation: train_loss = 0.004275, val_loss = 0.007331
+2020-01-07 11:25:39,952 [INFO] Training complete. time_to_train = 357.06 sec, 5.95 min
+2020-01-07 11:25:39,962 [INFO] Model saved to results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/best_model.pickle
+2020-01-07 11:25:39,964 [INFO] Training history saved to: results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/training_error_history.csv
+2020-01-07 11:25:40,134 [INFO] Plot saved to: results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/training_error_history.png
+2020-01-07 11:25:40,302 [INFO] Plot saved to: results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/training_f1_history.png
+2020-01-07 11:25:40,302 [INFO] Making predictions on training, validation, testing data
+2020-01-07 11:25:45,243 [INFO] Evaluating predictions (results)
+2020-01-07 11:25:45,794 [INFO] Dataset: Testing. Classification report below
+2020-01-07 11:25:45,794 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       0.96      0.85      0.90      7458
+      normal       0.68      0.93      0.79      9711
+       probe       0.71      0.75      0.73      2421
+         r2l       0.96      0.04      0.08      2421
+         u2r       0.70      0.03      0.05       533
+
+    accuracy                           0.77     22544
+   macro avg       0.80      0.52      0.51     22544
+weighted avg       0.81      0.77      0.73     22544
+
+2020-01-07 11:25:45,794 [INFO] Overall accuracy (micro avg): 0.7679648687012065
+2020-01-07 11:25:46,390 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.7680         0.7680                       0.7680                0.0580                   0.2320  0.7680
+1     Macro avg        0.9072         0.8031                       0.5208                0.0767                   0.4792  0.5108
+2  Weighted avg        0.8681         0.8069                       0.7680                0.1512                   0.2320  0.7257
+2020-01-07 11:25:47,062 [INFO] Dataset: Validation. Classification report below
+2020-01-07 11:25:47,063 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00      9186
+      normal       0.99      1.00      0.99     13469
+       probe       0.99      0.99      0.99      2331
+         r2l       0.90      0.82      0.86       199
+         u2r       0.50      0.30      0.37        10
+
+    accuracy                           0.99     25195
+   macro avg       0.88      0.82      0.84     25195
+weighted avg       0.99      0.99      0.99     25195
+
+2020-01-07 11:25:47,063 [INFO] Overall accuracy (micro avg): 0.9943639611033935
+2020-01-07 11:25:47,732 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9944         0.9944                       0.9944                0.0014                   0.0056  0.9944
+1     Macro avg        0.9977         0.8759                       0.8201                0.0019                   0.1799  0.8426
+2  Weighted avg        0.9966         0.9942                       0.9944                0.0039                   0.0056  0.9943
+2020-01-07 11:25:50,557 [INFO] Dataset: Training. Classification report below
+2020-01-07 11:25:50,560 [INFO] 
+              precision    recall  f1-score   support
+
+         dos       1.00      1.00      1.00     36741
+      normal       0.99      1.00      1.00     53874
+       probe       0.99      0.99      0.99      9325
+         r2l       0.90      0.80      0.84       796
+         u2r       0.62      0.38      0.47        42
+
+    accuracy                           0.99    100778
+   macro avg       0.90      0.83      0.86    100778
+weighted avg       0.99      0.99      0.99    100778
+
+2020-01-07 11:25:50,560 [INFO] Overall accuracy (micro avg): 0.994681378872373
+2020-01-07 11:25:53,588 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9947         0.9947                       0.9947                0.0013                   0.0053  0.9947
+1     Macro avg        0.9979         0.8992                       0.8318                0.0019                   0.1682  0.8594
+2  Weighted avg        0.9968         0.9945                       0.9947                0.0041                   0.0053  0.9946
+2020-01-07 11:25:53,636 [INFO] Results saved to: results_additional_exps/semi_sup_perf_nsl_ae_ann_rep2/semi_sup_perf_nsl_ae_ann_rep2_results.xlsx
+2020-01-07 11:25:53,636 [INFO] ================= Finished running experiment no. 2 ================= 
+
+2020-01-07 11:25:53,637 [INFO] Created directory: results_additional_exps/semi_sup_perf_nsl_ae_ann_rep3

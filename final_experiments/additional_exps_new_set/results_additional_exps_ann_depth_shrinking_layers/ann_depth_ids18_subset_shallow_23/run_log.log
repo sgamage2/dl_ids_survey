@@ -1,0 +1,161 @@
+2020-01-05 16:01:43,003 [INFO] Initialized logging. log_filename = results_additional_exps/ann_depth_ids18_subset_shallow_23/run_log.log
+2020-01-05 16:01:43,003 [INFO] ================= Running experiment no. 13  ================= 
+
+2020-01-05 16:01:43,003 [INFO] Experiment parameters given below
+2020-01-05 16:01:43,003 [INFO] 
+{'experiment_num': 13, 'results_dir': 'results_additional_exps/ann_depth_ids18_subset_shallow_23', 'model_type': 'classifier', 'model': 'ann', 'normal_label': 'BENIGN', 'training_data_feed': 'preload', 'scaling_type': 'NA', 'ann_layer_units': [3000, 1500, 500], 'ann_layer_activations': ['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu'], 'ann_layer_dropout_rates': [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2], 'epochs': 200, 'early_stop_patience': 50, 'batch_size': 256, 'training_set': 'train_set_only', 'dataset_dir': '../Datasets/small_datasets/ids2018', 'description': 'ann_depth_ids18_subset_shallow_21'}
+2020-01-05 16:01:43,003 [INFO] Created tensorboard log directory: results_additional_exps/ann_depth_ids18_subset_shallow_23/tf_logs_run_2020_01_05-16_01_42
+2020-01-05 16:01:43,003 [INFO] Loading datsets from: ../Datasets/small_datasets/ids2018
+2020-01-05 16:01:43,003 [INFO] Reading X, y files
+2020-01-05 16:01:43,003 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_train.h5
+2020-01-05 16:01:47,477 [INFO] Reading complete. time_to_read=4.47 seconds
+2020-01-05 16:01:47,478 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_val.h5
+2020-01-05 16:01:49,016 [INFO] Reading complete. time_to_read=1.54 seconds
+2020-01-05 16:01:49,016 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/X_test.h5
+2020-01-05 16:01:50,554 [INFO] Reading complete. time_to_read=1.54 seconds
+2020-01-05 16:01:50,554 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_train.h5
+2020-01-05 16:01:50,809 [INFO] Reading complete. time_to_read=0.26 seconds
+2020-01-05 16:01:50,809 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_val.h5
+2020-01-05 16:01:50,894 [INFO] Reading complete. time_to_read=0.08 seconds
+2020-01-05 16:01:50,894 [INFO] Reading HDF dataset ../Datasets/small_datasets/ids2018/y_test.h5
+2020-01-05 16:01:50,978 [INFO] Reading complete. time_to_read=0.08 seconds
+2020-01-05 16:01:54,854 [INFO] Initializing model
+2020-01-05 16:01:55,126 [INFO] _________________________________________________________________
+2020-01-05 16:01:55,126 [INFO] Layer (type)                 Output Shape              Param #   
+2020-01-05 16:01:55,126 [INFO] =================================================================
+2020-01-05 16:01:55,127 [INFO] dense_9 (Dense)              (None, 3000)              234000    
+2020-01-05 16:01:55,127 [INFO] _________________________________________________________________
+2020-01-05 16:01:55,127 [INFO] batch_normalization_7 (Batch (None, 3000)              12000     
+2020-01-05 16:01:55,127 [INFO] _________________________________________________________________
+2020-01-05 16:01:55,127 [INFO] dropout_7 (Dropout)          (None, 3000)              0         
+2020-01-05 16:01:55,127 [INFO] _________________________________________________________________
+2020-01-05 16:01:55,127 [INFO] dense_10 (Dense)             (None, 1500)              4501500   
+2020-01-05 16:01:55,127 [INFO] _________________________________________________________________
+2020-01-05 16:01:55,127 [INFO] batch_normalization_8 (Batch (None, 1500)              6000      
+2020-01-05 16:01:55,127 [INFO] _________________________________________________________________
+2020-01-05 16:01:55,127 [INFO] dropout_8 (Dropout)          (None, 1500)              0         
+2020-01-05 16:01:55,127 [INFO] _________________________________________________________________
+2020-01-05 16:01:55,127 [INFO] dense_11 (Dense)             (None, 500)               750500    
+2020-01-05 16:01:55,127 [INFO] _________________________________________________________________
+2020-01-05 16:01:55,127 [INFO] batch_normalization_9 (Batch (None, 500)               2000      
+2020-01-05 16:01:55,127 [INFO] _________________________________________________________________
+2020-01-05 16:01:55,128 [INFO] dropout_9 (Dropout)          (None, 500)               0         
+2020-01-05 16:01:55,128 [INFO] _________________________________________________________________
+2020-01-05 16:01:55,128 [INFO] dense_12 (Dense)             (None, 15)                7515      
+2020-01-05 16:01:55,128 [INFO] =================================================================
+2020-01-05 16:01:55,128 [INFO] Total params: 5,513,515
+2020-01-05 16:01:55,128 [INFO] Trainable params: 5,503,515
+2020-01-05 16:01:55,128 [INFO] Non-trainable params: 10,000
+2020-01-05 16:01:55,128 [INFO] _________________________________________________________________
+2020-01-05 16:01:55,128 [INFO] Training model
+2020-01-05 21:24:27,040 [INFO] epoch = 20. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_shallow_23/ann_model_epoch_20.pickle
+2020-01-06 02:33:51,809 [INFO] epoch = 40. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_shallow_23/ann_model_epoch_40.pickle
+2020-01-06 07:43:00,346 [INFO] epoch = 60. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_shallow_23/ann_model_epoch_60.pickle
+2020-01-06 12:54:39,169 [INFO] epoch = 80. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_shallow_23/ann_model_epoch_80.pickle
+2020-01-06 18:04:37,250 [INFO] epoch = 100. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_shallow_23/ann_model_epoch_100.pickle
+2020-01-06 23:17:32,082 [INFO] epoch = 120. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_shallow_23/ann_model_epoch_120.pickle
+2020-01-07 04:30:40,577 [INFO] epoch = 140. Intermediate model saved to results_additional_exps/ann_depth_ids18_subset_shallow_23/ann_model_epoch_140.pickle
+2020-01-07 07:55:29,630 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-01-07 08:01:47,402 [INFO] Last epoch loss evaluation: train_loss = 0.007415, val_loss = 0.007525
+2020-01-07 08:01:47,402 [INFO] Training complete. time_to_train = 143992.27 sec, 2399.87 min
+2020-01-07 08:01:47,464 [INFO] Model saved to results_additional_exps/ann_depth_ids18_subset_shallow_23/best_model.pickle
+2020-01-07 08:01:47,466 [INFO] Training history saved to: results_additional_exps/ann_depth_ids18_subset_shallow_23/training_error_history.csv
+2020-01-07 08:01:47,607 [INFO] Plot saved to: results_additional_exps/ann_depth_ids18_subset_shallow_23/training_error_history.png
+2020-01-07 08:01:47,747 [INFO] Plot saved to: results_additional_exps/ann_depth_ids18_subset_shallow_23/training_f1_history.png
+2020-01-07 08:01:47,747 [INFO] Making predictions on training, validation, testing data
+2020-01-07 08:09:41,325 [INFO] Evaluating predictions (results)
+2020-01-07 08:09:53,463 [INFO] Dataset: Testing. Classification report below
+2020-01-07 08:09:53,463 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99    535650
+                     Bot       1.00      1.00      1.00     11465
+        Brute Force -Web       1.00      0.33      0.50        24
+        Brute Force -XSS       1.00      0.33      0.50         9
+        DDOS attack-HOIC       1.00      1.00      1.00     27447
+    DDOS attack-LOIC-UDP       0.70      1.00      0.82        67
+  DDoS attacks-LOIC-HTTP       0.99      1.00      1.00     23010
+   DoS attacks-GoldenEye       0.99      1.00      1.00      1651
+        DoS attacks-Hulk       1.00      1.00      1.00     18478
+DoS attacks-SlowHTTPTest       0.76      0.49      0.60      5596
+   DoS attacks-Slowloris       0.96      0.98      0.97       440
+          FTP-BruteForce       0.71      0.89      0.79      7718
+           Infilteration       0.50      0.02      0.05      6404
+           SQL Injection       1.00      0.75      0.86         4
+          SSH-Bruteforce       1.00      1.00      1.00      7525
+
+               micro avg       0.98      0.98      0.98    645488
+               macro avg       0.91      0.79      0.80    645488
+            weighted avg       0.98      0.98      0.98    645488
+
+2020-01-07 08:09:53,463 [INFO] Overall accuracy (micro avg): 0.9839501276553553
+2020-01-07 08:10:07,254 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9840         0.9840                       0.9840                0.0011                   0.0160  0.9840
+1     Macro avg        0.9979         0.9069                       0.7869                0.0042                   0.2131  0.8048
+2  Weighted avg        0.9912         0.9795                       0.9840                0.0477                   0.0160  0.9792
+2020-01-07 08:10:19,400 [INFO] Dataset: Validation. Classification report below
+2020-01-07 08:10:19,400 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99    535650
+                     Bot       1.00      1.00      1.00     11465
+        Brute Force -Web       1.00      0.48      0.65        25
+        Brute Force -XSS       1.00      0.67      0.80         9
+        DDOS attack-HOIC       1.00      1.00      1.00     27447
+    DDOS attack-LOIC-UDP       0.76      1.00      0.87        68
+  DDoS attacks-LOIC-HTTP       0.99      1.00      1.00     23009
+   DoS attacks-GoldenEye       1.00      1.00      1.00      1651
+        DoS attacks-Hulk       1.00      1.00      1.00     18478
+DoS attacks-SlowHTTPTest       0.78      0.49      0.60      5596
+   DoS attacks-Slowloris       0.95      0.98      0.97       439
+          FTP-BruteForce       0.71      0.90      0.79      7718
+           Infilteration       0.45      0.02      0.04      6403
+           SQL Injection       1.00      0.25      0.40         4
+          SSH-Bruteforce       1.00      1.00      1.00      7525
+
+               micro avg       0.98      0.98      0.98    645487
+               macro avg       0.91      0.79      0.81    645487
+            weighted avg       0.98      0.98      0.98    645487
+
+2020-01-07 08:10:19,400 [INFO] Overall accuracy (micro avg): 0.984005874634191
+2020-01-07 08:10:33,213 [INFO] Average metrics for Validation dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9840         0.9840                       0.9840                0.0011                   0.0160  0.9840
+1     Macro avg        0.9979         0.9086                       0.7859                0.0042                   0.2141  0.8071
+2  Weighted avg        0.9912         0.9792                       0.9840                0.0477                   0.0160  0.9792
+2020-01-07 08:11:12,794 [INFO] Dataset: Training. Classification report below
+2020-01-07 08:11:12,794 [INFO] 
+                          precision    recall  f1-score   support
+
+                  Benign       0.99      1.00      0.99   1606949
+                     Bot       1.00      1.00      1.00     34396
+        Brute Force -Web       0.96      0.37      0.53        73
+        Brute Force -XSS       1.00      0.50      0.67        26
+        DDOS attack-HOIC       1.00      1.00      1.00     82341
+    DDOS attack-LOIC-UDP       0.73      1.00      0.85       203
+  DDoS attacks-LOIC-HTTP       0.99      1.00      1.00     69029
+   DoS attacks-GoldenEye       1.00      1.00      1.00      4954
+        DoS attacks-Hulk       1.00      1.00      1.00     55435
+DoS attacks-SlowHTTPTest       0.77      0.49      0.60     16787
+   DoS attacks-Slowloris       0.97      1.00      0.98      1318
+          FTP-BruteForce       0.71      0.89      0.79     23153
+           Infilteration       0.56      0.03      0.05     19210
+           SQL Injection       1.00      0.33      0.50        12
+          SSH-Bruteforce       1.00      1.00      1.00     22576
+
+               micro avg       0.98      0.98      0.98   1936462
+               macro avg       0.91      0.77      0.80   1936462
+            weighted avg       0.98      0.98      0.98   1936462
+
+2020-01-07 08:11:12,794 [INFO] Overall accuracy (micro avg): 0.984067335171049
+2020-01-07 08:11:57,810 [INFO] Average metrics for Training dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate  avg f1
+0     Micro avg        0.9841         0.9841                       0.9841                0.0011                   0.0159  0.9841
+1     Macro avg        0.9979         0.9118                       0.7740                0.0042                   0.2260  0.7973
+2  Weighted avg        0.9913         0.9802                       0.9841                0.0474                   0.0159  0.9793
+2020-01-07 08:11:57,836 [INFO] Results saved to: results_additional_exps/ann_depth_ids18_subset_shallow_23/ann_depth_ids18_subset_shallow_23_results.xlsx
+2020-01-07 08:11:57,841 [INFO] ================= Finished running experiment no. 13 ================= 
+
+2020-01-07 08:11:57,920 [INFO] ================= Finished running 3 experiments ================= 
+
