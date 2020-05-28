@@ -1,0 +1,207 @@
+2020-05-09 22:07:50,623 [INFO] Initialized logging. log_filename = results_selected_models/selected_ids18_full_dbn_shallow_rep3/run_log.log
+2020-05-09 22:07:50,623 [INFO] ================= Running experiment no. 3  ================= 
+
+2020-05-09 22:07:50,623 [INFO] Experiment parameters given below
+2020-05-09 22:07:50,623 [INFO] 
+{'experiment_num': 3, 'results_dir': 'results_selected_models/selected_ids18_full_dbn_shallow_rep3', 'model_type': 'classifier', 'model': 'dbn', 'normal_label': 'BENIGN', 'scaling_type': 'NA', 'dbn_layer_units': [32], 'ann_layer_activations': ['relu'], 'ann_layer_dropout_rates': [0.2], 'unsupervised_ratio': 0.5, 'dbn_learning_rate': 0.0001, 'pretrain_epochs': 12, 'fine_tune_epochs': 80, 'early_stop_patience': 20, 'batch_size': 8192, 'dataset_dir': '../Datasets/full_datasets/ids2018', 'description': 'selected_ids18_full_dbn_shallow_rep3'}
+2020-05-09 22:07:50,623 [INFO] Created tensorboard log directory: results_selected_models/selected_ids18_full_dbn_shallow_rep3/tf_logs_run_2020_05_09-22_07_50
+2020-05-09 22:07:50,623 [INFO] Loading datsets from: ../Datasets/full_datasets/ids2018
+2020-05-09 22:07:50,623 [INFO] Reading X, y files
+2020-05-09 22:07:50,623 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_train_1.h5
+2020-05-09 22:07:52,072 [INFO] Reading complete. time_to_read=1.45 seconds
+2020-05-09 22:07:52,072 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_train_10.h5
+2020-05-09 22:07:53,527 [INFO] Reading complete. time_to_read=1.45 seconds
+2020-05-09 22:07:53,527 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_train_11.h5
+2020-05-09 22:07:54,985 [INFO] Reading complete. time_to_read=1.46 seconds
+2020-05-09 22:07:54,985 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_train_12.h5
+2020-05-09 22:07:56,278 [INFO] Reading complete. time_to_read=1.29 seconds
+2020-05-09 22:07:56,278 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_train_13.h5
+2020-05-09 22:07:57,123 [INFO] Reading complete. time_to_read=0.84 seconds
+2020-05-09 22:07:57,123 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_train_2.h5
+2020-05-09 22:07:58,442 [INFO] Reading complete. time_to_read=1.32 seconds
+2020-05-09 22:07:58,442 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_train_3.h5
+2020-05-09 22:07:59,893 [INFO] Reading complete. time_to_read=1.45 seconds
+2020-05-09 22:07:59,893 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_train_4.h5
+2020-05-09 22:08:02,667 [INFO] Reading complete. time_to_read=2.77 seconds
+2020-05-09 22:08:02,667 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_train_5.h5
+2020-05-09 22:08:05,398 [INFO] Reading complete. time_to_read=2.73 seconds
+2020-05-09 22:08:05,398 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_train_6.h5
+2020-05-09 22:08:08,125 [INFO] Reading complete. time_to_read=2.73 seconds
+2020-05-09 22:08:08,125 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_train_7.h5
+2020-05-09 22:08:10,866 [INFO] Reading complete. time_to_read=2.74 seconds
+2020-05-09 22:08:10,866 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_train_8.h5
+2020-05-09 22:08:11,332 [INFO] Reading complete. time_to_read=0.47 seconds
+2020-05-09 22:08:11,332 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_train_9.h5
+2020-05-09 22:08:12,775 [INFO] Reading complete. time_to_read=1.44 seconds
+2020-05-09 22:08:12,775 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_val_1.h5
+2020-05-09 22:08:13,261 [INFO] Reading complete. time_to_read=0.49 seconds
+2020-05-09 22:08:13,261 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_val_10.h5
+2020-05-09 22:08:13,749 [INFO] Reading complete. time_to_read=0.49 seconds
+2020-05-09 22:08:13,749 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_val_11.h5
+2020-05-09 22:08:14,238 [INFO] Reading complete. time_to_read=0.49 seconds
+2020-05-09 22:08:14,238 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_val_12.h5
+2020-05-09 22:08:14,673 [INFO] Reading complete. time_to_read=0.44 seconds
+2020-05-09 22:08:14,673 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_val_13.h5
+2020-05-09 22:08:14,956 [INFO] Reading complete. time_to_read=0.28 seconds
+2020-05-09 22:08:14,956 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_val_2.h5
+2020-05-09 22:08:15,400 [INFO] Reading complete. time_to_read=0.44 seconds
+2020-05-09 22:08:15,400 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_val_3.h5
+2020-05-09 22:08:15,888 [INFO] Reading complete. time_to_read=0.49 seconds
+2020-05-09 22:08:15,888 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_val_4.h5
+2020-05-09 22:08:16,815 [INFO] Reading complete. time_to_read=0.93 seconds
+2020-05-09 22:08:16,815 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_val_5.h5
+2020-05-09 22:08:17,727 [INFO] Reading complete. time_to_read=0.91 seconds
+2020-05-09 22:08:17,727 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_val_6.h5
+2020-05-09 22:08:18,641 [INFO] Reading complete. time_to_read=0.91 seconds
+2020-05-09 22:08:18,641 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_val_7.h5
+2020-05-09 22:08:19,559 [INFO] Reading complete. time_to_read=0.92 seconds
+2020-05-09 22:08:19,559 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_val_8.h5
+2020-05-09 22:08:19,715 [INFO] Reading complete. time_to_read=0.16 seconds
+2020-05-09 22:08:19,715 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_val_9.h5
+2020-05-09 22:08:20,200 [INFO] Reading complete. time_to_read=0.48 seconds
+2020-05-09 22:08:20,200 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_test_1.h5
+2020-05-09 22:08:20,686 [INFO] Reading complete. time_to_read=0.49 seconds
+2020-05-09 22:08:20,686 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_test_10.h5
+2020-05-09 22:08:21,174 [INFO] Reading complete. time_to_read=0.49 seconds
+2020-05-09 22:08:21,174 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_test_11.h5
+2020-05-09 22:08:21,662 [INFO] Reading complete. time_to_read=0.49 seconds
+2020-05-09 22:08:21,662 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_test_12.h5
+2020-05-09 22:08:22,098 [INFO] Reading complete. time_to_read=0.44 seconds
+2020-05-09 22:08:22,098 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_test_13.h5
+2020-05-09 22:08:22,380 [INFO] Reading complete. time_to_read=0.28 seconds
+2020-05-09 22:08:22,380 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_test_2.h5
+2020-05-09 22:08:22,823 [INFO] Reading complete. time_to_read=0.44 seconds
+2020-05-09 22:08:22,823 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_test_3.h5
+2020-05-09 22:08:23,313 [INFO] Reading complete. time_to_read=0.49 seconds
+2020-05-09 22:08:23,313 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_test_4.h5
+2020-05-09 22:08:24,243 [INFO] Reading complete. time_to_read=0.93 seconds
+2020-05-09 22:08:24,243 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_test_5.h5
+2020-05-09 22:08:25,156 [INFO] Reading complete. time_to_read=0.91 seconds
+2020-05-09 22:08:25,156 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_test_6.h5
+2020-05-09 22:08:26,071 [INFO] Reading complete. time_to_read=0.91 seconds
+2020-05-09 22:08:26,071 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_test_7.h5
+2020-05-09 22:08:26,987 [INFO] Reading complete. time_to_read=0.92 seconds
+2020-05-09 22:08:26,987 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_test_8.h5
+2020-05-09 22:08:27,144 [INFO] Reading complete. time_to_read=0.16 seconds
+2020-05-09 22:08:27,144 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/X_test_9.h5
+2020-05-09 22:08:27,628 [INFO] Reading complete. time_to_read=0.48 seconds
+2020-05-09 22:08:27,629 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_train_1.h5
+2020-05-09 22:08:27,934 [INFO] Reading complete. time_to_read=0.31 seconds
+2020-05-09 22:08:27,934 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_train_10.h5
+2020-05-09 22:08:28,253 [INFO] Reading complete. time_to_read=0.32 seconds
+2020-05-09 22:08:28,253 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_train_11.h5
+2020-05-09 22:08:28,583 [INFO] Reading complete. time_to_read=0.33 seconds
+2020-05-09 22:08:28,583 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_train_12.h5
+2020-05-09 22:08:28,916 [INFO] Reading complete. time_to_read=0.33 seconds
+2020-05-09 22:08:28,916 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_train_13.h5
+2020-05-09 22:08:29,101 [INFO] Reading complete. time_to_read=0.18 seconds
+2020-05-09 22:08:29,101 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_train_2.h5
+2020-05-09 22:08:29,450 [INFO] Reading complete. time_to_read=0.35 seconds
+2020-05-09 22:08:29,450 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_train_3.h5
+2020-05-09 22:08:29,770 [INFO] Reading complete. time_to_read=0.32 seconds
+2020-05-09 22:08:29,770 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_train_4.h5
+2020-05-09 22:08:30,415 [INFO] Reading complete. time_to_read=0.64 seconds
+2020-05-09 22:08:30,415 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_train_5.h5
+2020-05-09 22:08:30,974 [INFO] Reading complete. time_to_read=0.56 seconds
+2020-05-09 22:08:30,975 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_train_6.h5
+2020-05-09 22:08:31,531 [INFO] Reading complete. time_to_read=0.56 seconds
+2020-05-09 22:08:31,531 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_train_7.h5
+2020-05-09 22:08:32,100 [INFO] Reading complete. time_to_read=0.57 seconds
+2020-05-09 22:08:32,100 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_train_8.h5
+2020-05-09 22:08:32,203 [INFO] Reading complete. time_to_read=0.10 seconds
+2020-05-09 22:08:32,203 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_train_9.h5
+2020-05-09 22:08:32,524 [INFO] Reading complete. time_to_read=0.32 seconds
+2020-05-09 22:08:32,524 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_val_1.h5
+2020-05-09 22:08:32,630 [INFO] Reading complete. time_to_read=0.11 seconds
+2020-05-09 22:08:32,630 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_val_10.h5
+2020-05-09 22:08:32,789 [INFO] Reading complete. time_to_read=0.16 seconds
+2020-05-09 22:08:32,789 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_val_11.h5
+2020-05-09 22:08:32,900 [INFO] Reading complete. time_to_read=0.11 seconds
+2020-05-09 22:08:32,901 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_val_12.h5
+2020-05-09 22:08:33,020 [INFO] Reading complete. time_to_read=0.12 seconds
+2020-05-09 22:08:33,020 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_val_13.h5
+2020-05-09 22:08:33,086 [INFO] Reading complete. time_to_read=0.07 seconds
+2020-05-09 22:08:33,086 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_val_2.h5
+2020-05-09 22:08:33,210 [INFO] Reading complete. time_to_read=0.12 seconds
+2020-05-09 22:08:33,210 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_val_3.h5
+2020-05-09 22:08:33,323 [INFO] Reading complete. time_to_read=0.11 seconds
+2020-05-09 22:08:33,323 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_val_4.h5
+2020-05-09 22:08:33,543 [INFO] Reading complete. time_to_read=0.22 seconds
+2020-05-09 22:08:33,543 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_val_5.h5
+2020-05-09 22:08:33,738 [INFO] Reading complete. time_to_read=0.19 seconds
+2020-05-09 22:08:33,738 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_val_6.h5
+2020-05-09 22:08:33,932 [INFO] Reading complete. time_to_read=0.19 seconds
+2020-05-09 22:08:33,932 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_val_7.h5
+2020-05-09 22:08:34,128 [INFO] Reading complete. time_to_read=0.20 seconds
+2020-05-09 22:08:34,128 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_val_8.h5
+2020-05-09 22:08:34,167 [INFO] Reading complete. time_to_read=0.04 seconds
+2020-05-09 22:08:34,167 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_val_9.h5
+2020-05-09 22:08:34,279 [INFO] Reading complete. time_to_read=0.11 seconds
+2020-05-09 22:08:34,279 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_test_1.h5
+2020-05-09 22:08:34,403 [INFO] Reading complete. time_to_read=0.12 seconds
+2020-05-09 22:08:34,403 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_test_10.h5
+2020-05-09 22:08:34,516 [INFO] Reading complete. time_to_read=0.11 seconds
+2020-05-09 22:08:34,516 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_test_11.h5
+2020-05-09 22:08:34,628 [INFO] Reading complete. time_to_read=0.11 seconds
+2020-05-09 22:08:34,628 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_test_12.h5
+2020-05-09 22:08:34,747 [INFO] Reading complete. time_to_read=0.12 seconds
+2020-05-09 22:08:34,747 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_test_13.h5
+2020-05-09 22:08:34,813 [INFO] Reading complete. time_to_read=0.07 seconds
+2020-05-09 22:08:34,813 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_test_2.h5
+2020-05-09 22:08:34,935 [INFO] Reading complete. time_to_read=0.12 seconds
+2020-05-09 22:08:34,935 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_test_3.h5
+2020-05-09 22:08:35,046 [INFO] Reading complete. time_to_read=0.11 seconds
+2020-05-09 22:08:35,047 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_test_4.h5
+2020-05-09 22:08:35,267 [INFO] Reading complete. time_to_read=0.22 seconds
+2020-05-09 22:08:35,267 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_test_5.h5
+2020-05-09 22:08:35,463 [INFO] Reading complete. time_to_read=0.20 seconds
+2020-05-09 22:08:35,463 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_test_6.h5
+2020-05-09 22:08:35,656 [INFO] Reading complete. time_to_read=0.19 seconds
+2020-05-09 22:08:35,657 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_test_7.h5
+2020-05-09 22:08:35,852 [INFO] Reading complete. time_to_read=0.20 seconds
+2020-05-09 22:08:35,852 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_test_8.h5
+2020-05-09 22:08:35,891 [INFO] Reading complete. time_to_read=0.04 seconds
+2020-05-09 22:08:35,891 [INFO] Reading HDF dataset ../Datasets/full_datasets/ids2018/y_test_9.h5
+2020-05-09 22:08:36,020 [INFO] Reading complete. time_to_read=0.13 seconds
+2020-05-09 22:08:42,943 [INFO] Initializing model
+2020-05-09 22:08:42,943 [INFO] Training model
+2020-05-09 22:08:42,943 [INFO] Splitting train set into 2 sets (unsupervised, supervised), random_seed = None
+2020-05-09 22:10:19,916 [INFO] Split sizes (instances). total = 9682309, unsupervised = 4841154, supervised = 4841155, unsupervised dataset hash = c021c640c4475e307971adbfdde6ab5e2a424f15
+2020-05-09 22:10:19,916 [INFO] Pretraining Deep Belief Network
+2020-05-09 22:15:22,138 [INFO] Pretraining Complete
+2020-05-09 22:15:22,138 [INFO] Getting pretrained weights
+2020-05-09 22:15:22,138 [INFO] Creating and initializing feed forward neural network
+2020-05-09 22:15:22,195 [INFO] Model: "sequential_3"
+2020-05-09 22:15:22,195 [INFO] _________________________________________________________________
+2020-05-09 22:15:22,195 [INFO] Layer (type)                 Output Shape              Param #   
+2020-05-09 22:15:22,195 [INFO] =================================================================
+2020-05-09 22:15:22,196 [INFO] dense_5 (Dense)              (None, 32)                2496      
+2020-05-09 22:15:22,196 [INFO] _________________________________________________________________
+2020-05-09 22:15:22,196 [INFO] batch_normalization_3 (Batch (None, 32)                128       
+2020-05-09 22:15:22,196 [INFO] _________________________________________________________________
+2020-05-09 22:15:22,196 [INFO] dropout_3 (Dropout)          (None, 32)                0         
+2020-05-09 22:15:22,196 [INFO] _________________________________________________________________
+2020-05-09 22:15:22,196 [INFO] dense_6 (Dense)              (None, 15)                495       
+2020-05-09 22:15:22,196 [INFO] =================================================================
+2020-05-09 22:15:22,196 [INFO] Total params: 3,119
+2020-05-09 22:15:22,196 [INFO] Trainable params: 3,055
+2020-05-09 22:15:22,196 [INFO] Non-trainable params: 64
+2020-05-09 22:15:22,196 [INFO] _________________________________________________________________
+2020-05-09 22:15:22,197 [INFO] Fine-tuning final neural network
+2020-05-09 22:23:13,508 [INFO] WeightRestorer::on_train_end(): restoring best weights
+2020-05-09 22:23:13,518 [INFO] Training complete. time_to_train = 870.57 sec, 14.51 min
+2020-05-09 22:23:13,522 [INFO] Model saved to results_selected_models/selected_ids18_full_dbn_shallow_rep3/best_model.pickle
+2020-05-09 22:23:13,523 [INFO] Training history saved to: results_selected_models/selected_ids18_full_dbn_shallow_rep3/training_error_history.csv
+2020-05-09 22:23:13,626 [INFO] Plot saved to: results_selected_models/selected_ids18_full_dbn_shallow_rep3/training_error_history.png
+2020-05-09 22:23:13,626 [INFO] Making predictions on training, validation, testing data
+2020-05-09 22:24:07,402 [INFO] Making predictions complete. time_to_predict = 53.78 sec, 0.90 min
+2020-05-09 22:24:07,450 [INFO] Evaluating predictions (results)
+2020-05-09 22:25:54,844 [INFO] Average metrics for Testing dataset below
+   average type  avg accuracy  avg precision  avg detection rate (recall)  avg false alarm rate  avg false negative rate    avg f1
+0     Micro avg      0.982843       0.982843                     0.982843              0.001226                 0.017157  0.982843
+1     Macro avg      0.997712       0.801463                     0.732819              0.004450                 0.267181  0.746104
+2  Weighted avg      0.990790       0.973005                     0.982843              0.049596                 0.017157  0.977681
+2020-05-09 22:25:54,879 [INFO] Results saved to: results_selected_models/selected_ids18_full_dbn_shallow_rep3/selected_ids18_full_dbn_shallow_rep3_results.xlsx
+2020-05-09 22:25:54,884 [INFO] ================= Finished running experiment no. 3 ================= 
+
+2020-05-09 22:25:55,045 [INFO] Created directory: results_selected_models/selected_ids18_full_dbn_shallow_rep4
